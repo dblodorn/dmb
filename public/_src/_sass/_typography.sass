@@ -1,0 +1,40 @@
+//-------------------------------------------------------------------
+//  TYPE STYLING
+//-------------------------------------------------------------------
+
+$monospace: 'freight-text-pro', monospace
+$pdu: 'pdu'
+
+h1
+  +type($pdu, 300, 6rem, 1.125, normal, center, $white, uppercase, normal)
+
+h2
+  +type($pdu, 300, 5rem, 1.5, normal, left, $type-color, none, normal)
+
+h3
+  +type($pdu, 300, 4rem, 1.5, normal, left, $type-color, none, normal)
+
+h4
+  +type($pdu, 300, 6rem, 1.5, normal, left, $type-color, none, normal)
+  &:hover
+    text-decoration: line-through
+    color: $beige
+
+h5
+  +type($pdu, 300, 6rem, 1, normal, left, $black, uppercase, normal)
+
+p
+  +type($monospace, 400, 2.5rem, 1.35, normal, left, $type-color, none, normal)
+  padding-bottom: $base-spacing * 5
+
+a
+  @extend %smooth
+  +type($pdu, 300, 6rem, 1, normal, left, $black, uppercase, normal)
+  display: block
+  height: 6rem
+  width: inherit
+  text-indent: 0
+  
+  &:hover
+    color: $white
+    background-color: $black

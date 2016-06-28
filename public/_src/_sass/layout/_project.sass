@@ -1,0 +1,34 @@
+//-------------------------------------------------------------------
+//  SINGLE PROJECT
+//-------------------------------------------------------------------
+
+#project
+  header
+    border-bottom: 0
+
+section.single-project
+  h1
+    width: 100vw
+    background-color: $black
+
+  aside#single-hero
+    @extend %full-bg
+    @extend %border-bottom
+    width: 100vw
+    height: calc(100vh + 10rem)
+  
+  article.image-grid
+    @extend %border-bottom
+    max-width: 100vw
+    padding: 0
+
+  article.project-description
+    max-width: 74rem
+    padding: 4rem
+    margin: 4rem 0 0
+
+  ol
+    text-align: center
+    li
+      width: 50%
+      display: inline-block
