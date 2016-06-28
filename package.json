@@ -1,0 +1,23 @@
+{
+  "name": "dmb",
+  "version": "1.0.0",
+  "description": "Portfolio website for Dain Blodorn",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dblodorn/dmb.git"
+  },
+  "keywords": [
+    "Portfolio",
+    "spectacular"
+  ],
+  "author": "Dain Blodorn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dblodorn/dmb/issues"
+  },
+  "homepage": "https://github.com/dblodorn/dmb#readme"
+}
