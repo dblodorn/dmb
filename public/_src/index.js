@@ -4,6 +4,8 @@ import $ from 'jquery'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
+
+// Functions
 import transition from './_app/transition.js'
 import states from './_app/states.js'
 
@@ -55,6 +57,7 @@ router.start(App, 'body')
 
 var initApp = function() {
   states.init()
+  
 }
 
 // RUN NOV VUE JS GLOBULAR FUNCTIONS
