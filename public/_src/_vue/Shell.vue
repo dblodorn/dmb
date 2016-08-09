@@ -1,6 +1,7 @@
 <template lang="jade">
   header
-    h1 {{title}}
+    a(v-link="'/'")
+      h1 {{title}}
   router-view
 </template>
 
@@ -8,7 +9,7 @@
   export default {
     data () {
       return {
-        title: 'SHELL'
+        title: "home"
       }
     }
   }

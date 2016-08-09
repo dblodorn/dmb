@@ -1,20 +1,25 @@
 <template lang="jade">
-  section#landing-page
-    h1 {{headline}}
+  main#landing-page(transition="home")
+    a(v-for="item in page.projects" v-link="item") 
+      h1 {{item}}
 </template>
 
 <script>
   export default {
     data () {
       return {
-        headline: "home"
+        page: {}
+      }
+    },
+    route: {
+      canReuse: false,
+      activate: function() {
+        var data = this.$route.data;
+        this.$set('page', data);
+        console.log(data)
       }
     }
   }
-  // initial - load
-  setTimeout(function() {
-    $('#landing-page').addClass('fade-in-slow');
-  }, 300);
 </script>
 
 <style lang="sass?indentedSyntax" scoped>

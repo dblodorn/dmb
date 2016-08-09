@@ -1,7 +1,8 @@
+import $ from 'jquery'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-// HOME
+// Home
 Vue.transition('home', {
   css: false,
   enter: function (el, done) {
