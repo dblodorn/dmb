@@ -2,5 +2,6 @@ assets/
 .DS_Store
 node_modules/
 public/js/
+public/data/
 npm-debug.log
 gulp-tasks/deploy.js

@@ -1,13 +1,1 @@
-{
-  "navigation": {
-    "projects": [
-      "db13",
-      "tif-sigfrids",
-      "xiv",
-      "sls",
-      "15x19",
-      "zero-one",
-      "canon"
-    ]
-  }
-}
+{"navigation":{"projects":["db13","tif-sigfrids","xiv","sls","15x19","zero-one"]}}

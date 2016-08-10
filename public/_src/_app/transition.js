@@ -8,7 +8,8 @@ Vue.transition('home', {
   enter: function (el, done) {
     $(el)
       .css('opacity', 0)
-      .delay(500).animate({ opacity: 1 }, 350, done)
+      .animate({ opacity: 1 }, 0, done)
+    document.querySelector('body').className = "home";
   },
   enterCancelled: function (el) {
     $(el).stop()
@@ -16,7 +17,29 @@ Vue.transition('home', {
   leave: function (el, done) {
     $(el)
       .css('opacity', 1)
-      .animate({ opacity: 0 }, 1500, done)
+      .animate({ opacity: 0 }, 0, done)
+  },
+  leaveCancelled: function (el) {
+    $(el).stop()
+  }
+})
+
+// Project
+Vue.transition('project', {
+  css: false,
+  enter: function (el, done) {
+    $(el)
+      .css('opacity', 0)
+      .animate({ opacity: 1 }, 0, done)
+    document.querySelector('body').className = "project";
+  },
+  enterCancelled: function (el) {
+    $(el).stop()
+  },
+  leave: function (el, done) {
+    $(el)
+      .css('opacity', 1)
+      .animate({ opacity: 0 }, 0, done)
   },
   leaveCancelled: function (el) {
     $(el).stop()

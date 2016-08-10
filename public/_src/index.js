@@ -47,17 +47,12 @@ router.map({
   }
 })
 
-router.afterEach(function (transition) {
-  console.log('Successfully navigated to: ' + transition.to.path)
-})
-
 router.start(App, 'body')
 
 // NON VUE
 
 var initApp = function() {
-  states.init()
-  
+  states.init() 
 }
 
 // RUN NOV VUE JS GLOBULAR FUNCTIONS

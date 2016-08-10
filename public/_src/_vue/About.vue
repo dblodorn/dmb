@@ -1,6 +1,6 @@
 <template lang="jade">
   section(transition="project")
-    h1 {{project.project_name}}
+    h1 About
 </template>
 
 <script>
@@ -24,12 +24,6 @@
       }
     }
   }
-
-  document.addEventListener('DOMContentLoaded', loadPage);
-  function loadPage() {
-    document.querySelector('body').className = "project";
-  }
-
 </script>
 
 <style lang="sass?indentedSyntax" scoped>

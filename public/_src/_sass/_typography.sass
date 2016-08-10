@@ -5,36 +5,25 @@
 $monospace: 'freight-text-pro', monospace
 $pdu: 'pdu'
 
+%pdu
+  font-family: $pdu
+  font-weight: 300
+
 h1
   +type($pdu, 300, 6rem, 1.125, normal, center, $white, uppercase, normal)
-
-h2
-  +type($pdu, 300, 5rem, 1.5, normal, left, $type-color, none, normal)
-
-h3
-  +type($pdu, 300, 4rem, 1.5, normal, left, $type-color, none, normal)
-
-h4
-  +type($pdu, 300, 6rem, 1.5, normal, left, $type-color, none, normal)
-  &:hover
-    text-decoration: line-through
-    color: $beige
-
-h5
-  +type($pdu, 300, 6rem, 1, normal, left, $black, uppercase, normal)
-
-p
-  +type($monospace, 400, 2.5rem, 1.35, normal, left, $type-color, none, normal)
-  padding-bottom: $base-spacing * 5
+  background-color: $black
 
 a
   @extend %smooth
-  +type($pdu, 300, 6rem, 1, normal, left, $black, uppercase, normal)
+  @extend %pdu
+  font-size: 6rem
+  text-transform: uppercase
+  color: $black
   display: block
-  height: 6rem
-  width: inherit
-  text-indent: 0
+  margin-bottom: 1.5rem
   
+  &:last-child
+    margin-bottom: 0
+
   &:hover
     color: $white
-    background-color: $black

@@ -1,6 +1,7 @@
-define('states', ['chibijs','simplestatemanager'], function(chibi,ssm) {
+define('states', ['simplestatemanager'], function(ssm) {
 
-  var states  = {};
+  var states  = {},
+      html = document.querySelector("html");
 
   states.init = function(){
   
@@ -8,7 +9,7 @@ define('states', ['chibijs','simplestatemanager'], function(chibi,ssm) {
       id: 'mobile',
       query: '(max-width: 767px)',
       onEnter: function(){
-        $("html").setClass('mobile');
+        html.className = "mobile";
       }
     });
 
@@ -16,7 +17,7 @@ define('states', ['chibijs','simplestatemanager'], function(chibi,ssm) {
       id: 'tablet',
       query: '(min-width: 768px) and (max-width: 1023px)',
       onEnter: function(){
-        $("html").setClass('tablet');
+        html.className = "tablet";
       }
     });
 
@@ -24,7 +25,7 @@ define('states', ['chibijs','simplestatemanager'], function(chibi,ssm) {
       id: 'desktop',
       query: '(min-width: 1024px)',
       onEnter: function(){
-        $("html").setClass('desktop');
+        html.className = "desktop";
       }
     });
 

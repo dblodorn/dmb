@@ -1,9 +1,0 @@
-@font-face {
-  font-family: 'pdu';
-  src: url('imgs/fonts/pdu_regular.eot');
-  src: url('imgs/fonts/pdu_regular.woff') format('woff'),
-       url('imgs/fonts/pdu_regular.ttf') format('truetype'),
-       url('imgs/fonts/pdu_regular.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
