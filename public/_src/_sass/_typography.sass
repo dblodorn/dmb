@@ -2,7 +2,7 @@
 //  TYPE STYLING
 //-------------------------------------------------------------------
 
-$monospace: 'freight-text-pro', monospace
+$monospace: monospace
 $pdu: 'pdu'
 
 %pdu
@@ -12,6 +12,12 @@ $pdu: 'pdu'
 h1
   +type($pdu, 300, 6rem, 1.125, normal, center, $white, uppercase, normal)
   background-color: $black
+
+p
+  font-family: $monospace
+  font-size: 2rem
+  line-height: 1.5
+  color: $black
 
 a
   @extend %smooth
