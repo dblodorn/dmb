@@ -36,7 +36,7 @@
   document.addEventListener('DOMContentLoaded', loadPage);
   
   function loadPage() {
-    document.querySelector('body').className = "project";
+    //document.querySelector('body').className = "project";
   }
 
 </script>
@@ -44,6 +44,9 @@
 <style lang="sass?indentedSyntax" scoped>
 
   @import "../_sass/utilities/_utilities.sass"
+
+  main
+    width: 100vw
 
   section
     h1
