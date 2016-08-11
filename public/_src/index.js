@@ -12,6 +12,7 @@ import states from './_app/states.js'
 // Templates
 import shell from './_vue/Shell.vue'
 import project from './_vue/Project.vue'
+import about from './_vue/About.vue'
 import home from './_vue/Home.vue'
 
 // DATA
@@ -34,7 +35,7 @@ window.router = new VueRouter({
 router.map({
   '/': {
     component: shell,
-    shellData: pageData,
+    shellData: pageData.shell,
     subRoutes: {
       '/': {
         component: home,
@@ -42,6 +43,10 @@ router.map({
       },
       '/:slug': {
         component: project
+      },
+      '/about': {
+        component: about,
+        data: pageData.about
       }
     }
   }

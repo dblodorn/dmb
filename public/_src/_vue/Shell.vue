@@ -1,6 +1,6 @@
 <template lang="jade">
   header
-    a(v-link="'/'" v-on:mouseover="setBgShell") {{title}}
+    a(v-link="'/'" v-on:mouseover="setBgShell") {{page.title}}
   main(v-bind:id="$route.params.slug")
     router-view
   footer
@@ -13,6 +13,7 @@
   export default {
     data () {
       return {
+        page: {},
         title: "DAIN BLODORN KIM",
         footer_links: [
           {
@@ -24,6 +25,12 @@
             link: "http://codepen.io/mrdain/"
           }
         ]
+      }
+    },
+    route: {
+      activate: function() {
+        var data = this.$route.shellData;
+        this.$set('page', data);
       }
     },
     methods: {

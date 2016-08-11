@@ -34,12 +34,6 @@
       }
     }
   }
-
-  document.addEventListener('DOMContentLoaded', loadPage);
-  function loadPage() {
-    document.querySelector('body').className = "home";
-  }
-
 </script>
 
 <style lang="sass?indentedSyntax" scoped>

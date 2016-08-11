@@ -1,26 +1,21 @@
 <template lang="jade">
   section(transition="project")
-    h1 About
+    h1 {{page.title}}
+    p {{page.copy}}
 </template>
 
 <script>
   export default {
     data () {
       return {
-        project: {}
+        page: {}
       }
     },
     route: {
       canReuse: false,
       activate: function() {
-        var id = this.$route.params.slug;
-        this.$http.get('/data/' + id + '.json').then (
-        function (data) {
-          this.$set('project', data.json());
-        },
-        function (data) {
-          alert('Failed to load data');
-        }); 
+        var data = this.$route.data;
+        this.$set('page', data);
       }
     }
   }

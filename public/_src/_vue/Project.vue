@@ -4,6 +4,9 @@
     aside(v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '-portfolio-landing-desktop@1x.jpg)' }")
     article.project-description
       p {{project.project_copy}}
+      ul
+        li(v-for="catgegory in project.categories")
+          p {{catgegory}}
       a(v-for="link in project.links" v-link="link.site_link" target="_blank") {{link.link_copy}}
 </template>
 
@@ -31,6 +34,7 @@
   }
 
   document.addEventListener('DOMContentLoaded', loadPage);
+  
   function loadPage() {
     document.querySelector('body').className = "project";
   }
@@ -60,9 +64,17 @@
     article.project-description
       @extend %container-padding
       max-width: 74rem
+      
       a
         margin-top: 3rem
         &:hover
           color: $red
+      
+      ul
+        margin-top: 3rem
+        li
+          font-family: $monospace
+          display: inline
+          text-transform: uppercase
 
 </style>
