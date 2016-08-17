@@ -32,31 +32,21 @@
 
   @import "../_sass/utilities/_utilities.sass"
 
-  body.home
-    header,
-    footer
-      width: 50vw
-
-  body.project
+  body
+    background-color: $white
     header,
     footer
       width: 100vw
-    main
-      min-height: 100vh
-      background-color: $white
 
   header,
   footer
     @extend %container-padding
   
   header
-    border-bottom: 10px solid $black
     z-index: $header-z
 
   footer
-    border-top: 10px solid $black
     z-index: $footer-z
     position: relative
-    overflow: hidden
 
 </style>
