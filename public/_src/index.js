@@ -3,20 +3,21 @@ import './_sass/main.sass'
 import $ from 'jquery'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import VueResource from 'vue-resource'
+//import VueResource from 'vue-resource'
 
 // Functions
 import transition from './_app/transition.js'
 import states from './_app/states.js'
 
 // Templates
-import shell from './_vue/Shell.vue'
-import project from './_vue/Project.vue'
-import about from './_vue/About.vue'
-import home from './_vue/Home.vue'
+//import shell from './_vue/Shell.vue'
+//import project from './_vue/Project.vue'
+//import about from './_vue/About.vue'
+//import home from './_vue/Home.vue'
+import temp from './_vue/Temp.vue'
 
 // DATA
-import pageData from '../data/data.json'
+//import pageData from '../data/data.json'
 
 // APP
 Vue.use(VueRouter);
@@ -31,7 +32,14 @@ window.router = new VueRouter({
   root: '/'
 });
 
+router.map({
+  '/': {
+    component: temp
+  }
+})
+
 // Router
+/*
 router.map({
   '/': {
     component: shell,
@@ -51,7 +59,7 @@ router.map({
     }
   }
 })
-
+*/
 router.start(App, 'body')
 
 // NON VUE
