@@ -38,7 +38,7 @@
 
   h1,
   a
-    +type($pdu, 300, 6vw, 1, normal, left, $beige, uppercase, normal)
+    +type($pdu, 300, 8vw, 1, normal, left, $beige, uppercase, normal)
 
   a
     @extend %smooth

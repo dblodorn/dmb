@@ -1,13 +1,14 @@
 import './_sass/main.sass'
 
-import $ from 'jquery'
+//import $ from 'jquery'
+//import AdaptText from 'adapttext.js'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 //import VueResource from 'vue-resource'
 
 // Functions
-import transition from './_app/transition.js'
-import states from './_app/states.js'
+//import transition from './_app/transition.js'
+//import states from './_app/states.js'
 
 // Templates
 //import shell from './_vue/Shell.vue'
@@ -60,13 +61,18 @@ router.map({
   }
 })
 */
+
 router.start(App, 'body')
 
 // NON VUE
 
 var initApp = function() {
-  states.init() 
+  /*
+  setTimeout(function(){
+    var el = document.querySelector('main');
+    var adapt = new AdaptText(el);
+  }, 1000);*/
 }
 
 // RUN NOV VUE JS GLOBULAR FUNCTIONS
-document.addEventListener('DOMContentLoaded', initApp);
+// document.addEventListener('DOMContentLoaded', initApp);
