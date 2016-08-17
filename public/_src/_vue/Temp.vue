@@ -1,19 +1,19 @@
 <template lang="jade">
-  header
-    h1 {{page.title}}
-  footer
-    a(v-link="'/about'" v-on:mouseover="setBgShell") about
+  main
+    h1 {{title}}
     a(v-for="links in footer_links" v-link="links.link" target="_blank" v-on:mouseover="setBgShell") {{links.site}}
-    a(v-link="mailto:dain@db13.us" v-on:mouseover="setBgShell") dain@db13.us
 </template>
 
 <script>
   export default {
     data () {
       return {
-        page: {},
         title: "DAIN BLODORN KIM",
         footer_links: [
+          {
+            site: "DB13",
+            link: "http://www.db13.us"
+          },
           {
             site: "github",
             link: "https://github.com/dblodorn"
@@ -21,6 +21,10 @@
           {
             site: "codepen",
             link: "http://codepen.io/mrdain/"
+          },
+          {
+            site: "linkedin",
+            link: "https://www.linkedin.com/in/dain-blodorn-028324b2"
           }
         ]
       }
@@ -32,21 +36,19 @@
 
   @import "../_sass/utilities/_utilities.sass"
 
-  body
-    background-color: $white
-    header,
-    footer
-      width: 100vw
+  h1,
+  a
+    +type($pdu, 300, 6vw, 1, normal, left, $beige, uppercase, normal)
 
-  header,
-  footer
+  a
+    @extend %smooth
+    &:hover
+      text-decoration: line-through
+
+  main
     @extend %container-padding
-  
-  header
-    z-index: $header-z
-
-  footer
-    z-index: $footer-z
-    position: relative
+    width: 100vw
+    display: flex
+    flex-direction: column
 
 </style>
