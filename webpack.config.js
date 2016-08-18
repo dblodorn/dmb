@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+var Dashboard = require('webpack-dashboard');
 
 module.exports = {
   entry: './public/_src/index.js',

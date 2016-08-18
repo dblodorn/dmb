@@ -10,6 +10,9 @@ Vue.transition('home', {
       .css('opacity', 0)
       .animate({ opacity: 1 }, 0, done)
     document.querySelector('body').className = "home";
+    setTimeout(function(){
+      document.getElementById('top-shell').style.opacity = 1;
+    }, 200);
   },
   enterCancelled: function (el) {
     $(el).stop()

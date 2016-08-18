@@ -1,23 +1,18 @@
 import './_sass/main.sass'
 
-//import $ from 'jquery'
+import $ from 'jquery'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 //import VueResource from 'vue-resource'
 
 // Functions
-//import transition from './_app/transition.js'
-//import states from './_app/states.js'
+import transition from './_app/transition.js'
+import states from './_app/states.js'
 
 // Templates
 import shell from './_vue/Shell.vue'
 import intro from './_vue/Intro.vue'
-//import project from './_vue/Project.vue'
-//import about from './_vue/About.vue'
-//import home from './_vue/Home.vue'
-
-// DATA
-//import pageData from '../data/data.json'
+import work from './_vue/Work.vue'
 
 // APP
 Vue.use(VueRouter);
@@ -38,6 +33,9 @@ router.map({
     subRoutes: {
       '/': {
         component: intro
+      },
+      '/work': {
+        component: work
       }
     }
   }
@@ -71,7 +69,9 @@ router.start(App, 'body')
 // NON VUE
 
 var initApp = function() {
-  console.log('app started')
+  setTimeout(function(){
+    document.getElementById('DBK').style.opacity = 1;
+  }, 200);
 }
 
 document.addEventListener('DOMContentLoaded', initApp);
