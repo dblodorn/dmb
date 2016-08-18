@@ -1,7 +1,6 @@
 import $ from 'jquery'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-//import slider from '../_app/slider.js'
 
 // Home
 Vue.transition('home', {

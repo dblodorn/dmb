@@ -68,10 +68,15 @@
   @import "../_sass/utilities/_utilities.sass"
 
   #top-shell
-    justify-content: flex-start
-    height: 100vh
+    display: block
+    width: 80vw
+    min-height: 100vh
     text-align: right
+    float: right
+    position: relative
     a
+      display: block
+      width: 100%
       color: $white
       -webkit-text-fill-color: white
       -webkit-text-stroke-width: 2px

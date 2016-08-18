@@ -52,7 +52,6 @@
     text-transform: uppercase
     color: $black
     font-size: 14vw
-    padding-bottom: 4rem
     &:hover
       text-decoration: line-through
 
