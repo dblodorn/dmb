@@ -1,6 +1,7 @@
 import $ from 'jquery'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+//import slider from '../_app/slider.js'
 
 // Home
 Vue.transition('home', {
@@ -35,6 +36,9 @@ Vue.transition('project', {
       .css('opacity', 0)
       .animate({ opacity: 1 }, 0, done)
     document.querySelector('body').className = "project";
+    setTimeout(function(){
+      document.getElementById('top-shell').style.opacity = 1;
+    }, 400);
   },
   enterCancelled: function (el) {
     $(el).stop()

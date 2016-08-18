@@ -28,7 +28,7 @@
 
 </script>
 
-<style lang="sass?indentedSyntax" scoped>
+<style lang="sass?indentedSyntax">
 
   @import "../_sass/utilities/_utilities.sass"
 
@@ -45,12 +45,14 @@
     width: 100vw
     top: 0
     opacity: 0
+    overflow-y: scroll
 
   a
     font-family: $pdu
     text-transform: uppercase
     color: $black
     font-size: 14vw
+    padding-bottom: 4rem
     &:hover
       text-decoration: line-through
 
