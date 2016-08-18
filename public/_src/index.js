@@ -1,7 +1,6 @@
 import './_sass/main.sass'
 
 //import $ from 'jquery'
-//import AdaptText from 'adapttext.js'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 //import VueResource from 'vue-resource'
@@ -11,11 +10,11 @@ import VueRouter from 'vue-router'
 //import states from './_app/states.js'
 
 // Templates
-//import shell from './_vue/Shell.vue'
+import shell from './_vue/Shell.vue'
+import intro from './_vue/Intro.vue'
 //import project from './_vue/Project.vue'
 //import about from './_vue/About.vue'
 //import home from './_vue/Home.vue'
-import temp from './_vue/Temp.vue'
 
 // DATA
 //import pageData from '../data/data.json'
@@ -35,7 +34,12 @@ window.router = new VueRouter({
 
 router.map({
   '/': {
-    component: temp
+    component: shell,
+    subRoutes: {
+      '/': {
+        component: intro
+      }
+    }
   }
 })
 
@@ -67,12 +71,7 @@ router.start(App, 'body')
 // NON VUE
 
 var initApp = function() {
-  /*
-  setTimeout(function(){
-    var el = document.querySelector('main');
-    var adapt = new AdaptText(el);
-  }, 1000);*/
+  console.log('app started')
 }
 
-// RUN NOV VUE JS GLOBULAR FUNCTIONS
-// document.addEventListener('DOMContentLoaded', initApp);
+document.addEventListener('DOMContentLoaded', initApp);

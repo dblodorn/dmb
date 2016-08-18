@@ -32,13 +32,6 @@
       }
     }
   }
-
-  document.addEventListener('DOMContentLoaded', loadPage);
-  
-  function loadPage() {
-    //document.querySelector('body').className = "project";
-  }
-
 </script>
 
 <style lang="sass?indentedSyntax" scoped>

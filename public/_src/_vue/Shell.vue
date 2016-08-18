@@ -1,21 +1,21 @@
 <template lang="jade">
-  header
-    a(v-link="'/'" v-on:mouseover="setBgShell") {{page.title}}
-  main(v-bind:id="$route.params.slug")
+  main
+    h1 {{title}}
+    #top-shell
+      a(v-for="links in footer_links" v-link="links.link" target="_blank" v-on:mouseover="setBgShell") {{links.site}}
     router-view
-  footer
-    a(v-link="'/about'" v-on:mouseover="setBgShell") about
-    a(v-for="links in footer_links" v-link="links.link" target="_blank" v-on:mouseover="setBgShell") {{links.site}}
-    a(v-link="mailto:dain@db13.us" v-on:mouseover="setBgShell") dain@db13.us
 </template>
 
 <script>
   export default {
     data () {
       return {
-        page: {},
         title: "DAIN BLODORN KIM",
         footer_links: [
+          {
+            site: "DB13",
+            link: "http://www.db13.us"
+          },
           {
             site: "github",
             link: "https://github.com/dblodorn"
@@ -26,17 +26,6 @@
           }
         ]
       }
-    },
-    route: {
-      activate: function() {
-        var data = this.$route.shellData;
-        this.$set('page', data);
-      }
-    },
-    methods: {
-      setBgShell: function (event) {
-        $('aside').removeClass('active');
-      }
     }
   }
 </script>
@@ -45,31 +34,46 @@
 
   @import "../_sass/utilities/_utilities.sass"
 
-  body.home
-    header,
-    footer
-      width: 50vw
+  h1,
+  a
+    font-family: $pdu
+    text-transform: uppercase
 
-  body.project
-    header,
-    footer
-      width: 100vw
-    main
-      min-height: 100vh
-      background-color: $white
+  h1
+    padding: 2rem
+    color: $black
+    writing-mode: vertical-rl
+    text-orientation: sideways-right
+    font-size: 5vw
+    display: block
+    position: fixed
+    top: 2rem
+    left: -4rem
+    z-index: 120
+    background-color: $white
+    border: 1rem solid $black
+    letter-spacing: 2px
 
-  header,
-  footer
+  a
+    color: $black
+    font-size: 14vw
+    &:hover
+      text-decoration: line-through
+
+  main
+    width: 100vw
+    min-height: 100vh
+
+  #top-shell
     @extend %container-padding
-  
-  header
-    border-bottom: 10px solid $black
-    z-index: $header-z
-
-  footer
-    border-top: 10px solid $black
-    z-index: $footer-z
-    position: relative
-    overflow: hidden
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    flex-direction: column
+    position: fixed
+    z-index: 100
+    height: calc(100vh - 6rem)
+    width: 100vw
+    top: 0
 
 </style>

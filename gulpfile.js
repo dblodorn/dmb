@@ -7,6 +7,7 @@ var gulp        = require('gulp'),
 
 /* Task Library */
 gulp.task('deploy', require('./gulp-tasks/deploy')(gulp, ftp));
+gulp.task('deploy-kim', require('./gulp-tasks/deploy-kim')(gulp, ftp));
 
 gulp.task('minify', function () {
   return gulp.src(['./public/_src/_data/*.json'])
