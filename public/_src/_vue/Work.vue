@@ -3,7 +3,10 @@
     #work
       .slide(v-for="slide in project_slides" v-bind:style="{ backgroundImage: 'url(' + imgpath + slide.project + '/' + slide.project + '-cover@2x.jpg)' }")
     #top-shell
+      h1 PROJECTS
       a(v-for="links in project_links" v-link="links.link" target="_blank") {{links.site}}
+      h1 SKETCHES
+      a(v-for="links in sketch_links" v-link="links.link" target="_blank") {{links.site}}
 </template>
 
 <script>
@@ -52,6 +55,20 @@
             site: "Loving Love",
             link: "http://lovinglove.biz/"
           }
+        ],
+        sketch_links: [
+          {
+            site: "Collapsing",
+            link: "http://collapsing.db13.us/"
+          },
+          {
+            site: "Sectional",
+            link: "http://sectional.db13.us/"
+          },
+          {
+            site: "Infinite",
+            link: "http://infinite.db13.us/"
+          }
         ]
       }
     }
@@ -67,14 +84,22 @@
 
   @import "../_sass/utilities/_utilities.sass"
 
+  h1
+    font-family: $pdu
+    font-size: 4rem
+    padding: 2rem
+    border: 2px solid $black
+    background-color: $lt-grey
+    text-align: left
+
   #top-shell
     display: block
     width: 80vw
     min-height: 100vh
-    text-align: right
     float: right
     position: relative
     a
+      text-align: left
       display: block
       width: 100%
       color: $white
