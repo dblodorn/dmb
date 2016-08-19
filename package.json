@@ -46,6 +46,7 @@
     "gulp-uglify": "^1.5.2",
     "gulp-util": "^3.0.7",
     "jade": "^1.11.0",
+    "jquery-unslider": "^1.2.0",
     "json-loader": "^0.5.4",
     "node-sass": "^3.8.0",
     "require-dir": "^0.3.0",

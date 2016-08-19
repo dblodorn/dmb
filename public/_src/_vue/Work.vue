@@ -1,7 +1,8 @@
 <template lang="jade">
   section(transition="project")
     #work
-      .slide(v-for="slide in project_slides" v-bind:style="{ backgroundImage: 'url(' + imgpath + slide.project + '/' + slide.project + '-cover@2x.jpg)' }")
+      ul
+        li(v-for="slide in project_slides" v-bind:style="{ backgroundImage: 'url(' + imgpath + slide.project + '/' + slide.project + '-cover@2x.jpg)' }")
     #top-shell
       h1 PROJECTS
       a(v-for="links in project_links" v-link="links.link" target="_blank") {{links.site}}
@@ -11,7 +12,8 @@
 
 <script>
   
-  import slider from '../_app/slider.js'
+  import unslider from 'jquery-unslider'
+  import $ from 'jquery'
 
   export default {
     data () {
@@ -20,38 +22,41 @@
         project_slides: [
           {
             project: "15x19"
+          },{
+            project: "zero-one"
+          },{
+            project: "xiv"
+          },{
+            project: "tif-sigfrids"
+          },{
+            project: "sls"
+          },{
+            project: "db13"
           }
         ],
         project_links: [
           {
             site: "Tif Sigfrids",
             link: "http://tifsigfrids.com/"
-          },
-          {
+          },{
             site: "db13.us",
             link: "http://db13.us/"
-          },
-          {
+          },{
             site: "15x19.io",
             link: "http://15x19.io/"
-          },
-          {
+          },{
             site: "Kitchen Nation",
             link: "http://thekitchennation.com/"
-          },
-          {
+          },{
             site: "n/naka",
             link: "http://n-naka.com/"
-          },
-          {
+          },{
             site: "zen sekizawa",
             link: "http://zensekizawa.com/"
-          },
-          {
+          },{
             site: "Chris Cunningham Studio",
             link: "http://chriscunninghamstudio.com/"
-          },
-          {
+          },{
             site: "Loving Love",
             link: "http://lovinglove.biz/"
           }
@@ -60,28 +65,37 @@
           {
             site: "Collapsing",
             link: "http://collapsing.db13.us/"
-          },
-          {
+          },{
             site: "Sectional",
             link: "http://sectional.db13.us/"
-          },
-          {
+          },{
             site: "Infinite",
             link: "http://infinite.db13.us/"
           }
         ]
       }
+    },
+    route: {
+      canReuse: false,
+      activate: function() {
+        setTimeout(function(){
+        document.getElementById('top-shell').style.opacity = 1;
+        $('#work').unslider({
+          nav: false,
+          autoplay: true,
+          arrows: false,
+          animation: 'fade'
+        });
+      }, 400);
+      }
     }
   }
-
-  setTimeout(function(){
-    document.getElementById('top-shell').style.opacity = 1;
-  }, 400);
-
 </script>
 
 <style lang="sass?indentedSyntax" scoped>
 
+  @import "../_sass/vendor/unslider.sass"
+  @import "../_sass/vendor/unslider-dots.sass"
   @import "../_sass/utilities/_utilities.sass"
 
   h1
@@ -113,13 +127,15 @@
     min-height: 100vh
     width: 100vw
 
-  #work,
-  .slide
+  #work
     @extend %full-screen
     position: fixed
     top: 0
     left: 0
-  .slide
-    @extend %full-bg
+    ul
+      @extend %full-bg
+      li
+        @extend %full-bg
+        @extend %full-screen
 
 </style>
