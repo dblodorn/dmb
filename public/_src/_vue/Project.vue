@@ -64,7 +64,7 @@
       a
         margin-top: 3rem
         &:hover
-          color: $red
+          color: $black
       
       ul
         margin-top: 3rem

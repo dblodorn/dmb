@@ -1,5 +1,5 @@
 <template lang="jade">
-  section(transition="project")
+  section
     #work
       ul
         li(v-for="slide in project_slides" v-bind:style="{ backgroundImage: 'url(' + imgpath + slide.project + '/' + slide.project + '-cover@2x.jpg)' }")
@@ -19,6 +19,7 @@
     data () {
       return {
         imgpath: 'imgs/projects/',
+        project: {},
         project_slides: [
           {
             project: "15x19"
@@ -77,16 +78,16 @@
     },
     route: {
       canReuse: false,
-      activate: function() {
-        setTimeout(function(){
-        document.getElementById('top-shell').style.opacity = 1;
-        $('#work').unslider({
-          nav: false,
-          autoplay: true,
-          arrows: false,
-          animation: 'fade'
-        });
-      }, 400);
+        activate: function() {
+          setTimeout(function(){
+          document.getElementById('top-shell').style.opacity = 1;
+          $('#work').unslider({
+            nav: false,
+            autoplay: true,
+            arrows: false,
+            animation: 'fade'
+          });
+        }, 250);
       }
     }
   }
@@ -112,6 +113,7 @@
     min-height: 100vh
     float: right
     position: relative
+    padding-bottom: 10rem
     a
       text-align: left
       display: block

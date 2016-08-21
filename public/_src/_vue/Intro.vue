@@ -1,5 +1,5 @@
 <template lang="jade">
-  #top-shell(transition="home")
+  #top-shell
     a(v-link="'/work'") WORK
     a(v-for="links in footer_links" v-link="links.link" target="_blank") {{links.site}}
 </template>
@@ -19,13 +19,16 @@
           }
         ]
       }
+    },
+    route: {
+      canReuse: false,
+        activate: function() {
+        setTimeout(function(){
+          document.getElementById('top-shell').style.opacity = 1;
+        }, 250);
+      }
     }
   }
-
-  setTimeout(function(){
-    document.getElementById('top-shell').style.opacity = 1;
-  }, 400);
-
 </script>
 
 <style lang="sass?indentedSyntax">
