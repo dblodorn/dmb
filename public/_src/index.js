@@ -48,9 +48,21 @@ router.map({
 })
 
 // TITLE CHANGER
-
 var changeTitle = function(){
-  document.querySelector('title').innerHTML = "DAIN | M. BLODORN | KIM";
+  var titleWord = [
+    'D | 1',
+    'M | 2',
+    'B | 3',
+    'K | 4'
+  ]
+  setInterval(function(){
+    for (var i = 0; i < titleWord.length; i++) {
+      document.querySelector('title').innerHTML = titleWord[i];
+    }
+    if (i > titleWord.length){
+      i = 0;
+    }
+  }, 250); 
 }
 
 var initApp = function() {
