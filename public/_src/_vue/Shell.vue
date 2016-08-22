@@ -5,7 +5,7 @@
     router-view
     footer
       .item  
-        a(v-link="'/'") INFO
+        a(v-link="'mailto:hello@dain.kim'") EMAIL FOR INQUIRIES & MORE WORK SAMPLES
 </template>
 
 <script>
@@ -60,9 +60,10 @@
     padding: 0 2rem
     .item
       @extend %aligner
-      border: 1px solid $white
-      width: 8rem
+      border: 2px solid $white
+      width: 55rem
       height: 4rem
+      margin-left: auto
       a
         font-family: $pdu
         color: $white

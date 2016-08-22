@@ -8,7 +8,6 @@
       a.project-link(v-for="links in project_links" v-link="links.link" target="_blank") {{links.site}}
       h1 PERSONAL PROJECTS
       a.project-link(v-for="links in sketch_links" v-link="links.link" target="_blank") {{links.site}}
-      a#inquire(href="mailto:hello@dain.kim") EMAIL FOR INQUIRIES & MORE WORK SAMPLES 
 </template>
 
 <script>
@@ -112,14 +111,14 @@
   @import "../_sass/vendor/unslider-dots.sass"
   @import "../_sass/utilities/_utilities.sass"
 
-  h1,
-  a#inquire
+  h1
     font-family: $pdu
     font-size: 4rem
     padding: 2rem
-    border: 2px solid $black
-    background-color: $lt-grey
+    border: 2px solid $white
+    background-color: $black
     text-align: left
+    color: $white
 
   #top-shell
     display: block
@@ -127,7 +126,7 @@
     min-height: 100vh
     float: right
     position: relative
-    padding-bottom: 10rem
+    padding-bottom: 15rem
     a.project-link
       text-align: left
       display: block
