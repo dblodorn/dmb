@@ -4,9 +4,9 @@
       ul
         li(v-for="slide in project_slides" v-bind:style="{ backgroundImage: 'url(' + imgpath + slide.project + '/' + slide.project + '-cover@2x.jpg)' }")
     #top-shell
-      h1 PROJECTS
+      h1 CLIENT WORK
       a(v-for="links in project_links" v-link="links.link" target="_blank") {{links.site}}
-      h1 SKETCHES
+      h1 PERSONAL PROJECTS
       a(v-for="links in sketch_links" v-link="links.link" target="_blank") {{links.site}}
 </template>
 
@@ -40,14 +40,11 @@
             site: "Tif Sigfrids",
             link: "http://tifsigfrids.com/"
           },{
-            site: "db13.us",
-            link: "http://db13.us/"
-          },{
-            site: "15x19.io",
-            link: "http://15x19.io/"
-          },{
             site: "Kitchen Nation",
             link: "http://thekitchennation.com/"
+          },{
+            site: "Canon PRO",
+            link: "http://canonpro1000.com/"
           },{
             site: "n/naka",
             link: "http://n-naka.com/"
@@ -58,12 +55,27 @@
             site: "Chris Cunningham Studio",
             link: "http://chriscunninghamstudio.com/"
           },{
-            site: "Loving Love",
-            link: "http://lovinglove.biz/"
+            site: "HDR",
+            link: "http://hdr.14-forty.com/"
           }
         ],
         sketch_links: [
           {
+            site: "db13.us",
+            link: "http://db13.us/"
+          },{
+            site: "15x19.io",
+            link: "http://15x19.io/"
+          },{
+            site: "Loving Love",
+            link: "http://lovinglove.biz/"
+          },{
+            site: "AN-AH-KAY",
+            link: "http://an-ah-kay.com/"
+          },{
+            site: "SHASTA",
+            link: "http://shasta.db13.us/"
+          },{
             site: "Collapsing",
             link: "http://collapsing.db13.us/"
           },{

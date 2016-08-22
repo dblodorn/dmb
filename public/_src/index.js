@@ -48,6 +48,7 @@ router.map({
 })
 
 // TITLE CHANGER
+/*
 var changeTitle = function(){
   var titleWord = [
     'D | 1',
@@ -63,11 +64,10 @@ var changeTitle = function(){
       i = 0;
     }
   }, 250); 
-}
+}*/
 
 var initApp = function() {
   router.start(App, 'body')
-  changeTitle()
   setTimeout(function(){
     document.getElementById('DBK').style.opacity = 1;
   }, 350);
