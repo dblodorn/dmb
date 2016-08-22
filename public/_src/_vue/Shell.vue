@@ -3,6 +3,9 @@
     a#DBK(v-link="'/'")
       h1 {{title}}
     router-view
+    footer
+      .item  
+        a(v-link="'/'") INFO
 </template>
 
 <script>
@@ -43,5 +46,27 @@
     background-color: $white
     border: 1rem solid $black
     letter-spacing: 2px
+
+  footer
+    display: flex
+    align-items: center
+    z-index: 12000
+    height: 8rem
+    width: 100vw
+    position: fixed
+    bottom: 0
+    left: 0
+    background-color: $black
+    padding: 0 2rem
+    .item
+      @extend %aligner
+      border: 1px solid $white
+      width: 8rem
+      height: 4rem
+      a
+        font-family: $pdu
+        color: $white
+        font-size: 2.5rem
+        letter-spacing: 3px
 
 </style>
