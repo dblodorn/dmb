@@ -5,9 +5,10 @@
         li(v-for="slide in project_slides" v-bind:style="{ backgroundImage: 'url(' + imgpath + slide.project + '/' + slide.project + '-cover@2x.jpg)' }")
     #top-shell
       h1 CLIENT WORK
-      a(v-for="links in project_links" v-link="links.link" target="_blank") {{links.site}}
+      a.project-link(v-for="links in project_links" v-link="links.link" target="_blank") {{links.site}}
       h1 PERSONAL PROJECTS
-      a(v-for="links in sketch_links" v-link="links.link" target="_blank") {{links.site}}
+      a.project-link(v-for="links in sketch_links" v-link="links.link" target="_blank") {{links.site}}
+      a#inquire(href="mailto:hello@dain.kim") EMAIL FOR INQUIRIES & MORE WORK SAMPLES 
 </template>
 
 <script>
@@ -111,7 +112,8 @@
   @import "../_sass/vendor/unslider-dots.sass"
   @import "../_sass/utilities/_utilities.sass"
 
-  h1
+  h1,
+  a#inquire
     font-family: $pdu
     font-size: 4rem
     padding: 2rem
@@ -126,7 +128,7 @@
     float: right
     position: relative
     padding-bottom: 10rem
-    a
+    a.project-link
       text-align: left
       display: block
       width: 100%
