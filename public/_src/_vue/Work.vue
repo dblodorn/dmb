@@ -1,6 +1,6 @@
 <template lang="jade">
-  section
-    #work
+  section#work-links
+    #workslides
       ul
         li(v-for="slide in project_slides" v-bind:style="{ backgroundImage: 'url(' + imgpath + slide.project + '/' + slide.project + '-cover@2x.jpg)' }")
     #top-shell
@@ -92,8 +92,7 @@
       canReuse: false,
         activate: function() {
           setTimeout(function(){
-          document.getElementById('top-shell').style.opacity = 1;
-          $('#work').unslider({
+          $('#workslides').unslider({
             nav: false,
             autoplay: true,
             arrows: false,
@@ -120,30 +119,30 @@
     background-color: $black
     text-align: left
     color: $white
-
-  #top-shell
-    display: block
-    width: 80vw
-    min-height: 100vh
-    float: right
-    position: relative
-    padding-bottom: 15rem
-    a.project-link
-      text-align: left
-      display: block
-      width: 100%
-      color: $white
-      -webkit-text-fill-color: white
-      -webkit-text-stroke-width: 2px
-      -webkit-text-stroke-color: black
-      -webkit-font-smoothing: antialiased
-
-  section
+  
+  section#work-links
     @extend %clearfix
     min-height: 100vh
     width: 100vw
+    #top-shell
+      opacity: 1
+      display: block
+      width: 80vw
+      min-height: 100vh
+      float: right
+      position: relative
+      padding-bottom: 15rem
+      a.project-link
+        text-align: left
+        display: block
+        width: 100%
+        color: $white
+        -webkit-text-fill-color: white
+        -webkit-text-stroke-width: 2px
+        -webkit-text-stroke-color: black
+        -webkit-font-smoothing: antialiased
 
-  #work
+  #workslides
     @extend %full-screen
     position: fixed
     top: 0
