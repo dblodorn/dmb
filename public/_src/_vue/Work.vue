@@ -4,9 +4,9 @@
       ul
         li(v-for="slide in project_slides" v-bind:style="{ backgroundImage: 'url(' + imgpath + slide.project + '/' + slide.project + '-cover@2x.jpg)' }")
     #top-shell
-      h1 CLIENT WORK
+      h1 CLIENT
       a.project-link(v-for="links in project_links" v-link="links.link" target="_blank") {{links.site}}
-      h1 PERSONAL PROJECTS
+      h1 PROJECTS
       a.project-link(v-for="links in sketch_links" v-link="links.link" target="_blank") {{links.site}}
 </template>
 
