@@ -1,13 +1,15 @@
 {
   "articles": [
     {
-      "date": "08-24-2016",
+      "date": "08-22-2016",
       "title": "Zachary Leener Poster",
-      "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam odio leo, tincidunt non dolor in, porttitor egestas sapien. Aenean nec venenatis dolor. Fusce ac eleifend dui. Mauris sit amet fermentum turpis, non venenatis urna. Nam quis hendrerit ex. Duis sodales mauris a nisi feugiat, sed varius mauris convallis. Duis fermentum mattis sem. Duis nec urna sed tellus tincidunt condimentum non ut nibh."
+      "image": "imgs/news/leener.gif", 
+      "copy": "Designed some stuffy 80's style upper west-side exhibition posters for <a href='http://tifsigfrids.com/artists/zachary-leener/' target='_blank'>Zachary Leener's</a> upcoming exhibit  <a href='http://tifsigfrids.com/exhibitions/zachary-leener-woronowii-editions/' target='_blank'>The Woronowii Editions</a> at <a href='http://tifsigfrids.com' target='_blank'>TIF SIGFRIDS</a>!"
     },{
-      "date": "08-24-2018",
-      "title": "Ding Dong",
-      "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam odio leo, tincidunt non dolor in, porttitor egestas sapien. Aenean nec venenatis dolor. Fusce ac eleifend dui. Mauris sit amet fermentum turpis, non venenatis urna. Nam quis hendrerit ex. Duis sodales mauris a nisi feugiat, sed varius mauris convallis. Duis fermentum mattis sem. Duis nec urna sed tellus tincidunt condimentum non ut nibh."
+      "date": "08-16-2018",
+      "title": "CHRIS CUNNINHAM STUDIO",
+      "image": "imgs/news/cunningham.gif", 
+      "copy": "Very excited to provide Chris Cunningham Studio with development consulting on the initial launch of their new web presence. <a href='http://chriscunninghamstudio.com' target='_blank'>Get psyched on this teaser of myriad projects this hyper influential director has been working on!</a>"
     }
   ]
 }
