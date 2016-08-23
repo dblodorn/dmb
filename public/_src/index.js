@@ -14,9 +14,11 @@ import shell from './_vue/Shell.vue'
 import intro from './_vue/Intro.vue'
 import work from './_vue/Work.vue'
 import about from './_vue/About.vue'
+import news from './_vue/News.vue'
 import project from './_vue/Project.vue'
 
-import data from './_data/data.json'
+//import pageData from './_data/data.json'
+import newsData from './_data/news.json'
 
 // APP
 Vue.use(VueRouter);
@@ -46,7 +48,11 @@ router.map({
       },
       '/:slug': {
         component: project
-      }
+      },
+      '/news': {
+        component: news,
+        data: newsData
+      },
     }
   }
 })

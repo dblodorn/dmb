@@ -3,6 +3,8 @@
     a#DBK(v-link="'/'") {{title}}
     router-view
     footer
+      .btn.news
+        a(v-link="'/news'") NEWS
       .btn.contact
         a(href="mailto:hello@dain.kim") CONTACT
     #footer-bg
@@ -79,5 +81,8 @@
 
   .btn.contact
     margin-left: auto
+
+  .btn.new
+    margin-right: auto
 
 </style>

@@ -1,0 +1,13 @@
+{
+  "articles": [
+    {
+      "date": "08-24-2016",
+      "title": "Zachary Leener Poster",
+      "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam odio leo, tincidunt non dolor in, porttitor egestas sapien. Aenean nec venenatis dolor. Fusce ac eleifend dui. Mauris sit amet fermentum turpis, non venenatis urna. Nam quis hendrerit ex. Duis sodales mauris a nisi feugiat, sed varius mauris convallis. Duis fermentum mattis sem. Duis nec urna sed tellus tincidunt condimentum non ut nibh."
+    },{
+      "date": "08-24-2018",
+      "title": "Ding Dong",
+      "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam odio leo, tincidunt non dolor in, porttitor egestas sapien. Aenean nec venenatis dolor. Fusce ac eleifend dui. Mauris sit amet fermentum turpis, non venenatis urna. Nam quis hendrerit ex. Duis sodales mauris a nisi feugiat, sed varius mauris convallis. Duis fermentum mattis sem. Duis nec urna sed tellus tincidunt condimentum non ut nibh."
+    }
+  ]
+}

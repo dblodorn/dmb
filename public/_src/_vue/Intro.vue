@@ -6,20 +6,6 @@
 
 <script>
   export default {
-    data () {
-      return {
-        footer_links: [
-          {
-            site: "github",
-            link: "https://github.com/dblodorn"
-          },
-          {
-            site: "codepen",
-            link: "http://codepen.io/mrdain/"
-          }
-        ]
-      }
-    },
     route: {
       canReuse: false,
         activate: function() {
