@@ -73,8 +73,7 @@
     .news-content
       z-index: 1000
       max-width: 70rem
-      border: 2px solid $white
-      padding: 3vw
+      padding: 2rem
       position: relative
       h1
         margin-bottom: 6rem
