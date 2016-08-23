@@ -42,6 +42,9 @@
     a
       text-transform: none
       letter-spacing: 0
+    img
+      padding: 1rem
+      border: 1px solid $white
   
   .news-copy:last-child
     margin-bottom: 0
