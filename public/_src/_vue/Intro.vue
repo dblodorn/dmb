@@ -37,14 +37,14 @@
 
   #top-shell
     @extend %container-padding
-    @extend %smooth-slow
+    @extend %smooth
     display: flex
     align-items: flex-end
     justify-content: center
     flex-direction: column
     position: fixed
     z-index: 100
-    height: calc(100vh - 6rem)
+    height: calc(100vh - 8rem)
     width: 100vw
     top: 0
     opacity: 0
