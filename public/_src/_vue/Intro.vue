@@ -1,7 +1,7 @@
 <template lang="jade">
   #top-shell
     a(v-link="'/work'") WORK
-    a(v-for="links in footer_links" v-link="links.link" target="_blank") {{links.site}}
+    a(v-link="'/about'") ABOUT
 </template>
 
 <script>

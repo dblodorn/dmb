@@ -13,6 +13,7 @@ import states from './_app/states.js'
 import shell from './_vue/Shell.vue'
 import intro from './_vue/Intro.vue'
 import work from './_vue/Work.vue'
+import about from './_vue/About.vue'
 import project from './_vue/Project.vue'
 
 import data from './_data/data.json'
@@ -40,31 +41,15 @@ router.map({
       '/work': {
         component: work
       },
+      '/about': {
+        component: about
+      },
       '/:slug': {
         component: project
       }
     }
   }
 })
-
-// TITLE CHANGER
-/*
-var changeTitle = function(){
-  var titleWord = [
-    'D | 1',
-    'M | 2',
-    'B | 3',
-    'K | 4'
-  ]
-  setInterval(function(){
-    for (var i = 0; i < titleWord.length; i++) {
-      document.querySelector('title').innerHTML = titleWord[i];
-    }
-    if (i > titleWord.length){
-      i = 0;
-    }
-  }, 250); 
-}*/
 
 var initApp = function() {
   router.start(App, 'body')

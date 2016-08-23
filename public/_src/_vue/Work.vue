@@ -113,7 +113,8 @@
 
   h1
     font-family: $pdu
-    font-size: 4rem
+    font-size: 3.5rem
+    letter-spacing: 3px
     padding: 2rem
     border: 2px solid $white
     background-color: $black
