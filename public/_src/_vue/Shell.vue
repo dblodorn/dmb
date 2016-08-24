@@ -29,7 +29,7 @@
     min-height: 100vh
 
   #DBK
-    @extend %smooth-slow
+    @extend %smooth
     opacity: 0
     font-family: $pdu
     text-transform: uppercase

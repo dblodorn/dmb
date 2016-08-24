@@ -1,7 +1,7 @@
 <template lang="jade">
   #top-shell
-    a(v-link="'/work'") WORK
-    a(v-link="'/about'") ABOUT
+    a.letter-breaker(v-link="'/work'") WORK
+    a.letter-breaker(v-link="'/about'") ABOUT
 </template>
 
 <script>
@@ -10,6 +10,10 @@
       canReuse: false,
         activate: function() {
         setTimeout(function(){
+          $('.letter-breaker').each(function() {
+            var $this = $(this);
+            $this.html($this.text().replace(/(\w)/g, "<span>$&</span>"));
+          });
           document.getElementById('top-shell').style.opacity = 1;
         }, 250);
       }
@@ -43,5 +47,18 @@
     font-size: 14vw
     &:hover
       text-decoration: line-through
+
+  .letter-breaker
+    span:nth-child(1n)
+      color: red
+
+    span:nth-child(2n)
+      color: blue
+
+    span:nth-child(3n)
+      color: yellow
+      
+    span:nth-child(4n)
+      color: green
 
 </style>
