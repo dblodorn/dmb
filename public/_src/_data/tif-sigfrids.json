@@ -1,6 +1,6 @@
 {
   "project_name": "tifsigfrids.com",
-  "project_copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam odio leo, tincidunt non dolor in, porttitor egestas sapien. Aenean nec venenatis dolor. Fusce ac eleifend dui. Mauris sit amet fermentum turpis, non venenatis urna. Nam quis hendrerit ex. Duis sodales mauris a nisi feugiat, sed varius mauris convallis. Duis fermentum mattis sem. Duis nec urna sed tellus tincidunt condimentum non ut nibh.",
+  "project_copy": "Tif Sigfrids is a contemporary art gallery in Los Angeles that shows conceptual art - and boasts a truly fine roster of artists from both Los Angeles and abroad. I developed and designed this website for the gallery - it is a completely custom WordPress theme constructed from the ground up. Some exciting additions to the build were the use of sass for styling and gulp for task management. I also enjoyed working with the client in crafting an intuitive back-end using Advanced Custom Fields that left a lot of the WordPress cruft on the cutting room floor!",
   "categories": [
     "conceptual art",
     "graphic design",

@@ -1,9 +1,21 @@
 {
   "project_name": "xiv",
-  "project_copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam odio leo, tincidunt non dolor in, porttitor egestas sapien. Aenean nec venenatis dolor. Fusce ac eleifend dui. Mauris sit amet fermentum turpis, non venenatis urna. Nam quis hendrerit ex. Duis sodales mauris a nisi feugiat, sed varius mauris convallis. Duis fermentum mattis sem. Duis nec urna sed tellus tincidunt condimentum non ut nibh.",
+  "project_copy": "I created this illustration for the branding of XIV restaurant by Michael Mina, it was used throughout the restaurant's identity system - and was even wrapped around the entire building at the intersection of Sunset Blvd. and Crescent Heights! Apparently a lot of passers by really enjoyed it - somehow a punked up Fragonard struck a chord at the height of the 2008 bubble(burst).",
   "categories": [
     "conceptual art",
     "graphic design",
     "web development"
+  ],
+  "images":[
+    {
+      "project_image": "dain-blodorn-kim-xiv-01.jpg",
+      "image_alt": "Dain Blodorn Kim xiv Mural 01"
+    },{
+      "project_image": "dain-blodorn-kim-xiv-03.jpg",
+      "image_alt": "Dain Blodorn Kim xiv Mural 03"
+    },{
+      "project_image": "dain-blodorn-kim-xiv-04.jpg",
+      "image_alt": "Dain Blodorn Kim SLS Mural 04"
+    }
   ]
 }

@@ -5,9 +5,9 @@
         li(v-for="slide in project_slides" v-bind:style="{ backgroundImage: 'url(' + imgpath + slide.project + '/' + slide.project + '-cover@2x.jpg)' }")
     #top-shell
       h1 CLIENT
-      a.project-link(v-for="links in project_links" v-link="links.link" target="_blank") {{links.site}}
+      a.project-link(v-for="links in project_links" v-link="links.link" v-bind:target="links.target") {{links.site}}
       h1 PROJECTS
-      a.project-link(v-for="links in sketch_links" v-link="links.link" target="_blank") {{links.site}}
+      a.project-link(v-for="links in sketch_links" v-link="links.link" v-bind:target="links.target") {{links.site}}
 </template>
 
 <script>
@@ -38,51 +38,70 @@
         project_links: [
           {
             site: "Tif Sigfrids",
-            link: "http://tifsigfrids.com/"
+            target: "",
+            link: "tif-sigfrids"
           },{
-            site: "Kitchen Nation",
-            link: "http://thekitchennation.com/"
+            site: "SLS",
+            target: "",
+            link: "sls"
           },{
-            site: "Canon PRO",
-            link: "http://canonpro1000.com/"
+            site: "xiv",
+            target: "",
+            link: "xiv"
           },{
             site: "n/naka",
+            target: "_blank",
             link: "http://n-naka.com/"
           },{
             site: "zen sekizawa",
+            target: "_blank",
             link: "http://zensekizawa.com/"
           },{
-            site: "Chris Cunningham Studio",
-            link: "http://chriscunninghamstudio.com/"
+            site: "Kitchen Nation",
+            target: "_blank",
+            link: "http://thekitchennation.com/"
           },{
             site: "HDR",
+            target: "_blank",
             link: "http://hdr.14-forty.com/"
+          },{
+            site: "Canon PRO",
+            target: "_blank",
+            link: "http://canonpro1000.com/"
           }
         ],
         sketch_links: [
           {
             site: "db13.us",
-            link: "http://db13.us/"
+            target: "",
+            link: "db13"
           },{
             site: "15x19.io",
-            link: "http://15x19.io/"
+            target: "",
+            link: "15x19"
           },{
             site: "Loving Love",
+            target: "_blank",
             link: "http://lovinglove.biz/"
           },{
             site: "AN-AH-KAY",
+            target: "_blank",
             link: "http://an-ah-kay.com/"
           },{
             site: "SHASTA",
+            target: "_blank",
             link: "http://shasta.db13.us/"
           },{
             site: "Collapsing",
+            target: "_blank",
             link: "http://collapsing.db13.us/"
           },{
             site: "Sectional",
+            target: "_blank",
             link: "http://sectional.db13.us/"
           },{
             site: "Infinite",
+            target: "_blank",
             link: "http://infinite.db13.us/"
           }
         ]

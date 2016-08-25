@@ -49,6 +49,9 @@
       text-decoration: line-through
 
   .letter-breaker
+    -webkit-text-stroke-width: 2px
+    -webkit-text-stroke-color: black
+    -webkit-font-smoothing: antialiased
     span:nth-child(1n)
       color: red
 

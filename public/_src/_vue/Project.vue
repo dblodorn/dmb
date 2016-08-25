@@ -1,13 +1,15 @@
 <template lang="jade">
-  section.single-project(transition="project")
+  section.single-project
     h1 {{project.project_name}}
-    aside(v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '-portfolio-landing-desktop@1x.jpg)' }")
+    aside(v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '-portfolio-landing-desktop@2x.jpg)' }")
     article.project-description
-      p {{project.project_copy}}
-      ul
-        li(v-for="catgegory in project.categories")
-          p {{catgegory}}
-      a(v-for="link in project.links" v-link="link.site_link" target="_blank") {{link.link_copy}}
+      p.project-copy {{{project.project_copy}}}
+        a(v-for="link in project.links" v-link="link.site_link" target="_blank") {{link.link_copy}}
+    ul.images(v-if="project.images")
+      li(v-for="image in project.images")
+        img(v-bind:src="imgpath + '/' + $route.params.slug + '/' + image.project_image" v-bind:alt="image.image_alt")
+    .btn.work
+      a(v-link="'/work'") WORK
 </template>
 
 <script>
@@ -21,7 +23,7 @@
     route: {
       canReuse: false,
       activate: function() {
-        var id = this.$route.params.slug;
+        var id = this.$route.params.slug
         this.$http.get('/data/' + id + '.json').then (
         function (data) {
           this.$set('project', data.json());
@@ -38,31 +40,38 @@
 
   @import "../_sass/utilities/_utilities.sass"
 
-  main
-    width: 100vw
-
-  section
+  section.single-project
+    background-color: $white
+    padding-bottom: 8rem
     h1
       width: 100vw
       background-color: $black
+      position: fixed
+      top: 0
+      left: 0
+      z-index: 1500
 
     aside
       @extend %full-bg
       @extend %border-bottom
       width: 100vw
-      height: calc(100vh + 10rem)
+      height: calc(100vh - 30rem)
     
     article.image-grid
       @extend %border-bottom
       max-width: 100vw
       padding: 0
+      background-color: $white
 
     article.project-description
-      @extend %container-padding
+      padding: 6rem 2rem 2rem
       max-width: 74rem
-      
+      position: relative
+      margin: auto
       a
+        font-size: 4rem
         margin-top: 3rem
+        text-align: center
         &:hover
           color: $black
       
@@ -72,5 +81,30 @@
           font-family: $monospace
           display: inline
           text-transform: uppercase
+
+    ul.images
+      max-width: 150rem
+      background-color: $white
+      display: flex
+      align-content: center
+      justify-content: center
+      flex-direction: row
+      flex-wrap: wrap
+      margin: auto
+      position: relative
+      padding-bottom: 6rem
+      li
+        align-self: center
+        max-width: 70rem
+        padding: 1rem
+
+    .btn.work
+      position: fixed
+      bottom: 2rem
+      left: 0
+      right: 0
+      margin: auto
+      z-index: 13000
+      width: 9rem
 
 </style>

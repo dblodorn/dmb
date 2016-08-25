@@ -6,7 +6,7 @@ var gulp        = require('gulp'),
     ftp         = require('vinyl-ftp');
 
 /* Task Library */
-gulp.task('deploy', require('./gulp-tasks/deploy')(gulp, ftp));
+//gulp.task('deploy', require('./gulp-tasks/deploy')(gulp, ftp));
 gulp.task('deploy-kim', require('./gulp-tasks/deploy-kim')(gulp, ftp));
 
 gulp.task('minify', function () {
