@@ -49,6 +49,10 @@
             target: "",
             link: "xiv"
           },{
+            site: "zero-one",
+            target: "",
+            link: "zero-one"
+          },{
             site: "n/naka",
             target: "_blank",
             link: "http://n-naka.com/"
@@ -61,13 +65,13 @@
             target: "_blank",
             link: "http://thekitchennation.com/"
           },{
-            site: "HDR",
-            target: "_blank",
-            link: "http://hdr.14-forty.com/"
-          },{
             site: "Canon PRO",
             target: "_blank",
             link: "http://canonpro1000.com/"
+          },{
+            site: "HDR",
+            target: "_blank",
+            link: "http://hdr.14-forty.com/"
           }
         ],
         sketch_links: [

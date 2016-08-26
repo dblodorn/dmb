@@ -55,7 +55,7 @@
       @extend %full-bg
       @extend %border-bottom
       width: 100vw
-      height: calc(100vh - 30rem)
+      height: calc(100vh - 20rem)
     
     article.image-grid
       @extend %border-bottom
