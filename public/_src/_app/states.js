@@ -7,7 +7,7 @@ define('states', ['simplestatemanager'], function(ssm) {
   
     ssm.addState({
       id: 'mobile',
-      query: '(max-width: 767px)',
+      query: '(max-width: 1023px)',
       onEnter: function(){
         html.className = "mobile";
       }
