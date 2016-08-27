@@ -25,6 +25,8 @@
       canReuse: false,
         activate: function() {
           
+          $('body').animate({ scrollTop: 0 }, 5);
+
           var data = this.$route.data;
           this.$set('work', data);
           

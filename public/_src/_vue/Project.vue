@@ -22,6 +22,7 @@
     route: {
       canReuse: false,
       activate: function() {
+        $('body').animate({ scrollTop: 0 }, 5);
         var id = this.$route.params.slug
         this.$http.get('/data/' + id + '.json').then (
         function (data) {
