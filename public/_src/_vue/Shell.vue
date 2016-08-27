@@ -1,6 +1,7 @@
 <template lang="jade">
+  a#dbk(v-link="'/'")
+    h1 {{title}}
   main
-    a#DBK(v-link="'/'") {{title}}
     router-view
     footer
       .btn.news
@@ -24,13 +25,7 @@
 
   @import "../_sass/utilities/_utilities.sass"
 
-  main
-    width: 100vw
-    min-height: 100vh
-
-  #DBK
-    @extend %smooth
-    opacity: 0
+  #dbk
     font-family: $pdu
     text-transform: uppercase
     padding: 2rem
@@ -48,36 +43,22 @@
     border: 2px solid $white
     letter-spacing: 2px
 
+  footer
+    z-index: 12000
+
   #footer-bg
     background-color: $black
     z-index: 10
-
-  footer
-    z-index: 12000
   
   footer,
   #footer-bg
-    display: flex
-    align-items: center
+    @extend %aligner-vertical
     height: 8rem
     width: 100vw
     position: fixed
     bottom: 0
     left: 0
     padding: 0 2rem
-
-  .btn
-    @extend %aligner
-    border: 2px solid $white
-    height: 4rem
-    padding-left: 1.25rem
-    padding-right: .75rem
-    background-color: $black
-    a
-      font-family: $pdu
-      color: $white
-      font-size: 2.5rem
-      letter-spacing: 3px
 
   .btn.contact
     margin-left: auto

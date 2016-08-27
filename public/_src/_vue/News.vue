@@ -1,9 +1,9 @@
 <template lang="jade">
-  section#about
-    .news-content
-      .news-copy(v-for="article in news.articles")
-        h1 {{article.date}}
-        h2 {{article.title}}
+  section#content
+    article.copy-content
+      .copy.news-copy(v-for="article in news.articles")
+        h2 {{article.date}}
+        h3 {{article.title}}
         p {{{article.copy}}}
         img(v-bind:src="article.image")
 </template>
@@ -20,6 +20,9 @@
       activate: function() {
         var data = this.$route.data;
         this.$set('news', data);
+        setTimeout(function(){
+          $('.copy-content').addClass('fade-in-slow')
+        }, 150);
       }
     }
   }
@@ -31,7 +34,8 @@
 
   .news-copy
     margin-bottom: 8rem
-    h1
+    
+    h2
       font-size: 4rem
       color: $black
       -webkit-text-fill-color: black
@@ -39,6 +43,16 @@
       -webkit-text-stroke-color: white
       -webkit-font-smoothing: antialiased
       margin-bottom: 2rem!important
+    
+    h3
+      font-family: $pdu
+      font-size: 4rem
+      color: $white
+      text-transform: uppercase
+      margin-bottom: 2rem
+      width: 100%
+      text-align: center
+
     a
       text-transform: none
       letter-spacing: 0

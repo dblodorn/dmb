@@ -31,6 +31,9 @@
         function (data) {
           alert('Failed to load data');
         }); 
+        setTimeout(function(){
+          $('.single-project').addClass('fade-in-slow')
+        }, 150);
       }
     }
   }
@@ -43,6 +46,8 @@
   section.single-project
     background-color: $white
     padding-bottom: 8rem
+    opacity: 0
+    
     h1
       width: 100vw
       background-color: $black
@@ -57,12 +62,6 @@
       width: 100vw
       height: calc(100vh - 20rem)
     
-    article.image-grid
-      @extend %border-bottom
-      max-width: 100vw
-      padding: 0
-      background-color: $white
-
     article.project-description
       padding: 6rem 2rem 2rem
       max-width: 74rem
@@ -73,23 +72,13 @@
         margin-top: 3rem
         text-align: center
         &:hover
-          color: $black
-      
-      ul
-        margin-top: 3rem
-        li
-          font-family: $monospace
-          display: inline
-          text-transform: uppercase
+          color: $black 
 
     ul.images
+      @extend %aligner
+      @extend %flex-row-wrap
       max-width: 150rem
       background-color: $white
-      display: flex
-      align-content: center
-      justify-content: center
-      flex-direction: row
-      flex-wrap: wrap
       margin: auto
       position: relative
       padding-bottom: 6rem

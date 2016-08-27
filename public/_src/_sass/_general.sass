@@ -13,17 +13,58 @@ body
   width: 100vw
   min-height: 100vh
   margin: 0
-  background-color: $lt-grey
   *
     @extend %border-box
 
+main
+  width: 100vw
+  min-height: 100vh
+
 nav
   z-index: $nav-z
-
-section
-  background-color: $lt-grey
 
 img
   width: 100%
   height: auto
   margin-bottom: -3px
+
+// ARTICLE STYLING
+
+section#content
+  display: flex
+  justify-content: center
+  width: 100vw
+  min-height: 100vh
+  background-color: $black
+  padding: 2rem 0 12rem
+
+article.copy-content
+  z-index: 6000
+  max-width: 70rem
+  padding: 2rem
+  position: relative
+  opacity: 0
+  
+  h2
+    margin: 2rem 0 4rem
+  
+  a
+    font-size: 3.5rem
+    letter-spacing: 3px
+    margin-bottom: 2.5rem
+  
+  a:last-child
+    margin-bottom: 0
+
+  *
+    color: $white!important
+  
+  .copy
+    a
+      font-family: $monospace
+      font-size: 2rem
+      line-height: 1.5
+      display: inline
+      text-decoration: underline
+      &:hover
+        text-decoration: line-through

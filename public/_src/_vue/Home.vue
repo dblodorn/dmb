@@ -1,76 +1,58 @@
 <template lang="jade">
-  section.prj-li(transition="home")
-    nav
-      a(v-for="item in page.projects" v-link="item" v-on:mouseover="setBg") {{item}}
-  aside.dflt
-  aside.prj(v-for="item in page.projects" v-bind:class="item" v-bind:style="{ backgroundImage: 'url(' + imgpath + item + '/' + item + '-cover@1x.jpg)' }")
+  nav.home-menu
+    a.letter-breaker(v-link="'/work'") WORK
+    a.letter-breaker(v-link="'/about'") ABOUT
 </template>
 
 <script>
+  
+  import utility from "../_app/utilities.js"
+
   export default {
-    data () {
-      return {
-        page: {},
-        imgpath: 'imgs/projects/'
-      }
-    },
     route: {
       canReuse: false,
-      activate: function() {
-        var data = this.$route.data;
-        this.$set('page', data);
-      }
-    },
-    methods: {
-      setBg: function (event) {
-        var hoveredEl = event.target,
-            projectElement = 'aside.' + hoveredEl.innerHTML; 
-        if(!$(projectElement).hasClass('active')) {
-          $('aside').removeClass('active');
-          $(projectElement).addClass('active');
-        } else {
-          $(projectElement).removeClass('active');
-        }
+        activate: function() {
+        utility.letterBreaker('.letter-breaker')
+        utility.setId('main','home')
+        setTimeout(function(){
+          $('.home-menu').addClass('fade-in-slow')
+        }, 150);
       }
     }
   }
 </script>
 
-<style lang="sass?indentedSyntax" scoped>
+<style lang="sass?indentedSyntax">
 
   @import "../_sass/utilities/_utilities.sass"
 
-  main
-    width: 50vw
+  main#home
+    background-color: $lt-grey
 
-  section.prj-li
-    @extend %container-padding
-    display: block
-    width: 50vw
-    position: relative
-    a
-      color: $black
-      background-color: $white
-      &:hover
-        color: $white
-        background-color: $black
-
-  aside
-    @extend %cover-no-repeat
-    border-left: 10px solid $black
-    height: 100vh
-    width: 50vw
-    position: fixed
-    top: 0
-    right: 0
-    z-index: 10000
-    background-color: $white
-
-  aside.prj
-    @extend %smooth-slow
+  nav.home-menu
+    @extend %nav-shell
     opacity: 0
+    align-content: center
+    a
+      width: 100%
+      text-align: right
+    span
+      line-height: normal
 
-  aside.prj.active
-    opacity: 1
+  .letter-breaker
+    -webkit-text-stroke-width: 2px
+    -webkit-text-stroke-color: black
+    -webkit-font-smoothing: antialiased
+    span:nth-child(1n)
+      color: red
+
+    span:nth-child(2n)
+      color: blue
+
+    span:nth-child(3n)
+      color: yellow
+      
+    span:nth-child(4n)
+      color: green
 
 </style>
