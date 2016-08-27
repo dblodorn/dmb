@@ -13,23 +13,6 @@
   &:after
     clear: both
 
-// Nav
-
-%nav-shell
-  display: flex
-  justify-content: flex-start
-  flex-direction: row
-  flex-wrap: wrap
-  width: 80vw
-  min-height: 100vh
-  position: relative
-  padding: 2rem 2rem 15rem
-  margin-left: auto
-  a
-    font-family: $pdu
-    text-transform: uppercase
-    font-size: 14vw
-
 // Border Box
 
 %border-box
@@ -55,6 +38,9 @@
 // Design
 %border-bottom
   border-bottom: 10px solid $black
+
+%black-shadow
+  +box-shadow(0,1px,12px,rgba(0, 0, 0, 0.125))
 
 // Sizing
 %full-screen
@@ -87,3 +73,66 @@
 
 %aligner-item--bottom
   align-self: flex-end
+
+// COLOR
+
+%gradient-bg-grey
+  background: linear-gradient(94deg, #454545, #a5a5a5, #92aa9c)
+  background-size: 600% 600%
+  -webkit-animation: AnimationName 16s ease infinite
+  -moz-animation: AnimationName 16s ease infinite
+  animation: AnimationName 16s ease infinite
+  
+  @-webkit-keyframes AnimationName
+    0%
+      background-position: 0% 87%
+    50%
+      background-position: 100% 14%
+    100%
+      background-position: 0% 87%
+
+  @-moz-keyframes AnimationName
+    0%
+      background-position: 0% 87%
+    50%
+      background-position: 100% 14%
+    100%
+      background-position: 0% 87%
+
+  @keyframes AnimationName
+    0%
+      background-position: 0% 87%
+    50%
+      background-position: 100% 14%
+    100%
+      background-position: 0% 87%
+
+%color-gradient
+  background: linear-gradient(270deg, #35ae8f, #dfee0e, #ee730e, #0ea7ee)
+  background-size: 800% 800%
+  -webkit-animation: AnimationName 30s ease infinite
+  -moz-animation: AnimationName 30s ease infinite
+  animation: AnimationName 30s ease infinite
+  @-webkit-keyframes AnimationName
+    0%
+      background-position: 0% 50%
+    50%
+      background-position: 100% 50%
+    100%
+      background-position: 0% 50%
+
+  @-moz-keyframes AnimationName
+    0%
+      background-position: 0% 50%
+    50%
+      background-position: 100% 50%
+    100%
+      background-position: 0% 50%
+
+  @keyframes AnimationName
+    0%
+      background-position: 0% 50%
+    50%
+      background-position: 100% 50%
+    100%
+      background-position: 0% 50%

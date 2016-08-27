@@ -52,6 +52,21 @@
   @import "../_sass/vendor/unslider-dots.sass"
   @import "../_sass/utilities/_utilities.sass"
 
+  html.mobile
+    nav.project-menu
+      h2
+        font-size: 3rem
+        line-height: .4
+      a.project-link
+        padding-bottom: 1rem
+
+
+  html.desktop
+    nav.project-menu
+      h2
+        font-size: 4.25rem
+
+  // BASE
   nav.project-menu
     @extend %nav-shell
     opacity: 0
@@ -59,14 +74,16 @@
       color: $white
       width: 100%
     h2
+      @extend %black-shadow
       width: 100%
       font-family: $pdu
-      font-size: 3.5rem
+      font-size: 4.25rem
       letter-spacing: 3px
       padding: 2rem
       border: 2px solid $white
       background-color: $black
       text-align: left
+      line-height: .75
     a.project-link
       text-align: left
       display: block

@@ -63,7 +63,7 @@ router.map({
 var initApp = function() {
   router.start(App, 'body')
   setTimeout(function(){
-    $('#dbk , footer , #footer-bg , main').addClass('fade-in-slow');
+    $('#dbk , .secondary-nav , .secondary-nav-bg , main').addClass('fade-in-slow');
   }, 250);
   states.init();
 }

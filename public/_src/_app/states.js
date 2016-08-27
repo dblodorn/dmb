@@ -14,14 +14,6 @@ define('states', ['simplestatemanager'], function(ssm) {
     });
 
     ssm.addState({
-      id: 'tablet',
-      query: '(min-width: 768px) and (max-width: 1023px)',
-      onEnter: function(){
-        html.className = "tablet";
-      }
-    });
-
-    ssm.addState({
       id: 'desktop',
       query: '(min-width: 1024px)',
       onEnter: function(){
