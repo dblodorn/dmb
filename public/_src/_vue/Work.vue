@@ -31,6 +31,10 @@
           this.$set('work', data);
           
           setTimeout(function(){
+            $('.project-menu').addClass('fade-in-slow')
+          }, 75);
+
+          setTimeout(function(){
             $('#workslides').unslider({
               nav: false,
               autoplay: true,
@@ -38,11 +42,6 @@
               animation: 'fade'
             });
           }, 250);
-
-          setTimeout(function(){
-            $('.project-menu').addClass('fade-in-slow')
-          }, 150);
-      
       }
     }
   }

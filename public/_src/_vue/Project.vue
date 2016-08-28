@@ -4,19 +4,28 @@
     aside(v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '-portfolio-landing-desktop@2x.jpg)' }")
     article.project-description
       p.project-copy {{{project.project_copy}}}
-      a.project-link(v-for="link in project.links" v-link="link.site_link" target="_blank") {{link.link_copy}}
+      a.bottom-btn(v-for="link in project.links" v-link="link.site_link" target="_blank") {{link.link_copy}}
     ul.images(v-if="project.images")
       li(v-for="image in project.images")
         img(v-bind:src="imgpath + '/' + $route.params.slug + '/' + image.project_image" v-bind:alt="image.image_alt")
-    a.back-to-work(v-link="'/work'") MORE WORK
+    a.bottom-btn(v-link="'/work'") MORE WORK
+    a.bottom-btn(v-on:click="top") TOP
 </template>
 
 <script>
+  
+  import smoothScroll from 'smoothscroll'
+
   export default {
     data () {
       return {
         project: {},
         imgpath: 'imgs/projects/'
+      }
+    },
+    methods: {
+      top: function (event) {
+        $('body').animate({ scrollTop: 0 }, 175);
       }
     },
     route: {
@@ -55,8 +64,6 @@
         height: 55vh
       ul.images
         padding: 0 2rem 2rem
-      a.back-to-work
-        margin: 3rem auto 0
 
   html.desktop
     section.single-project
@@ -66,13 +73,11 @@
         top: 0
         left: 0
       article.project-description
-        padding: 8rem 1.5rem 4rem
+        padding: 7rem 1.5rem 3rem
       aside
         height: calc(100vh - 20rem)
       ul.images
         padding: 0 2rem 4rem
-      a.back-to-work
-        margin: 0 auto
 
   // BASER
   section.single-project
@@ -116,16 +121,5 @@
         align-self: center
         max-width: 80rem
         padding: 1.5rem
-
-    a.back-to-work
-      @extend %color-gradient
-      font-size: 3.5rem
-      width: 20rem
-      text-align: center
-      position: relative
-      display: block
-      padding: 1rem
-      border: 3px outset #999
-      cursor: pointer
 
 </style>
