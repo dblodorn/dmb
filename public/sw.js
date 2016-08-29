@@ -5,9 +5,14 @@ self.addEventListener('install', e => {
     caches.open(cacheName).then(cache => {
       return cache.addAll([
         '/',
-        'app/app.js',
+        'js/app.js',
         'index.html',
-        'data/*.json'
+        'data/15x19.json',
+        'data/db13.json',
+        'data/news.json',
+        'data/sls.json',
+        'data/xiv.json',
+        'data/zero-one.json'
       ]).then(() => self.skipWaiting());
     })
   );

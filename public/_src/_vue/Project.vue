@@ -13,9 +13,6 @@
 </template>
 
 <script>
-  
-  import smoothScroll from 'smoothscroll'
-
   export default {
     data () {
       return {
