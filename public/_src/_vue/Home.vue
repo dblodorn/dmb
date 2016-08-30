@@ -30,6 +30,7 @@
   html.mobile
     nav.home-menu
       justify-content: center
+      padding: 2rem
       a
         font-size: 28vw
         padding: 2rem 2rem
@@ -59,31 +60,49 @@
     opacity: 0
     align-content: center
     a
+      @extend %black-shadow
+      @extend %gradient-button
       width: 100%
       overflow: hidden
-      border: 5px outset #f5dbb3
-      background-color: #f3eb63
+      border: 5px outset #f3eb63
       text-align: center
       margin: 1rem 0
       
       &:hover
-        border-color: darken(#f5dbb3, 9)
-        background-color: darken(#f3eb63, 9)
+        @extend %gradient-button-hover
+        text-decoration: none!important
+        border-color: darken(#f3eb63, 12)
+        span
+          color: purple
 
   .letter-breaker
     -webkit-text-stroke-width: 1px
     -webkit-text-stroke-color: black
     -webkit-font-smoothing: antialiased
+    span
+      @extend %smooth
+
     span:nth-child(1n)
       color: red
-
     span:nth-child(2n)
       color: blue
-
     span:nth-child(3n)
       color: yellow
-      
     span:nth-child(4n)
       color: green
+    span:nth-child(5n)
+      color: magenta
+
+    &:hover
+      span:nth-child(1n)
+        color: purple
+      span:nth-child(2n)
+        color: orange
+      span:nth-child(3n)
+        color: pink
+      span:nth-child(4n)
+        color: aqua
+      span:nth-child(5n)
+        color: lime
 
 </style>

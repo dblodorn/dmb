@@ -4,7 +4,7 @@
     .btn.news
       a(v-link="'/news'") NEWS
     .btn.contact
-      a(href="mailto:hello@dain.kim") CONTACT
+      a(href="mailto:hello@dain.kim") EMAIL
   main
     router-view
     .secondary-nav-bg

@@ -9,7 +9,6 @@ self.addEventListener('install', e => {
         'index.html',
         'data/15x19.json',
         'data/db13.json',
-        'data/news.json',
         'data/sls.json',
         'data/xiv.json',
         'data/zero-one.json'

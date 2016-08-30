@@ -1,10 +1,6 @@
 {
   "project_slides": [
     {
-      "project": "15x19"
-    },{
-      "project": "zero-one"
-    },{
       "project": "xiv"
     },{
       "project": "tif-sigfrids"
@@ -12,6 +8,10 @@
       "project": "sls"
     },{
       "project": "db13"
+    },{
+      "project": "zero-one"
+    },{
+      "project": "15x19"
     }
   ],
   "project_links": [
@@ -82,6 +82,10 @@
       "site": "IDENTITY",
       "target": "_blank",
       "link": "http://my-crumbling-identity.db13.us/"
+    },{
+      "site": "Area Man",
+      "target": "_blank",
+      "link": "http://areaman.info/"
     },{
       "site": "Sectional",
       "target": "_blank",

@@ -70,9 +70,9 @@
         top: 0
         left: 0
       article.project-description
-        padding: 7rem 1.5rem 3rem
+        padding: 4.5rem 1.5rem 3rem
       aside
-        height: calc(100vh - 20rem)
+        height: calc(100vh - 28rem)
       ul.images
         padding: 0 2rem 4rem
 

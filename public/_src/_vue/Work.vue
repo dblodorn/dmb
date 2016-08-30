@@ -1,9 +1,11 @@
 <template lang="jade">
   nav.project-menu
-    h2 CLIENT
-    a.project-link(v-for="links in work.project_links" v-link="links.link" v-bind:target="links.target") {{links.site}}
-    h2 PROJECTS
-    a.project-link(v-for="links in work.sketch_links" v-link="links.link" v-bind:target="links.target") {{links.site}}
+    h2 CLIENT WORK
+    a.project-link(v-for="links in work.project_links" v-link="links.link" v-if="!links.target" v-bind:target="links.target") {{links.site}}
+    a.project-link.link(v-for="links in work.project_links" v-link="links.link" v-if="links.target" v-bind:target="links.target") {{links.site}}
+    h2 PERSONAL PROJECTS
+    a.project-link(v-for="links in work.sketch_links" v-link="links.link" v-if="!links.target" v-bind:target="links.target") {{{links.site}}}
+    a.project-link.link(v-for="links in work.sketch_links" v-link="links.link" v-if="links.target" v-bind:target="links.target") {{{links.site}}}
   aside#workslides
     ul
       li(v-for="slide in work.project_slides" v-bind:style="{ backgroundImage: 'url(' + imgpath + slide.project + '/' + slide.project + '-cover@2x.jpg)' }")
@@ -61,6 +63,14 @@
       a.project-link
         padding-bottom: 1rem
 
+  .link:after
+    content: ""
+    background-image: url('!~/imgs/icons/link.svg')
+    background-repeat: no-repeat
+    padding-left: 6vw
+    background-size: contain
+    margin-left: .5vw
+    background-position-y: 36%
 
   html.desktop
     nav.project-menu
