@@ -3,11 +3,13 @@
 /* Plugins */
 var gulp        = require('gulp'),
     jsonminify  = require('gulp-jsonminify'),
-    ftp         = require('vinyl-ftp');
+    ftp         = require('vinyl-ftp'),
+    awspublish  = require('gulp-awspublish');
 
 /* Task Library */
-//gulp.task('deploy', require('./gulp-tasks/deploy')(gulp, ftp));
 gulp.task('deploy-kim', require('./gulp-tasks/deploy-kim')(gulp, ftp));
+
+//
 
 gulp.task('minify', function () {
   return gulp.src(['./public/_src/_data/*.json'])
@@ -16,4 +18,4 @@ gulp.task('minify', function () {
 });
 
 /* Default Task */
-gulp.task('default', ['minify', 'deploy']);
+gulp.task('default', ['minify','deploy-kim']);
