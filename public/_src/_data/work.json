@@ -32,6 +32,10 @@
       "target": "",
       "link": "zero-one"
     },{
+      "site": "Canon",
+      "target": "",
+      "link": "canon"
+    },{
       "site": "n/naka",
       "target": "_blank",
       "link": "http://n-naka.com/"
@@ -43,10 +47,6 @@
       "site": "Kitchen Nation",
       "target": "_blank",
       "link": "http://thekitchennation.com/"
-    },{
-      "site": "Canon PRO",
-      "target": "_blank",
-      "link": "http://canonproprinters.com/"
     },{
       "site": "HDR",
       "target": "_blank",

@@ -11,7 +11,8 @@ self.addEventListener('install', e => {
         'data/db13.json',
         'data/sls.json',
         'data/xiv.json',
-        'data/zero-one.json'
+        'data/zero-one.json',
+        'data/canon.json'
       ]).then(() => self.skipWaiting());
     })
   );
