@@ -7,6 +7,7 @@ import VueResource from 'vue-resource'
 
 // Functions
 import states from './_app/states.js'
+import transition from './_app/transition.js'
 
 // Templates
 import shell from './_vue/Shell.vue'

@@ -2,6 +2,7 @@
   nav.home-menu
     a.letter-breaker(v-link="'/work'") WORK
     a.letter-breaker(v-link="'/about'") ABOUT
+  #home-bg(transition="home")
 </template>
 
 <script>
@@ -16,7 +17,7 @@
         utility.setId('body','home')
         setTimeout(function(){
           $('.home-menu').addClass('fade-in-slow')
-        }, 150)
+        }, 500)
       }
     }
   }
@@ -45,7 +46,7 @@
 
   //
   body#home
-    @extend %gradient-bg-grey
+    background-color: blue
     html.mobile
       nav.home-menu
         min-height: calc(100vh - 24rem)
@@ -54,6 +55,16 @@
       nav.home-menu
         min-height: calc(100vh - 8rem)
         padding-bottom: 0
+
+  #home-bg
+    @extend %gradient-bg-grey
+    width: 100%
+    height: 100%
+    display: block
+    position: fixed
+    top: 0
+    right: 0
+    z-index: 10
 
   nav.home-menu
     @extend %nav-shell

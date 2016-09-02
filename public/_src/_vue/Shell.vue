@@ -8,16 +8,23 @@
   main
     router-view
     .secondary-nav-bg
+  #work-preload
 </template>
 
 <script>
   export default {
     data () {
       return {
-        title: "DAIN BLODORN KIM"
+        title: "DAIN BLODORN KIM",
+        imgpath: 'imgs/projects/'
       }
     }
   }
+
+  setTimeout(function(){
+    document.getElementById('work-preload').innerHTML = '<div class="hidden" style="background-image: url(&quot;imgs/projects/xiv/xiv-cover@2x.jpg&quot;);"></div><div class="hidden" style="background-image: url(&quot;imgs/projects/tif-sigfrids/tif-sigfrids-cover@2x.jpg&quot;);"></div><div class="hidden" style="background-image: url(&quot;imgs/projects/sls/sls-cover@2x.jpg&quot;);"></div>';
+  }, 2000)
+
 </script>
 
 <style lang="sass?indentedSyntax">
@@ -75,6 +82,11 @@
       left: 0
       padding: 0 2rem
       height: 8rem
+
+  //
+
+  #work-preload
+    display: none
 
   // BASE
 

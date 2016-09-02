@@ -15,6 +15,7 @@
   
   import unslider from 'jquery-unslider'
   import $ from 'jquery'
+  import utility from "../_app/utilities.js"
 
   export default {
     data () {
@@ -35,7 +36,7 @@
           
           setTimeout(function(){
             $('.project-menu').addClass('fade-in-slow')
-          }, 75);
+          }, 500);
 
           setTimeout(function(){
             $('#workslides').unslider({
@@ -44,7 +45,7 @@
               arrows: false,
               animation: 'fade'
             });
-          }, 250);
+          }, 1000);
       }
     }
   }
