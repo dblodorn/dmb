@@ -28,7 +28,8 @@
         activate: function() {
           
           $('body').animate({ scrollTop: 0 }, 5);
-
+          
+          utility.setId('body','work')
           var data = this.$route.data;
           this.$set('work', data);
           
