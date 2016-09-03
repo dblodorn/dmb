@@ -8,6 +8,7 @@ import VueResource from 'vue-resource'
 // Functions
 import states from './_app/states.js'
 import transition from './_app/transition.js'
+import utility from "./_app/utilities.js"
 
 // Templates
 import shell from './_vue/Shell.vue'
@@ -38,6 +39,7 @@ window.router = new VueRouter({
 router.map({
   '/': {
     component: shell,
+    data: workData,
     subRoutes: {
       '/': {
         component: home
@@ -63,10 +65,17 @@ router.map({
 
 var initApp = function() {
   router.start(App, 'body')
+  
+  // Preload Images
   setTimeout(function(){
     $('#dbk , .secondary-nav , .secondary-nav-bg , main').addClass('fade-in-slow');
   }, 250);
-  states.init();  
+  
+  states.init();
+
+  setTimeout(function(){
+    utility.preload(workData.project_slides)
+  }, 500);
 }
 
 document.addEventListener('DOMContentLoaded', initApp);

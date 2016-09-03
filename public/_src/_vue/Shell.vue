@@ -8,10 +8,10 @@
   main
     router-view
     .secondary-nav-bg
-  #work-preload
 </template>
 
 <script>
+  
   export default {
     data () {
       return {
@@ -20,11 +20,6 @@
       }
     }
   }
-
-  setTimeout(function(){
-    document.getElementById('work-preload').innerHTML = '<div class="hidden" style="background-image: url(&quot;imgs/projects/xiv/xiv-cover@2x.jpg&quot;);"></div><div class="hidden" style="background-image: url(&quot;imgs/projects/tif-sigfrids/tif-sigfrids-cover@2x.jpg&quot;);"></div><div class="hidden" style="background-image: url(&quot;imgs/projects/sls/sls-cover@2x.jpg&quot;);"></div>';
-  }, 2000)
-
 </script>
 
 <style lang="sass?indentedSyntax">
@@ -32,6 +27,16 @@
   @import "../_sass/utilities/_utilities.sass"
 
   // RESPONSIVE
+
+  .visuallyhidden
+    border: 0
+    clip: rect(0 0 0 0)
+    height: 1px
+    margin: -1px
+    overflow: hidden
+    padding: 0
+    position: absolute
+    width: 1px
 
   html.mobile
     #dbk

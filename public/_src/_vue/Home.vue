@@ -57,7 +57,7 @@
         padding-bottom: 0
 
   #home-bg
-    @extend %gradient-bg-grey
+    background-color: grey
     width: 100%
     height: 100%
     display: block

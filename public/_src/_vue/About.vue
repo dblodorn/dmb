@@ -8,6 +8,9 @@
 </template>
 
 <script>
+  
+  import utility from "../_app/utilities.js"
+
   export default {
     data () {
       return {
@@ -18,11 +21,15 @@
       canReuse: false,
       activate: function() {
         $('body').animate({ scrollTop: 0 }, 5);
+        
+        utility.setId('body','about')
+
         var data = this.$route.data;
         this.$set('about', data);
+        
         setTimeout(function(){
           $('.copy-content').addClass('fade-in-slow')
-        }, 150);
+        }, 500);
       }
     }
   }
@@ -31,6 +38,9 @@
 <style lang="sass?indentedSyntax">
 
   @import "../_sass/utilities/_utilities.sass"
+
+  body#about
+    background-color: $black
 
   .about-links
     @extend %flex-row-wrap

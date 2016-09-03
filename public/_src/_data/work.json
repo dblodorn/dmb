@@ -1,18 +1,11 @@
 {
   "project_slides": [
-    {
-      "project": "xiv"
-    },{
-      "project": "tif-sigfrids"
-    },{
-      "project": "sls"
-    },{
-      "project": "db13"
-    },{
-      "project": "zero-one"
-    },{
-      "project": "15x19"
-    }
+    "imgs/projects/xiv/xiv-portfolio-landing-desktop@1x.jpg",
+    "imgs/projects/tif-sigfrids/tif-sigfrids-portfolio-landing-desktop@1x.jpg",
+    "imgs/projects/sls/sls-portfolio-landing-desktop@1x.jpg",
+    "imgs/projects/db13/db13-portfolio-landing-desktop@1x.jpg",
+    "imgs/projects/zero-one/zero-one-portfolio-landing-desktop@1x.jpg",
+    "imgs/projects/15x19/15x19-portfolio-landing-desktop@1x.jpg"
   ],
   "project_links": [
     {

@@ -8,7 +8,8 @@
     a.project-link.link(v-for="links in work.sketch_links" v-link="links.link" v-if="links.target" v-bind:target="links.target") {{{links.site}}}
   aside#workslides
     ul
-      li(v-for="slide in work.project_slides" v-bind:style="{ backgroundImage: 'url(' + imgpath + slide.project + '/' + slide.project + '-cover@2x.jpg)' }")
+      //li(v-for="slide in work.project_slides" v-bind:style="{ backgroundImage: 'url(' + imgpath + slide + '/' + slide + '-portfolio-landing-desktop@1x.jpg)' }")
+      li(v-for="slide in work.project_slides" v-bind:style="{ backgroundImage: 'url('+ slide +')' }")
 </template>
 
 <script>
@@ -28,24 +29,25 @@
       canReuse: false,
         activate: function() {
           
-          $('body').animate({ scrollTop: 0 }, 5);
-          
-          utility.setId('body','work')
-          var data = this.$route.data;
-          this.$set('work', data);
-          
-          setTimeout(function(){
-            $('.project-menu').addClass('fade-in-slow')
-          }, 500);
+        $('body').animate({ scrollTop: 0 }, 5);
+        
+        utility.setId('body','work')
+        
+        var data = this.$route.data;
+        this.$set('work', data);
+        
+        setTimeout(function(){
+          $('.project-menu').addClass('fade-in-slow')
+        }, 500);
 
-          setTimeout(function(){
-            $('#workslides').unslider({
-              nav: false,
-              autoplay: true,
-              arrows: false,
-              animation: 'fade'
-            });
-          }, 1000);
+        setTimeout(function(){
+          $('#workslides').unslider({
+            nav: false,
+            autoplay: true,
+            arrows: false,
+            animation: 'fade'
+          });
+        }, 1000);
       }
     }
   }

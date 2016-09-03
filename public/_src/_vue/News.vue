@@ -9,6 +9,9 @@
 </template>
 
 <script>
+  
+  import utility from "../_app/utilities.js"
+
   export default {
     data () {
       return {
@@ -19,11 +22,14 @@
       canReuse: false,
       activate: function() {
         $('body').animate({ scrollTop: 0 }, 5);
+        
+        utility.setId('body','news')
+
         var data = this.$route.data;
         this.$set('news', data);
         setTimeout(function(){
           $('.copy-content').addClass('fade-in-slow')
-        }, 150);
+        }, 500);
       }
     }
   }
@@ -32,6 +38,9 @@
 <style lang="sass?indentedSyntax">
 
   @import "../_sass/utilities/_utilities.sass"
+
+  body#news
+    background-color: $black
 
   .news-copy
     margin-bottom: 8rem
