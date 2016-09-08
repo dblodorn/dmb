@@ -46,7 +46,7 @@
 
   //
   body#home
-    background-color: blue
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAN0lEQVQYV2NkYGD4zwABjFAaKwWSJFkhzCSsJiObSLJCrBqwmUiyQhQN+EwkWSE8kGHhiC+8GQCwzgoJeImtBAAAAABJRU5ErkJggg==) repeat
     html.mobile
       nav.home-menu
         min-height: calc(100vh - 24rem)
