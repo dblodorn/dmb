@@ -6,7 +6,7 @@
         a.project-link.link(v-link="links.link" target="_blank") {{links.site}}
     ul.foot
       li
-        a EXTERNAL /
+        a(v-link="'https://drive.google.com/open?id=0B6t2BVlhSCGqTERqdEl1Qi1aNE0'" target="_blank") DOWNLOAD CV
       li(v-for="outs in site_links")
         a(v-link="outs.link" target="_blank") {{outs.site}}
 </template>
@@ -30,18 +30,6 @@
           },{
             site: "CODEPEN",
             link: "http://codepen.io/mrdain/"
-          },{
-            site: "INSTAGRAM",
-            link: "https://www.instagram.com/mrdainblo/"
-          },{
-            site: "TWITTER",
-            link: "https://twitter.com/dblodorn"
-          },{
-            site: "SOUNDCLOUD",
-            link: "https://soundcloud.com/dainblodorn"
-          },{
-            site: "TUMBLR",
-            link: "http://db13.tumblr.com/"
           }
         ]
       }
