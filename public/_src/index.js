@@ -17,6 +17,7 @@ import work from './_vue/Work.vue'
 import about from './_vue/About.vue'
 import news from './_vue/News.vue'
 import project from './_vue/Project.vue'
+import links from './_vue/Links.vue'
 
 // Data
 import workData from './_data/work.json'
@@ -50,6 +51,9 @@ router.map({
       },
       '/:slug': {
         component: project
+      },
+      '/links/:slug': {
+        component: links
       },
       '/about': {
         component: about,

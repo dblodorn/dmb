@@ -1,0 +1,24 @@
+{
+  "list_title": "Clean",
+  "list_links": [
+    {
+      "site": "TIF SIGFRIDS",
+      "link": "http://tifsigfrids.com/"
+    },{
+      "site": "zen sekizawa",
+      "link": "http://zensekizawa.com/"
+    },{
+      "site": "HDR",
+      "link": "http://hdr.14-forty.com/"
+    },{
+      "site": "CANON PRO PRINTERS",
+      "link": "http://canonproprinters.com/"
+    },{
+      "site": "CANON GENIUS",
+      "link": "http://7d-staging.14-forty.com/"
+    },{
+      "site": "CANON LENSES",
+      "link": "http://lenses-staging-v2.14-forty.com/"
+    }
+  ]
+}
