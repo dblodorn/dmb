@@ -4,6 +4,7 @@
     ul.links
       li(v-for="links in work.list_links")
         a.project-link.link(v-link="links.link" target="_blank") {{links.site}}
+        p {{description}}
     ul.foot
       li
         a(v-link="'https://drive.google.com/open?id=0B6t2BVlhSCGqTERqdEl1Qi1aNE0'" target="_blank") DOWNLOAD CV
@@ -20,6 +21,7 @@
     data () {
       return {
         work: {},
+        description: "Promotional Microsite for A new range of Canon Products. Built in HTML5 / CSS3 with Javascript animations and templating. The site was customized by over 100 retailers to showcase related canon offers they had in store. As this site relied heavily on animations, great care was taken in translating that experience to a mobile environment.",
         site_links: [
           {
             site: "LINKEDIN",
@@ -72,15 +74,6 @@
     nav.project-menu
       width: 85vw
 
-  .link:after
-    content: ""
-    background-image: url('!~/imgs/icons/link.svg')
-    background-repeat: no-repeat
-    padding-left: 5vw
-    background-size: contain
-    margin-left: 1vw
-    background-position-y: 50%
-
   // BASE
   nav.project-menu
     padding: 2rem
@@ -123,6 +116,14 @@
     li:last-child
       margin-bottom: 0
     
+    p
+      color: $black
+      font-size: 1.65rem
+      line-height: 1.5
+      color: black
+      padding-bottom: 2rem
+      max-width: 60rem
+
     a 
       text-align: left
       color: $black
@@ -130,6 +131,7 @@
       float: left
 
     a.project-link
-      font-size: 8vw
+      font-size: 6rem
+      margin-bottom: 2rem
 
 </style>

@@ -1,9 +1,10 @@
 {
-  "list_title": "Clean",
+  "list_title": "Websites - Commercial",
   "list_links": [
     {
       "site": "TIF SIGFRIDS",
-      "link": "http://tifsigfrids.com/"
+      "link": "http://tifsigfrids.com/",
+      "description": "Promotional Microsite for A new range of Canon Products. Built in HTML5 / CSS3 with Javascript animations and templating. The site was customized by over 100 retailers to showcase related canon offers they had in store. As this site relied heavily on animations, great care was taken in translating that experience to a mobile environment."
     },{
       "site": "zen sekizawa",
       "link": "http://zensekizawa.com/"
