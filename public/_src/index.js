@@ -24,6 +24,7 @@ import WorkSubNav from './_vue/Work-Sub-Nav.vue'
 import WebDevData from './_data/work-web-development.json'
 import DesignData from './_data/work-design.json'
 import ArtData from './_data/work-art.json'
+import ExperimentalData from './_data/work-experimental.json'
 import newsData from './_data/news.json'
 import aboutData from './_data/about.json'
 
@@ -62,6 +63,10 @@ router.map({
         '/art': {
           component: WorkSubNav,
           data: ArtData
+          },
+        '/experimental': {
+          component: WorkSubNav,
+          data: ExperimentalData
           }
         }
       },
@@ -84,11 +89,11 @@ router.map({
 });
 
 var initApp = function() {
+
   router.start(App, 'body')
   
-  // Preload Images
   setTimeout(function(){
-    $('#dbk , .secondary-nav , .secondary-nav-bg , main').addClass('fade-in-slow');
+    $('#dbk , .secondary-nav , .secondary-nav-bg , main').animate({opacity: 1}, 500);
   }, 250);
   
   states.init();
@@ -96,6 +101,7 @@ var initApp = function() {
   setTimeout(function(){
     utility.preload(workData.project_slides)
   }, 500);
+
 }
 
 document.addEventListener('DOMContentLoaded', initApp);

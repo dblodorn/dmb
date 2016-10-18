@@ -1,9 +1,6 @@
 {
   "project_links": [
     {
-      "site": "Tif Sigfrids",
-      "link": "tif-sigfrids"
-    },{
       "site": "SLS",
       "link": "sls"
     },{
@@ -12,21 +9,6 @@
     },{
       "site": "zero-one",
       "link": "zero-one"
-    },{
-      "site": "Kitchen Nation",
-      "link": "kitchen-nation"
-    },{
-      "site": "Canon",
-      "link": "canon"
-    },{
-      "site": "n/naka",
-      "link": "http://n-naka.com/"
-    },{
-      "site": "HDR",
-      "link": "http://hdr.14-forty.com/"
-    },{
-      "site": "zen sekizawa",
-      "link": "http://zensekizawa.com/"
     }
   ]
 }
