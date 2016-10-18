@@ -1,6 +1,8 @@
 import './_sass/main.sass'
 
+// Vendor
 import $ from 'jquery'
+import series from 'async-series'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
@@ -41,6 +43,7 @@ window.router = new VueRouter({
   root: '/'
 });
 
+// ROUTES
 router.map({
   '/': {
     component: shell,
@@ -88,20 +91,31 @@ router.map({
   }
 });
 
+// RUN CONFIG
 var initApp = function() {
-
-  router.start(App, 'body')
-  
-  setTimeout(function(){
-    $('#dbk , .secondary-nav , .secondary-nav-bg , main').animate({opacity: 1}, 500);
-  }, 250);
-  
-  states.init();
-
-  setTimeout(function(){
-    utility.preload(workData.project_slides)
-  }, 500);
-
+  series([
+    function(done) {
+      router.start(App, 'body')
+      done()
+    },
+    function(done) {
+      setTimeout(function(){
+        $('#dbk , .secondary-nav , .secondary-nav-bg , main').animate({opacity: 1}, 500);
+      }, 250);
+      done()
+    },
+    function(done) {
+      states.init();
+      done()
+    },
+    function(done) {
+      setTimeout(function(){
+        utility.preload(workData.project_slides)
+      }, 500);
+    }
+    ], function(err) {
+      console.log('Something be wrong!')
+  });
 }
 
 document.addEventListener('DOMContentLoaded', initApp);
