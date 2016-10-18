@@ -1,11 +1,8 @@
 <template lang="jade">
-  #category-nav
-    a(v-link="'/work/web-development'") Web-Development
-    a(v-link="'/work/art'") Art
-  router-view
-  aside#workslides
-    ul
-      li(v-for="slide in work.project_slides" v-bind:style="{ backgroundImage: 'url('+ slide +')' }")
+  nav.project-menu
+    h2 Web Development
+    a.project-link(v-for="links in work.project_links" v-link="links.link" v-if="!links.target" v-bind:target="links.target") {{links.site}}
+    a.project-link.link(v-for="links in work.project_links" v-link="links.link" v-if="links.target" v-bind:target="links.target") {{links.site}}
 </template>
 
 <script>
@@ -71,17 +68,6 @@
     background-size: contain
     margin-left: .5vw
     background-position-y: 36%
-
-  #category-nav
-    display: flex
-    flex-direction: column
-    position: relative
-    z-index: 12000
-    align-self: flex-end
-    background-color: $white
-    padding: 3rem
-    width: 85vw
-    right: 0
 
   html.desktop
     nav.project-menu

@@ -18,6 +18,8 @@ import about from './_vue/About.vue'
 import news from './_vue/News.vue'
 import project from './_vue/Project.vue'
 import links from './_vue/Links.vue'
+import art from './_vue/Work-Web-Development.vue'
+import development from './_vue/Work-Art.vue'
 
 // Data
 import workData from './_data/work.json'
@@ -47,7 +49,17 @@ router.map({
       },
       '/work': {
         component: work,
-        data: workData
+        data: workData,
+        subRoutes: {
+        '/web-development': {
+          component: development,
+          data: workData
+          },
+        '/art': {
+          component: art,
+          data: workData
+          }
+        }
       },
       '/:slug': {
         component: project
@@ -65,7 +77,7 @@ router.map({
       }
     }
   }
-})
+});
 
 var initApp = function() {
   router.start(App, 'body')
