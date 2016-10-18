@@ -13,16 +13,17 @@ import utility from "./_app/utilities.js"
 // Templates
 import shell from './_vue/Shell.vue'
 import home from './_vue/Home.vue'
-import work from './_vue/Work.vue'
 import about from './_vue/About.vue'
 import news from './_vue/News.vue'
 import project from './_vue/Project.vue'
 import links from './_vue/Links.vue'
-import art from './_vue/Work-Web-Development.vue'
-import development from './_vue/Work-Art.vue'
+import WorkNav from './_vue/Work-Nav.vue'
+import WorkSubNav from './_vue/Work-Sub-Nav.vue'
 
 // Data
-import workData from './_data/work.json'
+import WebDevData from './_data/work-web-development.json'
+import DesignData from './_data/work-design.json'
+import ArtData from './_data/work-art.json'
 import newsData from './_data/news.json'
 import aboutData from './_data/about.json'
 
@@ -48,16 +49,19 @@ router.map({
         component: home
       },
       '/work': {
-        component: work,
-        data: workData,
+        component: WorkNav
         subRoutes: {
         '/web-development': {
-          component: development,
-          data: workData
+          component: WorkSubNav,
+          data: WebDevData
+          },
+        '/design': {
+          component: WorkSubNav,
+          data: DesignData
           },
         '/art': {
-          component: art,
-          data: workData
+          component: WorkSubNav,
+          data: ArtData
           }
         }
       },

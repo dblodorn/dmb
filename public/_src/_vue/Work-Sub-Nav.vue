@@ -1,13 +1,11 @@
 <template lang="jade">
   nav.project-menu
-    h2 Art
-    a.project-link(v-for="links in work.sketch_links" v-link="links.link" v-if="!links.target" v-bind:target="links.target") {{{links.site}}}
-    a.project-link.link(v-for="links in work.sketch_links" v-link="links.link" v-if="links.target" v-bind:target="links.target") {{{links.site}}}
+    h2 {{work.title}}
+    a.project-link(v-for="links in work.project_links" v-link="links.link" v-if="!links.target" v-bind:target="links.target") {{links.site}}
 </template>
 
 <script>
   
-  import unslider from 'jquery-unslider'
   import $ from 'jquery'
   import utility from "../_app/utilities.js"
 
@@ -30,17 +28,8 @@
         this.$set('work', data);
         
         setTimeout(function(){
-          $('.project-menu').addClass('fade-in-slow')
+          $('.project-menu').animate({opacity: 1}, 500);
         }, 500);
-
-        setTimeout(function(){
-          $('#workslides').unslider({
-            nav: false,
-            autoplay: true,
-            arrows: false,
-            animation: 'fade'
-          });
-        }, 1000);
       }
     }
   }
@@ -48,8 +37,6 @@
 
 <style lang="sass?indentedSyntax" scoped>
 
-  @import "../_sass/vendor/unslider.sass"
-  @import "../_sass/vendor/unslider-dots.sass"
   @import "../_sass/utilities/_utilities.sass"
 
   html.mobile
@@ -100,16 +87,5 @@
       -webkit-text-stroke-width: 2px
       -webkit-text-stroke-color: black
       -webkit-font-smoothing: antialiased
-
-  aside#workslides
-    @extend %full-screen
-    position: fixed
-    top: 0
-    left: 0
-    ul
-      @extend %full-bg
-      li
-        @extend %full-bg
-        @extend %full-screen
 
 </style>
