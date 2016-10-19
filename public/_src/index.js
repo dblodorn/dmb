@@ -29,6 +29,7 @@ import ArtData from './_data/work-art.json'
 import ExperimentalData from './_data/work-experimental.json'
 import newsData from './_data/news.json'
 import aboutData from './_data/about.json'
+import slidesData from './_data/slides.json'
 
 // APP
 Vue.use(VueRouter);
@@ -47,13 +48,13 @@ window.router = new VueRouter({
 router.map({
   '/': {
     component: shell,
-    data: workData,
+    data: slidesData,
     subRoutes: {
       '/': {
         component: home
       },
       '/work': {
-        component: WorkNav
+        component: WorkNav,
         subRoutes: {
         '/web-development': {
           component: WorkSubNav,
@@ -110,7 +111,7 @@ var initApp = function() {
     },
     function(done) {
       setTimeout(function(){
-        utility.preload(workData.project_slides)
+        utility.preload(slidesData.project_slides)
       }, 500);
     }
     ], function(err) {

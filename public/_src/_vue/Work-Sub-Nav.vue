@@ -1,6 +1,5 @@
 <template lang="jade">
   nav.project-menu
-    h2 {{work.title}}
     a.project-link(v-for="links in work.project_links" v-link="links.link" v-if="!links.target" v-bind:target="links.target") {{links.site}}
 </template>
 

@@ -1,8 +1,10 @@
 <template lang="jade">
   #category-nav
-    a(v-link="'/work/web-development'") Web-Development
-    a(v-link="'/work/design'") Web-Development
-    a(v-link="'/work/art'") Art
+    menu
+      a(v-link="'/work/web-development'") Web-Development
+      a(v-link="'/work/design'") Design
+      a(v-link="'/work/art'") Art
+      a(v-link="'/work/experimental'") Experimental
   router-view
   aside#workslides
     ul
@@ -36,15 +38,17 @@
         
         utility.setId('body','work')
         
-        setTimeout(function(){
-          $('#workslides').unslider({
-            nav: false,
-            autoplay: true,
-            arrows: false,
-            animation: 'fade'
-          });
-        }, 1000);
       }
+    },
+    ready: function(){
+      setTimeout(function(){
+        $('#workslides').unslider({
+          nav: false,
+          autoplay: true,
+          arrows: false,
+          animation: 'fade'
+        });
+      }, 1000);
     }
   }
 </script>
@@ -55,23 +59,20 @@
   @import "../_sass/vendor/unslider-dots.sass"
   @import "../_sass/utilities/_utilities.sass"
 
-  html.mobile
-    #category-nav
-      width: 100vw
-
-  html.desktop
-    #category-nav
-      width: 85vw
-
   #category-nav
-    display: flex
-    flex-direction: column
-    position: relative
-    z-index: 12000
-    background-color: $white
-    padding: 3rem
-    width: 85vw
-    right: 0
+    @extend %nav-shell
+    padding: 2rem!important
+    min-height: initial!important
+    z-index: 1000
+    menu
+      background-color: $black
+      border: 2px solid $white
+      padding: 1rem
+      width: 100%
+      a
+        color: $white
+        font-size: 3rem
+        margin-right: 3rem
 
   aside#workslides
     @extend %full-screen
