@@ -6,9 +6,10 @@
       button(data-group="design") Design
       button(data-group="art") Art
       button(data-group="experimental") Experimental
-  nav.project-menu.js-shuffle
-    .project-item(v-for="item in projects.project_list" v-bind:data-groups="'[' + item.category + ']'")
-      a.project-link(v-link="item.link") {{item.project}}
+  nav.project-menu
+    ul.js-shuffle
+      li.project-thumb(v-for="item in projects.project_list" v-bind:data-groups="item.category + ',all'")
+        a.project-link(v-link="item.link") {{item.project}}
   aside#workslides
     ul
       li(v-for="slide in projects.project_slides" v-bind:style="{ backgroundImage: 'url('+ slide +')' }")
@@ -36,7 +37,6 @@
       }
     },
     ready: function(){
-      shuffleInit.filter();
       setTimeout(function(){
         $('#workslides').unslider({
           nav: false,
@@ -48,6 +48,9 @@
       setTimeout(function(){
         $('.project-menu').animate({opacity: 1}, 500);
       }, 500);
+      setTimeout(function(){
+        shuffleInit.filter();
+      },50);
     }
   }
 </script>
