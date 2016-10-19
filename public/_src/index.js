@@ -23,10 +23,7 @@ import WorkNav from './_vue/Work-Nav.vue'
 import WorkSubNav from './_vue/Work-Sub-Nav.vue'
 
 // Data
-import WebDevData from './_data/work-web-development.json'
-import DesignData from './_data/work-design.json'
-import ArtData from './_data/work-art.json'
-import ExperimentalData from './_data/work-experimental.json'
+import workData from './_data/work.json'
 import newsData from './_data/news.json'
 import aboutData from './_data/about.json'
 import slidesData from './_data/slides.json'
@@ -55,24 +52,7 @@ router.map({
       },
       '/work': {
         component: WorkNav,
-        subRoutes: {
-        '/web-development': {
-          component: WorkSubNav,
-          data: WebDevData
-          },
-        '/design': {
-          component: WorkSubNav,
-          data: DesignData
-          },
-        '/art': {
-          component: WorkSubNav,
-          data: ArtData
-          },
-        '/experimental': {
-          component: WorkSubNav,
-          data: ExperimentalData
-          }
-        }
+        data: workData
       },
       '/:slug': {
         component: project

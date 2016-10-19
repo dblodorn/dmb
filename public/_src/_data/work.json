@@ -7,89 +7,82 @@
     "imgs/projects/zero-one/zero-one-portfolio-landing-desktop@1x.jpg",
     "imgs/projects/15x19/15x19-portfolio-landing-desktop@1x.jpg"
   ],
-  "project_links": [
+  "project_list": [
     {
-      "site": "Tif Sigfrids",
-      "target": "",
+      "project": "Tif Sigfrids",
+      "category": "web-development",
       "link": "tif-sigfrids"
     },{
-      "site": "SLS",
-      "target": "",
-      "link": "sls"
-    },{
-      "site": "xiv",
-      "target": "",
-      "link": "xiv"
-    },{
-      "site": "zero-one",
-      "target": "",
-      "link": "zero-one"
-    },{
-      "site": "Kitchen Nation",
-      "target": "",
-      "link": "kitchen-nation"
-    },{
-      "site": "Canon",
-      "target": "",
-      "link": "canon"
-    },{
-      "site": "n/naka",
-      "target": "_blank",
-      "link": "http://n-naka.com/"
-    },{
-      "site": "HDR",
-      "target": "_blank",
-      "link": "http://hdr.14-forty.com/"
-    },{
-      "site": "zen sekizawa",
-      "target": "_blank",
-      "link": "http://zensekizawa.com/"
-    }
-  ],
-  "sketch_links": [
-    {
-      "site": "db13.us",
-      "target": "",
+      "project": "db13.us",
+      "category": "web-development",
       "link": "db13"
     },{
-      "site": "15x19.io",
-      "target": "",
-      "link": "15x19"
+      "project": "Kitchen Nation",
+      "category": "web-development",
+      "link": "kitchen-nation"
     },{
-      "site": "Loving Love",
-      "target": "_blank",
+      "project": "Canon",
+      "category": "web-development",
+      "link": "canon"
+    },{
+      "project": "n/naka",
+      "category": "web-development",
+      "link": "http://n-naka.com/"
+    },{
+      "project": "HDR",
+      "category": "web-development",
+      "link": "http://hdr.14-forty.com/"
+    },{
+      "project": "zen sekizawa",
+      "category": "web-development",
+      "link": "http://zensekizawa.com/"
+    },{
+      "project": "Loving Love",
+      "category": "web-development",
       "link": "http://lovinglove.biz/"
     },{
-      "site": "AN-AH-KAY",
-      "target": "_blank",
+      "project": "SLS",
+      "category": "design",
+      "link": "sls"
+    },{
+      "project": "xiv",
+      "category": "design",
+      "link": "xiv"
+    },{
+      "project": "zero-one",
+      "category": "design",
+      "link": "zero-one"
+    },{
+      "project": "15x19.io",
+      "category": "art",
+      "link": "15x19"
+    },{
+      "project": "AN-AH-KAY",
+      "category": "art",
       "link": "http://an-ah-kay.com/"
     },{
-      "site": "SHASTA",
-      "target": "_blank",
+      "project": "SHASTA",
+      "category": "art",
       "link": "http://shasta.db13.us/"
     },{
-      "site": "Collapsing",
-      "target": "_blank",
+      "project": "Collapsing",
+      "category": "art",
       "link": "http://collapsing.db13.us/"
     },{
-      "site": "IDENTITY",
-      "target": "_blank",
+      "project": "IDENTITY",
+      "category": "art",
       "link": "http://my-crumbling-identity.db13.us/"
     },{
-      "site": "Area Man",
-      "target": "_blank",
+      "project": "Area Man",
+      "category": "art",
       "link": "http://areaman.info/"
     },{
-      "site": "childcare official img",
-      "target": "_blank",
-      "link": "http://images.childcareofficial.com/"
-    },{
-      "site": "Sectional",
-      "target": "_blank",
+      "project": "Sectional",
+      "category": "art",
       "link": "http://sectional.db13.us/"
     },{
-      "site": "Infinite",
-      "target": "_blank",
+      "project": "Infinite",
+      "category": "art",
       "link": "http://infinite.db13.us/"
     }
   ]
