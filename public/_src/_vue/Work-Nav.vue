@@ -37,6 +37,7 @@
       }
     },
     ready: function(){
+      /*
       setTimeout(function(){
         $('#workslides').unslider({
           nav: false,
@@ -44,7 +45,7 @@
           arrows: false,
           animation: 'fade'
         });
-      }, 1000);
+      }, 1000);*/
       setTimeout(function(){
         $('.project-menu').animate({opacity: 1}, 500);
       }, 500);
@@ -57,8 +58,8 @@
 
 <style lang="sass?indentedSyntax" scoped>
 
-  @import "../_sass/vendor/unslider.sass"
-  @import "../_sass/vendor/unslider-dots.sass"
+  //@import "../_sass/vendor/unslider.sass"
+  //@import "../_sass/vendor/unslider-dots.sass"
   @import "../_sass/utilities/_utilities.sass"
 
   // CATEGORY NAVIGATION
@@ -107,17 +108,5 @@
       -webkit-text-stroke-width: 2px
       -webkit-text-stroke-color: black
       -webkit-font-smoothing: antialiased
-
-  // SLIDESHOW
-  aside#workslides
-    @extend %full-screen
-    position: fixed
-    top: 0
-    left: 0
-    ul
-      @extend %full-bg
-      li
-        @extend %full-bg
-        @extend %full-screen
 
 </style>
