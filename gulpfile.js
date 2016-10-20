@@ -8,6 +8,7 @@ var gulp        = require('gulp'),
 /* Task Library */
 //gulp.task('deploy', require('./gulp-tasks/deploy')(gulp, ftp));
 gulp.task('deploy-kim', require('./gulp-tasks/deploy-kim')(gulp, ftp));
+gulp.task('deploy-staging', require('./gulp-tasks/deploy-staging')(gulp, ftp));
 
 gulp.task('minify', function () {
   return gulp.src(['./public/_src/_data/**/*.json'])
@@ -17,3 +18,5 @@ gulp.task('minify', function () {
 
 /* Default Task */
 gulp.task('default', ['minify', 'deploy']);
+
+gulp.task('staging', ['minify', 'deploy-staging']);

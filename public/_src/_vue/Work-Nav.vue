@@ -10,7 +10,7 @@
     ul.js-shuffle
       li.project-thumb(v-for="item in projects.project_list" v-bind:data-groups="item.category + ',all'")
         a.project-link(v-link="item.link") {{item.project}}
-  aside#workslides
+  //aside#workslides
     ul
       li(v-for="slide in projects.project_slides" v-bind:style="{ backgroundImage: 'url('+ slide +')' }")
 </template>
