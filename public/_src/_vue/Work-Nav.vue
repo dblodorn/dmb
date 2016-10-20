@@ -56,14 +56,17 @@
     @extend %nav-shell
     padding: 2rem!important
     min-height: initial!important
-    z-index: 1000
+    position: fixed
+    top: 0
+    right: 0
+    z-index: $header-z
     menu
       @extend %black-shadow
       background-color: $white
       border: 2px solid $black
       padding: 2rem
       width: 100%
-  
+      
   html.desktop
     nav.project-menu
       h2
@@ -71,21 +74,24 @@
 
   // PROJECT MENU
   nav.project-menu
-    @extend %nav-shell
-    flex-wrap: wrap
     opacity: 0
     *
       color: $white
       width: 100%
-    
+    ul
+      @extend %nav-shell
+      flex-wrap: wrap
+      margin-top: 14rem
     li
+      position: relative
+      display: flex
       width: 100%
       margin-bottom: 2rem
+      padding-left: 3rem
+      z-index: $nav-z
 
     a.project-link
       text-align: left
-      //display: block
-      //width: 100%
       -webkit-text-fill-color: white
       -webkit-text-stroke-width: 2px
       -webkit-text-stroke-color: black
