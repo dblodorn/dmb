@@ -10,15 +10,15 @@
   "project_list": [
     {
       "project": "Tif Sigfrids",
-      "category": "web-development",
+      "category": "web-development,design",
       "link": "tif-sigfrids"
     },{
-      "project": "db13.us",
+      "project": "HDR",
       "category": "web-development",
-      "link": "db13"
+      "link": "http://hdr.14-forty.com/"
     },{
       "project": "Kitchen Nation",
-      "category": "web-development",
+      "category": "web-development,design",
       "link": "kitchen-nation"
     },{
       "project": "Canon",
@@ -28,10 +28,6 @@
       "project": "n/naka",
       "category": "web-development",
       "link": "http://n-naka.com/"
-    },{
-      "project": "HDR",
-      "category": "web-development",
-      "link": "http://hdr.14-forty.com/"
     },{
       "project": "zen sekizawa",
       "category": "web-development",
@@ -65,8 +61,12 @@
       "category": "experimental",
       "link": "http://shasta.db13.us/"
     },{
+      "project": "db13.us",
+      "category": "web-development",
+      "link": "db13"
+    },{
       "project": "Collapsing",
-      "category": "experimental",
+      "category": "experimental,web-development",
       "link": "http://collapsing.db13.us/"
     },{
       "project": "IDENTITY",
@@ -74,7 +74,7 @@
       "link": "http://my-crumbling-identity.db13.us/"
     },{
       "project": "Area Man",
-      "category": "experimental",
+      "category": "experimental,web-development",
       "link": "http://areaman.info/"
     },{
       "project": "Sectional",

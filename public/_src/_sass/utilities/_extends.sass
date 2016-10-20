@@ -73,8 +73,24 @@
 %aligner-item--bottom
   align-self: flex-end
 
-// COLOR
+// UI
+%button
+  border: 0
+  background-color: $white
+  margin-right: 3rem
+  font-family: $monospace
+  color: $black
+  text-transform: uppercase
+  letter-spacing: 2px
+  font-size: 1.5rem
+  cursor: pointer
+  &:hover
+    text-decoration: line-through
+  &.active
+    background-color: $black
+    color: $white
 
+// COLOR
 %gradient-bg-grey
   background: linear-gradient(94deg, #454545, #a5a5a5, #92aa9c)
   background-size: 600% 600%

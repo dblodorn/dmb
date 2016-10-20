@@ -10,9 +10,6 @@
     ul.js-shuffle
       li.project-thumb(v-for="item in projects.project_list" v-bind:data-groups="item.category + ',all'")
         a.project-link(v-link="item.link") {{item.project}}
-  //aside#workslides
-    ul
-      li(v-for="slide in projects.project_slides" v-bind:style="{ backgroundImage: 'url('+ slide +')' }")
 </template>
 
 <script>
@@ -37,30 +34,22 @@
       }
     },
     ready: function(){
-      /*
       setTimeout(function(){
-        $('#workslides').unslider({
-          nav: false,
-          autoplay: true,
-          arrows: false,
-          animation: 'fade'
-        });
-      }, 1000);*/
-      setTimeout(function(){
-        $('.project-menu').animate({opacity: 1}, 500);
+        $('.project-menu').animate({opacity: 1}, 1000);
       }, 500);
       setTimeout(function(){
         shuffleInit.filter();
-      },50);
+      }, 50);
     }
   }
 </script>
 
 <style lang="sass?indentedSyntax" scoped>
 
-  //@import "../_sass/vendor/unslider.sass"
-  //@import "../_sass/vendor/unslider-dots.sass"
   @import "../_sass/utilities/_utilities.sass"
+
+  button
+    @extend %button
 
   // CATEGORY NAVIGATION
   #category-nav
@@ -69,14 +58,12 @@
     min-height: initial!important
     z-index: 1000
     menu
-      background-color: $black
-      border: 2px solid $white
-      padding: 1rem
+      @extend %black-shadow
+      background-color: $white
+      border: 2px solid $black
+      padding: 2rem
       width: 100%
-      a
-        color: $white
-        font-size: 3rem
-        margin-right: 3rem
+  
   html.desktop
     nav.project-menu
       h2
@@ -85,25 +72,20 @@
   // PROJECT MENU
   nav.project-menu
     @extend %nav-shell
+    flex-wrap: wrap
     opacity: 0
     *
       color: $white
       width: 100%
-    h2
-      @extend %black-shadow
+    
+    li
       width: 100%
-      font-family: $pdu
-      font-size: 4.25rem
-      letter-spacing: 3px
-      padding: 2rem
-      border: 2px solid $white
-      background-color: $black
-      text-align: left
-      line-height: .75
+      margin-bottom: 2rem
+
     a.project-link
       text-align: left
-      display: block
-      width: 100%
+      //display: block
+      //width: 100%
       -webkit-text-fill-color: white
       -webkit-text-stroke-width: 2px
       -webkit-text-stroke-color: black
