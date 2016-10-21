@@ -74,6 +74,8 @@
       padding: 2rem
       border: 2px solid $black
       background-color: $white
+      &:hover
+        background-color: $hover-bg
 
     .secondary-nav
       position: fixed

@@ -1,14 +1,14 @@
 <template lang="jade">
   h1 {{project.project_name}}
-  section.single-project(transition="project-description")
+  section.single-project
     article.project-description
       p.project-copy {{{project.project_copy}}}
-      ul.images(v-if="project.images")
-        li(v-for="image in project.images")
-          img(v-bind:src="imgpath + '/' + $route.params.slug + '/' + image.project_image" v-bind:alt="image.image_alt")
       .bottom-buttons
         a.btn(v-for="link in project.links" v-link="link.site_link" target="_blank") {{link.link_copy}}
         a.btn(v-link="'/work'") ALL WORK
+  ul.images(v-if="project.images")
+    li(v-for="image in project.images")
+      img(v-bind:src="imgpath + '/' + $route.params.slug + '/' + image.project_image" v-bind:alt="image.image_alt")
   aside(v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '-portfolio-landing-desktop@2x.jpg)' }" transition="home")
 </template>
 
@@ -108,10 +108,10 @@
       line-height: 1.125
 
   section.single-project
-    position: absolute
+    position: fixed
     top: 0
     z-index: $content-z
-    min-height: 100vh
+    height: 100vh
     width: 100vw
     display: flex
     align-items: flex-end
@@ -135,16 +135,19 @@
       &:hover
         color: $black 
 
-    ul.images
-      @extend %aligner
-      @extend %flex-row-wrap
-      max-width: 160rem
-      background-color: $white
-      margin: auto
-      position: relative
-      li
-        align-self: center
-        max-width: 80rem
-        padding: 1.5rem
+  ul.images
+    @extend %aligner
+    @extend %flex-row-wrap
+    position: absolute
+    max-width: 50rem
+    background-color: $white
+    padding: 1rem 2rem
+    border: 2px solid $black
+    z-index: 9000
+    margin: 10rem 3rem
+    li
+      align-self: center
+      //max-width: 80rem
+      padding: 1rem 0
 
 </style>
