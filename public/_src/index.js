@@ -20,7 +20,6 @@ import news from './_vue/News.vue'
 import project from './_vue/Project.vue'
 import links from './_vue/Links.vue'
 import WorkNav from './_vue/Work-Nav.vue'
-import WorkSubNav from './_vue/Work-Sub-Nav.vue'
 
 // Data
 import workData from './_data/work.json'

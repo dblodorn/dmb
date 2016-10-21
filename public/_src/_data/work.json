@@ -10,80 +10,99 @@
   "project_list": [
     {
       "project": "Tif Sigfrids",
+      "summary": "Visual Design, Full Stack Development.",
       "category": "web-development,design",
       "link": "tif-sigfrids"
     },{
       "project": "HDR",
+      "summary": "Visual Design, Full Stack Development.",
       "category": "web-development",
-      "link": "http://hdr.14-forty.com/"
+      "link": "hdr"
     },{
       "project": "Kitchen Nation",
+      "summary": "Visual Design, Full Stack Development.",
       "category": "web-development,design",
       "link": "kitchen-nation"
     },{
       "project": "Canon",
+      "summary": "Visual Design, Full Stack Development.",
       "category": "web-development",
       "link": "canon"
     },{
       "project": "n/naka",
+      "summary": "Visual Design, Full Stack Development.",
       "category": "web-development",
-      "link": "http://n-naka.com/"
+      "link": "nnaka"
     },{
       "project": "zen sekizawa",
+      "summary": "Visual Design, Full Stack Development.",
       "category": "web-development",
-      "link": "http://zensekizawa.com/"
+      "link": "zen-sekizawa"
     },{
       "project": "Loving Love",
+      "summary": "Visual Design, Full Stack Development.",
       "category": "web-development",
-      "link": "http://lovinglove.biz/"
+      "link": "loving-love"
     },{
       "project": "SLS",
+      "summary": "Visual Design, Full Stack Development.",
       "category": "design",
       "link": "sls"
     },{
       "project": "xiv",
+      "summary": "Visual Design, Full Stack Development.",
       "category": "design",
       "link": "xiv"
     },{
       "project": "zero-one",
+      "summary": "Visual Design, Full Stack Development.",
       "category": "design",
       "link": "zero-one"
     },{
       "project": "15x19.io",
+      "summary": "Visual Design, Full Stack Development.",
       "category": "art",
       "link": "15x19"
     },{
       "project": "AN-AH-KAY",
+      "summary": "Visual Design, Full Stack Development.",
       "category": "experimental",
-      "link": "http://an-ah-kay.com/"
+      "link": "anahkay"
     },{
       "project": "SHASTA",
+      "summary": "Visual Design, Full Stack Development.",
       "category": "experimental",
-      "link": "http://shasta.db13.us/"
+      "link": "shasta"
     },{
       "project": "db13.us",
+      "summary": "Visual Design, Full Stack Development.",
       "category": "web-development",
       "link": "db13"
     },{
       "project": "Collapsing",
-      "category": "experimental,web-development",
-      "link": "http://collapsing.db13.us/"
+      "summary": "Visual Design, Full Stack Development.",
+      "category": "experimental",
+      "link": "collapsing"
     },{
       "project": "IDENTITY",
+      "summary": "Visual Design, Full Stack Development.",
       "category": "experimental",
-      "link": "http://my-crumbling-identity.db13.us/"
+      "link": "identity"
     },{
       "project": "Area Man",
+      "summary": "Visual Design, Full Stack Development.",
       "category": "experimental,web-development",
-      "link": "http://areaman.info/"
+      "link": "areaman"
     },{
       "project": "Sectional",
+      "summary": "Visual Design, Full Stack Development.",
       "category": "experimental",
-      "link": "http://sectional.db13.us/"
+      "link": "sectional"
     },{
       "project": "Infinite",
+      "summary": "Visual Design, Full Stack Development.",
       "category": "experimental",
-      "link": "http://infinite.db13.us/"
+      "link": "infinite"
     }
   ]
 }

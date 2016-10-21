@@ -9,7 +9,13 @@
   nav.project-menu(transition="project-nav")
     ul.js-shuffle
       li.project-thumb(v-for="item in projects.project_list" v-bind:data-groups="item.category + ',all'")
-        a.project-link(v-link="item.link") {{item.project}}
+        .project-inner
+          h2 {{item.project}}
+          .project-description
+            .content
+              h3 {{item.project}}
+              p {{item.summary}}
+              a(v-link="item.link") View Project
 </template>
 
 <script>
@@ -86,11 +92,45 @@
       display: flex
       width: 100%
       margin-bottom: 2rem
-      padding-left: 6rem
+      padding: 2rem
       z-index: $nav-z
 
-    a.project-link
-      +stroke-type($white,$black,2px)
-      text-align: left
+    .project-inner
+      padding: 2rem
+      border: 1px solid $black
+      position: relative
+      &:hover
+        h2
+          opacity: 0!important
+        .project-description
+          opacity: 1
+      .project-description
+        @extend %smooth
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        display: flex
+        background-color: $blue
+        padding: 0 4rem
+        align-items: center
+        opacity: 0
+        p
+          padding-bottom: .5rem
+        a
+          font-family: $monospace
+          font-size: 1.45rem
+          text-decoration: underline
+          color: $white
+          &:hover 
+            text-decoration: line-through
+      h2
+        +stroke-type($white,$black,2px)
+        @extend %smooth
+        text-align: left
+        font-size: 12vw!important
+        margin-bottom: 0
+        pointer-events: none
+
       
 </style>
