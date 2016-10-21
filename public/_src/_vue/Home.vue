@@ -1,7 +1,7 @@
 <template lang="jade">
-  nav.home-menu
-    a.letter-breaker(v-link="'/work'") WORK
-    a.letter-breaker(v-link="'/about'") ABOUT
+  nav.home-menu(transition="home-nav")
+    a(v-link="'/work'") WORK
+    a(v-link="'/about'") ABOUT
   #home-bg(transition="home")
     aside#workslides
       ul
@@ -30,25 +30,18 @@
     route: {
       canReuse: false,
         activate: function() {
-        utility.letterBreaker('.letter-breaker')
         utility.setId('body','home')
-        setTimeout(function(){
-          $('.home-menu').addClass('fade-in-slow')
-        }, 500)
       }
     },
     ready: function(){
       setTimeout(function(){
-        $('#workslides').unslider({
-          nav: false,
-          autoplay: true,
-          arrows: false,
-          animation: 'fade'
-        });
         setTimeout(function(){
-          $('#workslides').animate({ opacity: 1 }, 2000,)
-        }, 500);
+          $('#workslides').animate({ opacity: 1 }, 1000,)
+        }, 1000)
       }, 1000);
+      setTimeout(function(){
+        $('.home-menu').animate({ opacity: 1 }, 250,)
+      }, 500)
     }
   }
 </script>
@@ -111,53 +104,19 @@
 
   nav.home-menu
     @extend %nav-shell
-    opacity: 0
     align-content: center
+    position: absolute
     a
       @extend %black-shadow
-      //@extend %gradient-button
+      +stroke-type($white,$black,2px)
       width: 100%
-      background-color: $white
       overflow: hidden
-      border: 3px outset $lt-grey
       text-align: center
       margin: 1rem 0
-      
+      border: 2px solid $black
+      background-color: $white
       &:hover
-        //@extend %gradient-button-hover
+        background-color: $hover-bg
         text-decoration: none!important
-        border-color: darken($lt-grey, 12)
-        //span
-          //color: purple
-
-  .letter-breaker
-    -webkit-text-stroke-width: 1px
-    -webkit-text-stroke-color: black
-    -webkit-font-smoothing: antialiased
-    span
-      @extend %smooth
-
-    span:nth-child(1n)
-      color: red
-    span:nth-child(2n)
-      color: blue
-    span:nth-child(3n)
-      color: yellow
-    span:nth-child(4n)
-      color: green
-    span:nth-child(5n)
-      color: magenta
-
-    &:hover
-      span:nth-child(1n)
-        color: purple
-      span:nth-child(2n)
-        color: orange
-      span:nth-child(3n)
-        color: pink
-      span:nth-child(4n)
-        color: aqua
-      span:nth-child(5n)
-        color: lime
 
 </style>

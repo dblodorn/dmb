@@ -21,12 +21,9 @@
       canReuse: false,
       activate: function() {
         $('body').animate({ scrollTop: 0 }, 5);
-        
         utility.setId('body','about')
-
         var data = this.$route.data;
         this.$set('about', data);
-        
         setTimeout(function(){
           $('.copy-content').addClass('fade-in-slow')
         }, 500);
@@ -40,7 +37,7 @@
   @import "../_sass/utilities/_utilities.sass"
 
   body#about
-    background-color: $black
+    background-color: $white
 
   .about-links
     @extend %flex-row-wrap

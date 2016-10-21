@@ -91,7 +91,7 @@ var initApp = function() {
     },
     function(done) {
       setTimeout(function(){
-        utility.preload(slidesData.project_slides)
+        //utility.preload(slidesData.project_slides)
       }, 500);
     }
     ], function(err) {

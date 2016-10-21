@@ -1,10 +1,8 @@
 <template lang="jade">
   a#dbk(v-link="'/'") {{title}}
   .secondary-nav
-    .btn.news
-      a(v-link="'/news'") NEWS
-    .btn.contact
-      a(href="mailto:dain@db13.us") EMAIL
+    a.btn.news(v-link="'/news'") NEWS
+    a.btn.contact(href="mailto:dain@db13.us") EMAIL
   main
     router-view
     .secondary-nav-bg
@@ -36,6 +34,10 @@
     padding: 0
     position: absolute
     width: 1px
+
+  body#project
+    #dbk
+      left: -100vw
 
   html.mobile
     #dbk
@@ -69,15 +71,17 @@
 
   html.desktop
     #dbk
+      @extend %black-shadow
       font-size: 4.25rem
       position: fixed
       writing-mode: vertical-rl
       text-orientation: sideways-right
       top: 2rem
       left: -2.35rem
-      color: $white
+      color: $black
       padding: 2rem
-      border: 2px solid $white
+      border: 2px solid $black
+      background-color: $white
 
     .secondary-nav,
     .secondary-nav-bg
@@ -96,6 +100,8 @@
 
   #dbk
     @extend %black-shadow
+    @extend %smooth
+    +stroke-type($white,$black,1px)
     font-family: $pdu
     display: block
     text-transform: uppercase
@@ -109,8 +115,6 @@
     z-index: 12000
 
   .secondary-nav-bg
-    @extend %black-shadow
-    background-color: $black
     z-index: 10
   
   .secondary-nav,

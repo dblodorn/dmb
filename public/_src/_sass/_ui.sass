@@ -4,16 +4,20 @@
 
 .btn
   @extend %aligner
-  border: 2px solid $white
+  @extend %black-shadow
+  @extend %smooth
+  border: 2px solid $black
   height: 4rem
   padding-left: 1.2rem
   padding-right: .7rem
-  background-color: $black
-  a
-    font-family: $pdu
+  background-color: $white
+  font-family: $monospace
+  color: $black
+  font-size: 1.5rem
+  letter-spacing: 2px
+  &:hover
+    background-color: $hover-bg
     color: $white
-    font-size: 2.5rem
-    letter-spacing: 2px
 
 a.bottom-btn
   @extend %color-gradient

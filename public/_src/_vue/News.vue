@@ -35,29 +35,25 @@
   }
 </script>
 
-<style lang="sass?indentedSyntax">
+<style lang="sass?indentedSyntax" scoped>
 
   @import "../_sass/utilities/_utilities.sass"
 
   body#news
-    background-color: $black
+    background-color: $white
 
   .news-copy
     margin-bottom: 8rem
     
     h2
+      +stroke-type($white,$black,1px)
       font-size: 4rem
-      color: $black
-      -webkit-text-fill-color: black
-      -webkit-text-stroke-width: 1px
-      -webkit-text-stroke-color: white
-      -webkit-font-smoothing: antialiased
       margin-bottom: 2rem!important
     
     h3
       font-family: $pdu
       font-size: 4rem
-      color: $white
+      color: $black
       text-transform: uppercase
       margin-bottom: 2rem
       width: 100%

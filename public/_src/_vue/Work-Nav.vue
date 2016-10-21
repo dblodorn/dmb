@@ -1,19 +1,18 @@
 <template lang="jade">
-  #category-nav
+  #category-nav(transition="nav")
     menu.filter-options
       button(data-group='all') All Projects
       button(data-group="web-development") Web-Development
       button(data-group="design") Design
       button(data-group="art") Art
       button(data-group="experimental") Experimental
-  nav.project-menu
+  nav.project-menu(transition="project-nav")
     ul.js-shuffle
       li.project-thumb(v-for="item in projects.project_list" v-bind:data-groups="item.category + ',all'")
         a.project-link(v-link="item.link") {{item.project}}
 </template>
 
 <script>
-  import unslider from 'jquery-unslider'
   import $ from 'jquery'
   import utility from "../_app/utilities.js"
   import shuffleInit from '../_app/shuffle-init'
@@ -26,7 +25,7 @@
     },
     route: {
       canReuse: false,
-        activate: function() {
+      activate: function() {
         $('body').animate({ scrollTop: 0 }, 5);
         utility.setId('body','work')
         var data = this.$route.data;
@@ -34,9 +33,6 @@
       }
     },
     ready: function(){
-      setTimeout(function(){
-        $('.project-menu').animate({opacity: 1}, 1000);
-      }, 500);
       setTimeout(function(){
         shuffleInit.filter();
       }, 50);
@@ -74,7 +70,10 @@
 
   // PROJECT MENU
   nav.project-menu
-    opacity: 0
+    position: absolute
+    top: 0
+    width: 85vw
+    right: 0
     *
       color: $white
       width: 100%
@@ -87,14 +86,11 @@
       display: flex
       width: 100%
       margin-bottom: 2rem
-      padding-left: 3rem
+      padding-left: 6rem
       z-index: $nav-z
 
     a.project-link
+      +stroke-type($white,$black,2px)
       text-align: left
-      -webkit-text-fill-color: white
-      -webkit-text-stroke-width: 2px
-      -webkit-text-stroke-color: black
-      -webkit-font-smoothing: antialiased
-
+      
 </style>

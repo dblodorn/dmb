@@ -3,7 +3,7 @@
 //-------------------------------------------------------------------
 
 // TYPE
-// +type($azo, 300, 1.75em, 1.35, 4px, center, lighten($black, 30%), uppercase);
+// +type($azo, 300, 1.75em, 1.35, 4px, center, lighten($black, 30%), uppercase)
 =type($font, $weight, $size, $kerning, $tracking, $align, $color, $transform, $style)
   font-family: $font
   font-weight: $weight
@@ -17,7 +17,7 @@
   text-rendering: optimizelegibility
 
 // Vendor
-// +vendor(border-radius, 4px);
+// +vendor(border-radius, 4px)
 =vendor($property, $value...)
   -webkit-#{$property}: $value
   -moz-#{$property}: $value
@@ -25,8 +25,17 @@
   -o-#{$property}: $value
   #{$property}: $value
 
+// STROKE TYPE
+// +stroke-type($white,$black,2px)
+=stroke-type($color, $stroke-color, $stroke-weight)
+  color: $color
+  -webkit-text-fill-color: $color
+  -webkit-text-stroke-color: black
+  -webkit-text-stroke-width: $stroke-weight
+  -webkit-font-smoothing: antialiased
+
 // Transition
-// +transition(all, 0.2s, ease-in-out);
+// +transition(all, 0.2s, ease-in-out)
 =transition($transition-property, $transition-time, $method)
   -webkit-transition: $transition-property $transition-time $method
   -moz-transition: $transition-property $transition-time $method
@@ -35,7 +44,7 @@
   transition: $transition-property $transition-time $method
 
 // Box Shadow
-// +box-shadow(0,1px,4px,rgba(0, 0, 0, 0.075));
+// +box-shadow(0,1px,4px,rgba(0, 0, 0, 0.075))
 =box-shadow($top: 0, $left: 0, $blur: 4, $color: rgba(0, 0, 0, 0.075), $inset: false)
   @if $inset
     -webkit-box-shadow: inset $top $left $blur $color

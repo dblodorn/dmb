@@ -13,6 +13,9 @@
 </template>
 
 <script>
+  
+  import utility from "../_app/utilities.js"
+
   export default {
     data () {
       return {
@@ -28,7 +31,11 @@
     route: {
       canReuse: false,
       activate: function() {
+        
+        utility.setId('body','project')
+        
         $('body').animate({ scrollTop: 0 }, 5);
+        
         var id = this.$route.params.slug
         this.$http.get('/data/' + id + '.json').then (
         function (data) {
@@ -37,9 +44,11 @@
         function (data) {
           alert('Failed to load data');
         }); 
+        
         setTimeout(function(){
           $('.single-project').addClass('fade-in-slow')
         }, 150);
+      
       }
     }
   }
