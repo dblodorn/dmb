@@ -5,7 +5,6 @@
     a.btn.contact(href="mailto:dain@db13.us") EMAIL
   main
     router-view
-    .secondary-nav-bg
 </template>
 
 <script>
@@ -35,10 +34,6 @@
     position: absolute
     width: 1px
 
-  body#project
-    #dbk
-      left: -100vw
-
   html.mobile
     #dbk
       position: relative
@@ -49,12 +44,9 @@
       width: 100%
       padding: 1.5rem
 
-    .secondary-nav,
-    .secondary-nav-bg
+    .secondary-nav
       position: relative
       background-color: $black
-
-    .secondary-nav
       border-bottom: 2px solid $white
 
     .btn
@@ -83,15 +75,19 @@
       border: 2px solid $black
       background-color: $white
 
-    .secondary-nav,
-    .secondary-nav-bg
+    .secondary-nav
       position: fixed
       bottom: 0
       left: 0
       padding: 0 2rem
       height: 8rem
-
-  //
+      
+    body#project
+      #dbk
+        left: -100vw
+      .secondary-nav
+        bottom: -20rem
+    
 
   #work-preload
     display: none
@@ -114,11 +110,7 @@
     @extend %aligner-vertical
     z-index: 12000
 
-  .secondary-nav-bg
-    z-index: 10
-  
-  .secondary-nav,
-  .secondary-nav-bg
+  .secondary-nav
     width: 100vw
 
   .btn.contact

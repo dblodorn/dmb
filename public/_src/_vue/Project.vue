@@ -1,15 +1,15 @@
 <template lang="jade">
-  section.single-project
-    h1 {{project.project_name}}
-    aside(v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '-portfolio-landing-desktop@2x.jpg)' }")
+  h1 {{project.project_name}}
+  section.single-project(transition="project-description")
     article.project-description
       p.project-copy {{{project.project_copy}}}
-      a.bottom-btn(v-for="link in project.links" v-link="link.site_link" target="_blank") {{link.link_copy}}
-    ul.images(v-if="project.images")
-      li(v-for="image in project.images")
-        img(v-bind:src="imgpath + '/' + $route.params.slug + '/' + image.project_image" v-bind:alt="image.image_alt")
-    a.bottom-btn(v-link="'/work'") MORE WORK
-    a.bottom-btn(v-on:click="top") TOP
+      ul.images(v-if="project.images")
+        li(v-for="image in project.images")
+          img(v-bind:src="imgpath + '/' + $route.params.slug + '/' + image.project_image" v-bind:alt="image.image_alt")
+      .bottom-buttons
+        a.btn(v-for="link in project.links" v-link="link.site_link" target="_blank") {{link.link_copy}}
+        a.btn(v-link="'/work'") ALL WORK
+  aside(v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '-portfolio-landing-desktop@2x.jpg)' }" transition="home")
 </template>
 
 <script>
@@ -44,11 +44,6 @@
         function (data) {
           alert('Failed to load data');
         }); 
-        
-        setTimeout(function(){
-          $('.single-project').addClass('fade-in-slow')
-        }, 150);
-      
       }
     }
   }
@@ -73,38 +68,62 @@
 
   html.desktop
     section.single-project
-      padding-bottom: 14rem
       h1
         position: fixed
         top: 0
         left: 0
-      article.project-description
-        padding: 4.5rem 1.5rem 3rem
-      aside
-        height: calc(100vh - 24.5rem)
       ul.images
         padding: 0 2rem 4rem
 
-  // BASER
-  section.single-project
-    background-color: $white
-    opacity: 0
-    
-    h1
-      @extend %black-shadow
-      width: 100vw
-      background-color: $black
-      z-index: 1500
+  aside
+    @extend %full-bg
+    width: 100vw
+    height: 100vh
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 0
 
-    aside
-      @extend %full-bg
-      @extend %border-bottom
-      width: 100vw
-    
+  h1
+    @extend %black-shadow
+    +stroke-type($white,$black,1px)
+    width: 100vw
+    background-color: $white
+    z-index: 1500
+    border-bottom: 2px solid $black
+    padding: 1rem
+    font-size: 4.5rem
+    letter-spacing: 2px
+    display: block
+    position: fixed
+
+  .bottom-buttons
+    width: 100%
+    display: flex
+    flex-direction: row
+    .btn
+      margin-right: 2rem
+      font-size: 1.25rem
+      border: 1px solid $black
+      line-height: 1.125
+
+  section.single-project
+    position: absolute
+    top: 0
+    z-index: $content-z
+    min-height: 100vh
+    width: 100vw
+    display: flex
+    align-items: flex-end
+    padding: 3rem
+  
     article.project-description
-      max-width: 70rem
-      position: relative
-      margin: auto
+      @extend %black-shadow
+      max-width: 60rem
+      padding: 2rem
+      margin-left: auto
+      background-color: $white
+      border: 2px solid $black
     
     a.project-link
       display: block
