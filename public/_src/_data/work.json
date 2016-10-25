@@ -7,6 +7,13 @@
     "imgs/projects/zero-one/zero-one-portfolio-landing-desktop@1x.jpg",
     "imgs/projects/15x19/15x19-portfolio-landing-desktop@1x.jpg"
   ],
+  "project_categories": [
+    "all",
+    "web-development",
+    "design",
+    "art",
+    "experimental"
+  ],
   "project_list": [
     {
       "project": "Tif Sigfrids",

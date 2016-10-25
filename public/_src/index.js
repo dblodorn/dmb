@@ -21,6 +21,10 @@ import project from './_vue/Project.vue'
 import links from './_vue/Links.vue'
 import WorkNav from './_vue/Work-Nav.vue'
 
+// GLOBAL COMPONENTS
+import ProjectDesktop from './_vue/Work-Nav-Project-Desktop.vue'
+Vue.component('project-desktop', ProjectDesktop)
+
 // Data
 import workData from './_data/work.json'
 import newsData from './_data/news.json'
