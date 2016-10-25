@@ -10,7 +10,6 @@
 
 <script>
   
-  import unslider from 'jquery-unslider'
   import $ from 'jquery'
   import utility from "../_app/utilities.js"
 
