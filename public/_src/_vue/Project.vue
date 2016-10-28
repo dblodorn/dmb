@@ -33,7 +33,7 @@
       activate: function() {
         
         utility.setId('body','project')
-        
+
         $('body').animate({ scrollTop: 0 }, 5);
         
         var id = this.$route.params.slug

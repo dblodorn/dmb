@@ -55,7 +55,7 @@
   html.mobile
     nav.home-menu
       justify-content: center
-      padding: 2rem
+      padding: 2rem 2rem 0
       a
         font-size: 28vw
         padding: 2rem 2rem
@@ -67,17 +67,6 @@
         max-width: 42vw
         height: 14vw
         padding: 0 2rem
-
-  //
-  body#home
-    html.mobile
-      nav.home-menu
-        min-height: calc(100vh - 24rem)
-        padding-bottom: 3rem
-    html.desktop
-      nav.home-menu
-        min-height: calc(100vh - 8rem)
-        padding-bottom: 0
 
   #home-bg
     width: 100%

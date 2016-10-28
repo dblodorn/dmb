@@ -21,15 +21,19 @@
     "url": "https://github.com/dblodorn/dmb/issues"
   },
   "dependencies": {
-    "shufflejs": "^4.0.0",
+    "adapttext.js": "^1.0.1",
     "async-series": "0.0.1",
+    "jquery-ui": "^1.12.1",
+    "jquery-ui-bundle": "^1.11.4",
+    "jquery-unslider": "^1.2.0",
+    "shufflejs": "^4.0.0",
     "simplestatemanager": "^3.1.3",
     "smooth-scroll": "cferdinandi/smooth-scroll",
-    "adapttext.js": "^1.0.1",
-    "jquery-unslider": "^1.2.0",
+    "v-media-query": "^1.0.3",
+    "vue": "^1.0.0",
+    "vue-resize-mixin": "^1.0.1",
     "vue-resource": "^0.9.3",
-    "vue-router": "^0.7.13",
-    "vue": "^1.0.0"
+    "vue-router": "^0.7.13"
   },
   "devDependencies": {
     "babel-runtime": "^6.0.0",

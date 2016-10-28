@@ -6,6 +6,7 @@ import series from 'async-series'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
+import vMediaQuery from 'v-media-query'
 
 // Functions
 import states from './_app/states.js'
@@ -25,6 +26,9 @@ import WorkNav from './_vue/Work-Nav.vue'
 import ProjectDesktop from './_vue/Work-Nav-Project-Desktop.vue'
 Vue.component('project-desktop', ProjectDesktop)
 
+import ProjectMobile from './_vue/Work-Nav-Project-Mobile.vue'
+Vue.component('project-mobile', ProjectMobile)
+
 // Data
 import workData from './_data/work.json'
 import newsData from './_data/news.json'
@@ -32,6 +36,7 @@ import aboutData from './_data/about.json'
 import slidesData from './_data/slides.json'
 
 // APP
+Vue.use(vMediaQuery);
 Vue.use(VueRouter);
 
 const App = Vue.extend()

@@ -1,4 +1,4 @@
-define('shuffleInit', ['shufflejs'], function(Shuffle) {
+define('shuffleInit', ['shufflejs','jquery'], function(Shuffle,$) {
 
   var shuffleInit = {};
 
@@ -65,6 +65,8 @@ define('shuffleInit', ['shufflejs'], function(Shuffle) {
           filterGroup = btnGroup;
         }
         this.shuffle.filter(filterGroup);
+        $('body').animate({ scrollTop: 0 }, 50);
+        console.log('clicked');
       }
     };
 
