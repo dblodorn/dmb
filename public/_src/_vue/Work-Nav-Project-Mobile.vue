@@ -2,7 +2,8 @@
   nav.project-menu(transition="nav")
     ul
       li(v-for="item in projects.project_list")
-        a(v-link="item.link") {{item.project}}
+        a(v-link="'work/' + item.link") {{item.project}}
+        p {{item.summary}}
 </template>
 
 <script>
@@ -34,25 +35,31 @@
   nav.project-menu
     position: absolute
     top: 0
-    width: 100vw
     right: 0
-    *
+    width: 100vw
+    a
       +stroke-type($white,$black,1px)
       width: 100%
-    ul
-      @extend %nav-shell
-      flex-wrap: wrap
-      margin-top: 8.5rem
+    p
+      color: $white
+      padding-bottom: 0
+      font-size: 1.25rem
 
   // RESPONSIVE
   ul
+    @extend %nav-shell
+    flex-wrap: wrap
+    margin-top: 8.5rem
     li
       position: relative
       display: flex
+      flex-wrap: wrap
       width: 100%
-      padding: 1rem
+      padding: 1rem 2rem 2rem
       z-index: $nav-z
       margin-bottom: 2rem
       border: 1px solid $black
+      background-color: $blue
+
 
 </style>

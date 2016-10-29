@@ -11,7 +11,7 @@
             .content
               h3 {{item.project}}
               p {{item.summary}}
-              a(v-link="item.link") View Project
+              a(v-link="'work/' + item.link") View Project
 </template>
 
 <script>

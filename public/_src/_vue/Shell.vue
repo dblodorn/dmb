@@ -11,8 +11,7 @@
   export default {
     data () {
       return {
-        title: "DAIN BLODORN KIM",
-        imgpath: 'imgs/projects/'
+        title: "DAIN BLODORN KIM"
       }
     }
   }
@@ -23,7 +22,6 @@
   @import "../_sass/utilities/_utilities.sass"
 
   // RESPONSIVE
-
   .visuallyhidden
     border: 0
     clip: rect(0 0 0 0)
@@ -75,7 +73,6 @@
       .secondary-nav
         bottom: -20rem
     
-
   #work-preload
     display: none
 

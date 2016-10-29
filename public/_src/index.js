@@ -33,7 +33,6 @@ Vue.component('project-mobile', ProjectMobile)
 import workData from './_data/work.json'
 import newsData from './_data/news.json'
 import aboutData from './_data/about.json'
-import slidesData from './_data/slides.json'
 
 // APP
 Vue.use(vMediaQuery);
@@ -53,7 +52,6 @@ window.router = new VueRouter({
 router.map({
   '/': {
     component: shell,
-    data: slidesData,
     subRoutes: {
       '/': {
         component: home
@@ -62,7 +60,7 @@ router.map({
         component: WorkNav,
         data: workData
       },
-      '/:slug': {
+      '/work/:slug': {
         component: project
       },
       '/links/:slug': {

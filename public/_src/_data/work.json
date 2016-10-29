@@ -12,104 +12,135 @@
     "web-development",
     "design",
     "art",
+    "personal",
     "experimental"
   ],
   "project_list": [
     {
       "project": "Tif Sigfrids",
-      "summary": "Visual Design, Full Stack Development.",
+      "summary": "Visual Design, Custom WordPress Theme Development.",
       "category": "web-development,design",
       "link": "tif-sigfrids"
+    },{
+      "project": "db13.us",
+      "summary": "Art Direction, Visual Design, Full Stack Development.",
+      "category": "web-development,design,experimental,personal",
+      "link": "db13"
+    },{
+      "project": "zen sekizawa",
+      "summary": "Custom WordPress Theme Development.",
+      "category": "web-development",
+      "link": "zen-sekizawa"
+    },{
+      "project": "Loving Love",
+      "summary": "Visual Design, Full Stack Development.",
+      "category": "web-development,design,personal",
+      "link": "loving-love"
+    },{
+      "project": "Browser Sketches",
+      "summary": "Interactive Design Experiments.",
+      "category": "web-development,experimental,art,personal",
+      "link": "browser-sketches"
+    },{
+      "project": "n/naka",
+      "summary": "Responsive Retrofit, Custom WordPress Theme Development.",
+      "category": "web-development",
+      "link": "nnaka"
+    },{
+      "project": "Kitchen Nation & Kindustry",
+      "summary": "Visual Design, Custom WordPress Theme Development.",
+      "category": "web-development",
+      "link": "kitchen-nation"
     },{
       "project": "HDR",
       "summary": "Visual Design, Full Stack Development.",
       "category": "web-development",
       "link": "hdr"
     },{
-      "project": "Kitchen Nation",
-      "summary": "Visual Design, Full Stack Development.",
-      "category": "web-development,design",
-      "link": "kitchen-nation"
-    },{
-      "project": "Canon",
+      "project": "Canon Pro Series",
       "summary": "Visual Design, Full Stack Development.",
       "category": "web-development",
-      "link": "canon"
+      "link": "canon-pro-series"
     },{
-      "project": "n/naka",
-      "summary": "Visual Design, Full Stack Development.",
+      "project": "Canon Genius",
+      "summary": "Visual Design, Front-End Development.",
       "category": "web-development",
-      "link": "nnaka"
+      "link": "canon-genius"
     },{
-      "project": "zen sekizawa",
-      "summary": "Visual Design, Full Stack Development.",
+      "project": "Canon Lenses",
+      "summary": "Visual Design, Front-End Development, Motion Graphics.",
       "category": "web-development",
-      "link": "zen-sekizawa"
+      "link": "canon-lenses"
     },{
-      "project": "Loving Love",
-      "summary": "Visual Design, Full Stack Development.",
+      "project": "Shift Hypnosis",
+      "summary": "Visual Design, Custom WordPress Theme Development.",
       "category": "web-development",
-      "link": "loving-love"
+      "link": "shift"
     },{
-      "project": "SLS",
-      "summary": "Visual Design, Full Stack Development.",
-      "category": "design",
-      "link": "sls"
+      "project": "Kaiser Permanente",
+      "summary": "Visual Design, Front-End Development.",
+      "category": "web-development",
+      "link": "kaiser-permanente"
     },{
       "project": "xiv",
-      "summary": "Visual Design, Full Stack Development.",
+      "summary": "Visual Design, Branding & Illustration.",
       "category": "design",
       "link": "xiv"
     },{
-      "project": "zero-one",
-      "summary": "Visual Design, Full Stack Development.",
+      "project": "SLS",
+      "summary": "Visual Design & Print Production.",
+      "category": "design",
+      "link": "sls"
+    },{
+      "project": "SBE Collateral",
+      "summary": "Visual Design & Print Production.",
+      "category": "design",
+      "link": "sbe"
+    },{
+      "project": "Zero-One",
+      "summary": "Visual Design, Web-Development.",
       "category": "design",
       "link": "zero-one"
     },{
+      "project": "N_Gen",
+      "summary": "Collaboration on Generative Design Application.",
+      "category": "design,experimental",
+      "link": "zero-one"
+    },{
+      "project": "Childcare",
+      "summary": "Visual Design, Branding.",
+      "category": "design,experimental,art",
+      "link": "chidcare"
+    },{
       "project": "15x19.io",
-      "summary": "Visual Design, Full Stack Development.",
-      "category": "art",
+      "summary": "Art / Painting Exhibition.",
+      "category": "art,personal",
       "link": "15x19"
     },{
-      "project": "AN-AH-KAY",
-      "summary": "Visual Design, Full Stack Development.",
-      "category": "experimental",
-      "link": "anahkay"
+      "project": "Travel Posters",
+      "summary": "Art / Mixed Media.",
+      "category": "art,personal",
+      "link": "travel-posters"
     },{
-      "project": "SHASTA",
-      "summary": "Visual Design, Full Stack Development.",
-      "category": "experimental",
-      "link": "shasta"
+      "project": "Tapestries",
+      "summary": "Art / Mixed Media.",
+      "category": "art,personal",
+      "link": "travel-posters"
     },{
-      "project": "db13.us",
-      "summary": "Visual Design, Full Stack Development.",
-      "category": "web-development",
-      "link": "db13"
+      "project": "Earth Abides",
+      "summary": "Art Exhibition / Mixed Media.",
+      "category": "art,personal",
+      "link": "earth-abides"
     },{
-      "project": "Collapsing",
-      "summary": "Visual Design, Full Stack Development.",
-      "category": "experimental",
-      "link": "collapsing"
+      "project": "The Naturalist",
+      "summary": "Art / Video.",
+      "category": "art,personal",
+      "link": "the-naturalist"
     },{
-      "project": "IDENTITY",
-      "summary": "Visual Design, Full Stack Development.",
-      "category": "experimental",
-      "link": "identity"
-    },{
-      "project": "Area Man",
-      "summary": "Visual Design, Full Stack Development.",
-      "category": "experimental,web-development",
-      "link": "areaman"
-    },{
-      "project": "Sectional",
-      "summary": "Visual Design, Full Stack Development.",
-      "category": "experimental",
-      "link": "sectional"
-    },{
-      "project": "Infinite",
-      "summary": "Visual Design, Full Stack Development.",
-      "category": "experimental",
-      "link": "infinite"
+      "project": "713 Main St.",
+      "summary": "Art / Public.",
+      "category": "art,experimental,design",
+      "link": "the-naturalist"
     }
   ]
 }
