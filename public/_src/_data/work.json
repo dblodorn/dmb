@@ -37,9 +37,9 @@
       "category": "web-development,design,personal",
       "link": "loving-love"
     },{
-      "project": "Browser Sketches",
+      "project": "Clickholes",
       "summary": "Interactive Design Experiments.",
-      "category": "web-development,experimental,art,personal",
+      "category": "web-development,experimental,personal",
       "link": "browser-sketches"
     },{
       "project": "n/naka",
@@ -47,7 +47,7 @@
       "category": "web-development",
       "link": "nnaka"
     },{
-      "project": "Kitchen Nation & Kindustry",
+      "project": "Kitchen Nation",
       "summary": "Visual Design, Custom WordPress Theme Development.",
       "category": "web-development",
       "link": "kitchen-nation"
@@ -57,7 +57,7 @@
       "category": "web-development",
       "link": "hdr"
     },{
-      "project": "Canon Pro Series",
+      "project": "Canon Pro",
       "summary": "Visual Design, Full Stack Development.",
       "category": "web-development",
       "link": "canon-pro-series"
@@ -109,7 +109,7 @@
     },{
       "project": "Childcare",
       "summary": "Visual Design, Branding.",
-      "category": "design,experimental,art",
+      "category": "design,experimental",
       "link": "chidcare"
     },{
       "project": "15x19.io",

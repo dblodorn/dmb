@@ -1,15 +1,11 @@
 {
   "project_name": "15x19.io",
   "project_copy": "15x19.io is essentially the culmination of moving around through various wet studios over 3 years and making 119 15x19 Paintings. I don't quite consider this project done, as i'm fascinated by the notion of a chunk of paintings floating around trying to found their identity in so many different ways. The show was a blast because i put them all on the floor and people were encouraged to flip through them - buy one if they like and experience them as interactive objects and not your typical painting hung on a wall. They did, and oddly enough - enjoyed it. I've got plans to update the web component of the project - so stay tuned - but enjoy whats up now too!",
-  "categories": [
-    "conceptual art",
-    "graphic design",
-    "web development"
-  ],
   "links": [
     {
       "link_copy": "visit site",
-      "site_link": "http://15x19.io/"
+      "site_link": "http://15x19.io/",
+      "link_description": ""
     }
   ],
   "images":[

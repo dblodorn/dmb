@@ -7,11 +7,14 @@
       li.project-thumb(v-for="item in projects.project_list" v-bind:data-groups="item.category + ',all'")
         .project-inner
           h2 {{item.project}}
-          .project-description
+          .project-description(v-bind:style="{backgroundImage: 'url(' + 'imgs/projects/' + item.link + '/' + item.link + '-cover@2x.jpg' + ')' }")
             .content
-              h3 {{item.project}}
-              p {{item.summary}}
-              a(v-link="'work/' + item.link") View Project
+              i
+                h3 {{item.project}}
+              i
+                p {{item.summary}}
+              i
+                a(v-link="'work/' + item.link") View Project
 </template>
 
 <script>
@@ -62,16 +65,11 @@
     top: 0
     width: 85vw
     right: 0
-    *
-      color: $white
-      width: 100%
-    ul
-      @extend %nav-shell
-      flex-wrap: wrap
-      margin-top: 14rem
 
-  // RESPONSIVE
   ul
+    @extend %nav-shell
+    flex-wrap: wrap
+    margin-top: 14rem
     li
       position: relative
       display: flex
@@ -79,44 +77,58 @@
       margin-bottom: 2rem
       padding: 2rem
       z-index: $nav-z
-    .project-inner
-      position: relative
-      width: 100%
-      padding: 2rem
-      border: 1px solid $black
-      &:hover
-        h2
-          opacity: 0!important
-        .project-description
-          opacity: 1
-      .project-description
-        @extend %smooth
-        position: absolute
-        top: 0
-        left: 0
-        height: 100%
-        width: 100%
-        display: flex
-        background-color: $blue
-        padding: 0 4rem
-        align-items: center
-        opacity: 0
-        p
-          padding-bottom: .5rem
-          color: $white
-        a
-          font-family: $monospace
-          font-size: 1.45rem
-          text-decoration: underline
-          color: $white
-          &:hover 
-            text-decoration: line-through
+    
+  .project-inner
+    position: relative
+    width: 100%
+    padding: 2rem
+    border: 1px solid $black
+    &:hover
       h2
-        +stroke-type($white,$black,2px)
-        @extend %smooth
-        text-align: left
-        font-size: 12vw!important
-        margin-bottom: 0
-        pointer-events: none
+        opacity: 0!important
+      .project-description
+        opacity: 1
+    
+  .project-description
+    @extend %smooth
+    @extend %full-bg
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    display: flex
+    padding: 0 4rem
+    align-items: center
+    opacity: 0
+    .content
+      display: flex
+      flex-direction: column
+      i
+        width: 100%
+      h3,p,a
+        background-color: $blue
+        display: inline
+        color: $white
+        float: left
+        padding-left: .5rem
+        padding-right: .5rem
+      p
+        padding-bottom: .5rem
+      a
+        cursor: pointer
+        font-family: $monospace
+        font-size: 1.45rem
+        text-decoration: underline
+        padding-bottom: .5rem
+        &:hover 
+          text-decoration: line-through
+  h2
+    +stroke-type($white,$black,2px)
+    @extend %smooth
+    text-align: left
+    font-size: 12vw!important
+    margin-bottom: 0
+    pointer-events: none
 
 </style>

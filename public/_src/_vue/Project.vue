@@ -37,7 +37,7 @@
         $('body').animate({ scrollTop: 0 }, 5);
         
         var id = this.$route.params.slug
-        this.$http.get('/data/' + id + '.json').then (
+        this.$http.get('/data/work/' + id + '.json').then (
         function (data) {
           this.$set('project', data.json());
         },
