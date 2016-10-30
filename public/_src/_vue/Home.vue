@@ -17,12 +17,7 @@
     data () {
       return {
         project_slides: [
-          "imgs/projects/db13/db13-cover@2x.jpg",
-          "imgs/projects/xiv/xiv-cover@2x.jpg",
-          "imgs/projects/15x19/15x19-cover@2x.jpg",
-          "imgs/projects/tif-sigfrids/tif-sigfrids-cover@2x.jpg",
-          "imgs/projects/sls/sls-cover@2x.jpg",
-          "imgs/projects/zero-one/zero-one-cover@2x.jpg"
+          "imgs/projects/tif-sigfrids/tif-sigfrids.jpg"
         ]
       }
     },

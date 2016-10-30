@@ -1,15 +1,11 @@
 {
-  "project_name": "db13.us",
-  "project_copy": "DB13.US is an ever-evolving repository for my digital stuff. You could say its a blog, but I created this site as a way to not only keep a steady repo going documenting my visual and written activities - but to also explore different ways to build a high content website. I started by developing a theme for Wordpress built in AngularJS, a good learning experience and a setup that i have applied to other projects. But i decided to switch gears and go static - so the build you will see if you decide to is a completely static (no database) html website deployed to Amazon Cloudfront. I used barba.js (pjax) to give it a more SPA-ish feeling, and had a lot of fun digging into harp.js for the static site generator (which served as a great intro to the static site gen buzz) - jade as my templating language of choice and Webpack and npm Scripts as my build tools. Oh and I also dreamed up the design of this site as a sort Google Drive on acid...",
-  "categories": [
-    "conceptual art",
-    "graphic design",
-    "web development"
-  ],
+  "project_name": "DB13.US",
+  "project_copy": "I designed and developed this website to showcase personal photography & other content both collected and generated. I took UI cues from other cloud storage systems, namely Google Drive.",
   "links": [
-      {
-        "link_copy": "visit site",
-        "site_link": "http://www.db13.us/"
-      }
+    {
+      "link_copy": "http://db13.us/",
+      "site_link": "http://db13.us/",
+      "link_description": "VIEW LIVE SITE"
+    }
   ]
 }

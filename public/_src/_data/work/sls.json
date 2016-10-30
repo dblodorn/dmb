@@ -1,24 +1,18 @@
 {
-  "project_name": "sls",
-  "project_copy": "This project was the invite for the grand opening of the SLS Hotel in Beverly Hills, it was the first SLS property and a lot of fun to launch, GBH London (not the band) did the overall branding in collaboration with Philippe Starck and We got to go to town with it in house - Rolling out at least 120 pieces of collateral. This was my favorite piece, I had a lot of fun concepting the Advent Calendar meets Russian Doll mechanical and working with a variety of printers on the production and assembly of this very elaborate print object - all in - it was a nice summation of the SLS brand!",
-  "categories": [
-    "conceptual art",
-    "graphic design",
-    "web development"
+  "project_name": "Project Name",
+  "project_copy": "Lorem Ipsum Dolor",
+  "links": [
+    {
+      "link_copy": "",
+      "site_link": "",
+      "link_description": ""
+    }
   ],
   "images":[
     {
-      "project_image": "dain-blodorn-kim-sls-01.jpg",
-      "image_alt": "Dain Blodorn Kim SLS Invite 01"
-    },{
-      "project_image": "dain-blodorn-kim-sls-02.jpg",
-      "image_alt": "Dain Blodorn Kim SLS Invite 02"
-    },{
-      "project_image": "dain-blodorn-kim-sls-03.jpg",
-      "image_alt": "Dain Blodorn Kim SLS Invite 03"
-    },{
-      "project_image": "dain-blodorn-kim-sls-04.jpg",
-      "image_alt": "Dain Blodorn Kim SLS Invite 04"
+      "project_image": "",
+      "image_description": "",
+      "image_alt": ""  
     }
   ]
 }

@@ -4,12 +4,12 @@
     article.project-description
       p.project-copy {{{project.project_copy}}}
       .bottom-buttons
-        a.btn(v-for="link in project.links" v-link="link.site_link" target="_blank") {{link.link_copy}}
+        a.btn(v-for="link in project.links" v-link="link.site_link" target="_blank") {{link.link_description}}
         a.btn(v-link="'/work'") ALL WORK
   ul.images(v-if="project.images")
     li(v-for="image in project.images")
       img(v-bind:src="imgpath + '/' + $route.params.slug + '/' + image.project_image" v-bind:alt="image.image_alt")
-  aside(v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '-portfolio-landing-desktop@2x.jpg)' }" transition="home")
+  aside(v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '.jpg)' }" transition="home")
 </template>
 
 <script>
@@ -58,7 +58,7 @@
     section.single-project
       padding-bottom: 8rem
       h1
-        border-bottom: 2px solid $white
+        
       article.project-description
         padding: 3rem 3rem 0
       aside
@@ -67,6 +67,8 @@
         padding: 0 2rem 2rem
 
   html.desktop
+    aside
+      position: fixed
     section.single-project
       h1
         position: fixed
@@ -79,14 +81,14 @@
     @extend %full-bg
     width: 100vw
     height: 100vh
-    position: fixed
+    position: absolute
     top: 0
     left: 0
     z-index: 0
 
   h1
     @extend %black-shadow
-    +stroke-type($white,$black,1px)
+    color: $blue
     width: 100vw
     background-color: $white
     z-index: 1500
@@ -147,7 +149,6 @@
     margin: 10rem 3rem
     li
       align-self: center
-      //max-width: 80rem
       padding: 1rem 0
 
 </style>

@@ -1,12 +1,4 @@
 {
-  "project_slides": [
-    "imgs/projects/xiv/xiv-portfolio-landing-desktop@1x.jpg",
-    "imgs/projects/tif-sigfrids/tif-sigfrids-portfolio-landing-desktop@1x.jpg",
-    "imgs/projects/sls/sls-portfolio-landing-desktop@1x.jpg",
-    "imgs/projects/db13/db13-portfolio-landing-desktop@1x.jpg",
-    "imgs/projects/zero-one/zero-one-portfolio-landing-desktop@1x.jpg",
-    "imgs/projects/15x19/15x19-portfolio-landing-desktop@1x.jpg"
-  ],
   "project_categories": [
     "all",
     "web-development",
@@ -32,12 +24,12 @@
       "category": "web-development",
       "link": "zen-sekizawa"
     },{
-      "project": "Loving Love",
+      "project": "LovingLove.biz",
       "summary": "Visual Design, Full Stack Development.",
       "category": "web-development,design,personal",
       "link": "loving-love"
     },{
-      "project": "Clickholes",
+      "project": "Browser Sketches",
       "summary": "Interactive Design Experiments.",
       "category": "web-development,experimental,personal",
       "link": "browser-sketches"
@@ -47,7 +39,7 @@
       "category": "web-development",
       "link": "nnaka"
     },{
-      "project": "Kitchen Nation",
+      "project": "Kitchen Nation & Kindustry",
       "summary": "Visual Design, Custom WordPress Theme Development.",
       "category": "web-development",
       "link": "kitchen-nation"
@@ -60,7 +52,7 @@
       "project": "Canon Pro",
       "summary": "Visual Design, Full Stack Development.",
       "category": "web-development",
-      "link": "canon-pro-series"
+      "link": "canon-pro"
     },{
       "project": "Canon Genius",
       "summary": "Visual Design, Front-End Development.",

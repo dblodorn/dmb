@@ -1,15 +1,11 @@
 {
-  "project_name": "tifsigfrids.com",
-  "project_copy": "I Designed and developed this custom Wordpress website and backend for the LA based contemporary art gallery Tif Sigfrids. Also completed SEO optimization, along with the organization of the CMS.",
-  "categories": [
-    "conceptual art",
-    "graphic design",
-    "web development"
-  ],
+  "project_name": "Tif Sigfrids",
+  "project_copy": "I Designed and developed this custom Wordpress website and backend for the LA based contemporary art gallery Tif Sigfrids. Also completed SEO optimization, along with the organization of the CMS. ",
   "links": [
-      {
-        "link_copy": "visit site",
-        "site_link": "http://tifsigfrids.com/"
-      }
+    {
+      "link_copy": "http://tifsigfrids.com/",
+      "site_link": "http://tifsigfrids.com/",
+      "link_description": "View Live Site"
+    }
   ]
 }

@@ -7,7 +7,7 @@
       li.project-thumb(v-for="item in projects.project_list" v-bind:data-groups="item.category + ',all'")
         .project-inner
           h2 {{item.project}}
-          .project-description(v-bind:style="{backgroundImage: 'url(' + 'imgs/projects/' + item.link + '/' + item.link + '-cover@2x.jpg' + ')' }")
+          .project-description(v-bind:style="{backgroundImage: 'url(' + 'imgs/projects/' + item.link + '/' + item.link + '-hover.jpg' + ')' }")
             .content
               i
                 h3 {{item.project}}

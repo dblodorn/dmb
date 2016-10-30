@@ -1,10 +1,10 @@
 <template lang="jade">
   section#content
     article.copy-content
-      h2 {{about.headline}}
       .copy {{{about.dain}}}
-      .about-links
-        a(v-for="links in about.site_links" v-link="links.link" target="_blank") {{links.site}}
+      ul.about-links
+        li(v-for="links in about.site_links")
+          a(v-link="links.link" target="_blank") {{links.site}}
 </template>
 
 <script>
@@ -32,18 +32,26 @@
   }
 </script>
 
-<style lang="sass?indentedSyntax">
+<style lang="sass?indentedSyntax" scoped>
 
   @import "../_sass/utilities/_utilities.sass"
 
   body#about
     background-color: $white
 
-  .about-links
-    @extend %flex-row-wrap
-    display: flex
+  ul.about-links
     border-top: 1px solid $white
     padding-top: 3.5rem
+    width: 100%
+    li
+      display: block
+      margin-bottom: .5rem
     a
-      width: 100%
+      font-size: 3rem
+      color: $blue
+      line-height: 1.5
+      text-decoration: underline
+      &:hover
+        border: 0
+        text-decoration: line-through
 </style>
