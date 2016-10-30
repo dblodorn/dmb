@@ -67,11 +67,11 @@
       &:hover
         background-color: $hover-bg
       
-    body#project
-      #dbk
-        left: -100vw
-      .secondary-nav
-        bottom: -20rem
+  body#project
+    #dbk
+      left: -100vw
+    .secondary-nav
+      bottom: -20rem
     
   #work-preload
     display: none

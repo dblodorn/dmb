@@ -1,5 +1,6 @@
 <template lang="jade">
   h1 {{project.project_name}}
+  aside(v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '.jpg)' }" transition="home")
   section.single-project
     article.project-description
       p.project-copy {{{project.project_copy}}}
@@ -9,7 +10,6 @@
   ul.images(v-if="project.images")
     li(v-for="image in project.images")
       img(v-bind:src="imgpath + '/' + $route.params.slug + '/' + image.project_image" v-bind:alt="image.image_alt")
-  aside(v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '.jpg)' }" transition="home")
 </template>
 
 <script>
@@ -55,32 +55,55 @@
 
   // RESPONSIVE
   html.mobile
+    aside
+      position: relative
+      width: 100vw
+      height: 125vw
+      border-bottom: 2px solid $black
     section.single-project
-      padding-bottom: 8rem
-      h1
-        
+      position: relative
+      padding-bottom: 0
       article.project-description
-        padding: 3rem 3rem 0
+        padding: 3rem
       aside
         height: 55vh
       ul.images
         padding: 0 2rem 2rem
+    .bottom-buttons
+      flex-direction: column
+      .btn
+        margin-bottom: 2rem
+        width: 100%
+        margin-right: 0
+        max-width: initial
+        justify-content: center
 
   html.desktop
     aside
       position: fixed
+      width: 100vw
+      height: 100vh
     section.single-project
+      position: fixed
+      height: 100vh
+      align-items: flex-end
+      padding: 3rem
       h1
-        position: fixed
         top: 0
         left: 0
+      article.project-description
+        @extend %black-shadow
+        max-width: 60rem
+        margin-left: auto
+        background-color: $white
+        border: 2px solid $black
       ul.images
         padding: 0 2rem 4rem
+      .bottom-buttons
+        flex-direction: row
 
   aside
     @extend %full-bg
-    width: 100vw
-    height: 100vh
     position: absolute
     top: 0
     left: 0
@@ -102,7 +125,6 @@
   .bottom-buttons
     width: 100%
     display: flex
-    flex-direction: row
     .btn
       margin-right: 2rem
       font-size: 1.25rem
@@ -110,23 +132,12 @@
       line-height: 1.125
 
   section.single-project
-    position: fixed
     top: 0
     z-index: $content-z
-    height: 100vh
     width: 100vw
     display: flex
-    align-items: flex-end
-    padding: 3rem
-  
     article.project-description
-      @extend %black-shadow
-      max-width: 60rem
       padding: 2rem
-      margin-left: auto
-      background-color: $white
-      border: 2px solid $black
-    
     a.project-link
       display: block
       margin: auto
