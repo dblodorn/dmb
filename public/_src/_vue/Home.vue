@@ -13,15 +13,16 @@
 <script>
   
   import $ from 'jquery'
-  import utility from "../_app/utilities.js"
+  import utility from '../_app/utilities.js'
 
   export default {
     data () {
       return {
+        imgpath: 'imgs/projects/',
         project_slides: [
-          "tif-sigfrids",
-          "15x19",
-          "db13"
+          'tif-sigfrids',
+          '15x19',
+          'db13'
         ]
       }
     },
@@ -35,8 +36,8 @@
       setTimeout(function(){
         setTimeout(function(){
           $('#workslides').animate({ opacity: 1 }, 1000,)
-        }, 1000)
-      }, 1000);
+        }, 250)
+      }, 250);
       setTimeout(function(){
         $('.home-menu').animate({ opacity: 1 }, 250,)
       }, 500)
@@ -91,6 +92,7 @@
     @extend %nav-shell
     align-content: center
     position: absolute
+    opacity: 0
     a
       @extend %black-shadow
       +stroke-type($white,$black,2px)

@@ -1,5 +1,5 @@
 <template lang="jade">
-  nav.project-menu(transition="nav")
+  nav.project-menu(transition="quick-fade")
     ul
       li(v-for="item in projects.project_list")
         a(v-link="'work/' + item.link") {{item.project}}

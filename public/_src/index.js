@@ -93,12 +93,6 @@ var initApp = function() {
     },
     function(done) {
       states.init();
-      done()
-    },
-    function(done) {
-      setTimeout(function(){
-        //utility.preload(slidesData.project_slides)
-      }, 500);
     }
     ], function(err) {
       console.log('Something be wrong!')

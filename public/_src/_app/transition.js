@@ -23,6 +23,27 @@ Vue.transition('home', {
   }
 })
 
+// Home
+Vue.transition('quick-fade', {
+  css: false,
+  enter: function (el, done) {
+    $(el)
+      .css('opacity', 0)
+      .delay(10).animate({ opacity: 1 }, 700, done)
+  },
+  enterCancelled: function (el) {
+    $(el).stop()
+  },
+  leave: function (el, done) {
+    $(el)
+      .css('opacity', 1)
+      .delay(10).animate({ opacity: 0 }, 700, done)
+  },
+  leaveCancelled: function (el) {
+    $(el).stop()
+  }
+})
+
 Vue.transition('home-nav', {
   css: false,
   enter: function (el, done) {

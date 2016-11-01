@@ -41,7 +41,6 @@
       width: calc(100vw - 4rem)
       padding: 1.5rem
       color: $blue
-
     .btn
       border: 0
       width: 50%
@@ -50,9 +49,13 @@
       height: 4.75rem
       a
         font-size: 3rem
-        
     .btn.contact
       border-left: 2px solid $white
+
+    body#project
+      #dbk
+        +transition(opacity, 0.5s, ease-in-out)
+        opacity: 0
 
   html.desktop
     #dbk
@@ -67,11 +70,11 @@
       &:hover
         background-color: $hover-bg
       
-  body#project
-    #dbk
-      left: -100vw
-    .secondary-nav
-      bottom: -20rem
+    body#project
+      #dbk
+        left: -100vw
+      .secondary-nav
+        bottom: -20rem
     
   #work-preload
     display: none
@@ -80,7 +83,6 @@
 
   #dbk
     @extend %black-shadow
-    @extend %smooth
     font-family: $pdu
     display: block
     text-transform: uppercase
@@ -89,6 +91,7 @@
     color: $black
     letter-spacing: 3px
     border: 2px solid $black
+    opacity: 0
 
   .secondary-nav
     @extend %aligner-vertical
