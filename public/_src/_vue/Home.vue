@@ -5,7 +5,9 @@
   #home-bg(transition="home")
     aside#workslides
       ul
-        li(v-for="slide in project_slides" v-bind:style="{ backgroundImage: 'url('+ slide +')' }")
+        li(v-if="$mq.resize && $mq.below(width, 800)" v-for="slide in project_slides" v-bind:style="{ backgroundImage: 'url(' + imgpath + slide + '/' + slide + '@0.5x.jpg)' }" transition="home")
+        li(v-if="$mq.resize && $mq.between(width, [800,1919])" v-for="slide in project_slides" v-bind:style="{ backgroundImage: 'url(' + imgpath + slide + '/' + slide + '.jpg)' }" transition="home")
+        li(v-if="$mq.resize && $mq.above(width, 1920)" v-for="slide in project_slides" v-bind:style="{ backgroundImage: 'url(' + imgpath + slide + '/' + slide + '@2x.jpg)' }" transition="home")
 </template>
 
 <script>
@@ -17,7 +19,9 @@
     data () {
       return {
         project_slides: [
-          "imgs/projects/tif-sigfrids/tif-sigfrids.jpg"
+          "tif-sigfrids",
+          "15x19",
+          "db13"
         ]
       }
     },
@@ -42,8 +46,6 @@
 
 <style lang="sass?indentedSyntax">
 
-  @import "../_sass/vendor/unslider.sass"
-  @import "../_sass/vendor/unslider-dots.sass"
   @import "../_sass/utilities/_utilities.sass"
 
   // RESPONSIVE
