@@ -1,7 +1,9 @@
 <template lang="jade">
   h1 {{project.project_name}}
-  aside(v-if="$mq.resize && $mq.below('1920px')" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '.jpg)' }" transition="home")
-  aside(v-if="$mq.resize && $mq.above('1920px')" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '@2x.jpg)' }" transition="home")
+  aside(v-if="$mq.resize && $mq.below('800px')" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '@0.25x.jpg)' }" transition="home")
+  aside(v-if="$mq.resize && $mq.between('800px,1199px')" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '@0.5x.jpg)' }" transition="home")
+  aside(v-if="$mq.resize && $mq.between('1200px,1919px')" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '.jpg)' }" transition="home")
+  aside(v-if="$mq.resize && $mq.above('1919px')" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '@2x.jpg)' }" transition="home")
   section.single-project
     article.project-description
       p.project-copy {{{project.project_copy}}}
