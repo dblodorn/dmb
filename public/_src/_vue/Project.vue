@@ -1,6 +1,7 @@
 <template lang="jade">
   h1 {{project.project_name}}
-  aside(v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '.jpg)' }" transition="home")
+  aside(v-if="$mq.resize && $mq.below('1920px')" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '.jpg)' }" transition="home")
+  aside(v-if="$mq.resize && $mq.above('1920px')" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '@2x.jpg)' }" transition="home")
   section.single-project
     article.project-description
       p.project-copy {{{project.project_copy}}}
