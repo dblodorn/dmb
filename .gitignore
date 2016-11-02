@@ -4,8 +4,6 @@ node_modules/
 public/js/
 public/data/
 public/cached/
-public/imgs/projects/
-public/imgs/news/
 npm-debug.log
 gulp-tasks/deploy.js
 deploy-staging.json
