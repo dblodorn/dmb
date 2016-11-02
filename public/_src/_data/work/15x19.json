@@ -7,5 +7,24 @@
       "site_link": "http://15x19.io/",
       "link_description": "View Web Component"
     }
+  ],
+  "images":[
+    {
+      "project_image": "dain-blodorn-kim-studio-die.jpg",
+      "image_description": "",
+      "image_alt": "Dain Kim - 15x19"  
+    },{
+      "project_image": "15x19-install-01.jpeg",
+      "image_description": "",
+      "image_alt": "Dain Kim - 15x19 - Install"  
+    },{
+      "project_image": "15x19-install-02.jpeg",
+      "image_description": "",
+      "image_alt": "Dain Kim - 15x19 - Install"  
+    },{
+      "project_image": "15x19-install-03.jpeg",
+      "image_description": "",
+      "image_alt": "Dain Kim - 15x19 - Install"  
+    }
   ]
 }

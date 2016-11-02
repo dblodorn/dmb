@@ -23,6 +23,7 @@
   "dependencies": {
     "adapttext.js": "^1.0.1",
     "async-series": "0.0.1",
+    "jquery": "^3.1.1",
     "jquery-ui": "^1.12.1",
     "jquery-ui-bundle": "^1.11.4",
     "jquery-unslider": "^1.2.0",
