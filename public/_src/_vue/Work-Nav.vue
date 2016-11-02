@@ -12,6 +12,11 @@
       canReuse: false,
       activate: function() {
         $('body').animate({ scrollTop: 0 }, 5);
+        
+        if($('#dbk').hasClass('fade-out')) {
+          $('#dbk').removeClass('fade-out');
+        }
+
         utility.setId('body','work')
       }
     }

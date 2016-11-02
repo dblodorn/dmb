@@ -52,11 +52,6 @@
     .btn.contact
       border-left: 2px solid $white
 
-    body#project
-      #dbk
-        +transition(opacity, 0.5s, ease-in-out)
-        opacity: 0
-
   html.desktop
     #dbk
       +stroke-type($white,$black,1px)
