@@ -36,6 +36,9 @@
 
   @import "../_sass/utilities/_utilities.sass"
 
+  article
+    background-color: $white
+
   body#about
     background-color: $white
 

@@ -2,12 +2,6 @@
   nav.home-menu(transition="home-nav")
     a(v-link="'/work'") WORK
     a(v-link="'/about'") ABOUT
-  #home-bg(transition="home")
-    aside#workslides
-      //ul
-        li(v-if="$mq.resize && $mq.below(width, 800)" v-for="slide in project_slides" v-bind:style="{ backgroundImage: 'url(' + imgpath + slide + '/' + slide + '@0.5x.jpg)' }" transition="home")
-        li(v-if="$mq.resize && $mq.between(width, [800,1919])" v-for="slide in project_slides" v-bind:style="{ backgroundImage: 'url(' + imgpath + slide + '/' + slide + '.jpg)' }" transition="home")
-        li(v-if="$mq.resize && $mq.above(width, 1920)" v-for="slide in project_slides" v-bind:style="{ backgroundImage: 'url(' + imgpath + slide + '/' + slide + '@2x.jpg)' }" transition="home")
 </template>
 
 <script>
@@ -33,11 +27,6 @@
       }
     },
     ready: function(){
-      setTimeout(function(){
-        setTimeout(function(){
-          $('#workslides').animate({ opacity: 1 }, 1000,)
-        }, 250)
-      }, 250);
       setTimeout(function(){
         $('.home-menu').animate({ opacity: 1 }, 250,)
       }, 500)
@@ -65,6 +54,9 @@
         max-width: 42vw
         height: 14vw
         padding: 0 2rem
+
+  body
+    background-color: pink
 
   #home-bg
     width: 100%

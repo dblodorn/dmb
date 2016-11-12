@@ -12,7 +12,7 @@ import vMediaQuery from 'v-media-query'
 import states from './_app/states.js'
 import transition from './_app/transition.js'
 import utility from "./_app/utilities.js"
-import Threed from './_app/threed.js';
+import Cubes from './_app/cubes.js'
 
 // Templates
 import shell from './_vue/Shell.vue'
@@ -90,8 +90,8 @@ var initApp = function() {
       done()
     },
     function(done) {
-      var three = new Threed();
-      three.start();
+      //var three = new Threed();
+      //three.start();
       done()
     },
     function(done) {
