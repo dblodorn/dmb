@@ -29,6 +29,9 @@ Vue.component('project-desktop', ProjectDesktop)
 import ProjectMobile from './_vue/Work-Nav-Project-Mobile.vue'
 Vue.component('project-mobile', ProjectMobile)
 
+import ProjectHeader from './_vue/Project-Header.vue'
+Vue.component('project-header', ProjectHeader)
+
 // Data
 import workData from './_data/work.json'
 import newsData from './_data/news.json'

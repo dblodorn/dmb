@@ -1,8 +1,8 @@
 <template lang="jade">
-  h1 {{project.project_name}}
-  aside(v-bind:class="{asidescroll: project.images}" v-if="$mq.resize && $mq.below(width, 800)" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '@0.5x.jpg)' }" transition="home")
-  aside(v-bind:class="{asidescroll: project.images}" v-if="$mq.resize && $mq.between(width, [800,1919])" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '.jpg)' }" transition="home")
-  aside(v-bind:class="{asidescroll: project.images}" v-if="$mq.resize && $mq.above(width, 1920)" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '@2x.jpg)' }" transition="home")
+  project-header
+  aside(v-if="$mq.resize && $mq.below(width, 800)" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '@0.5x.jpg)' }" transition="home")
+  aside(v-if="$mq.resize && $mq.between(width, [800,1919])" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '.jpg)' }" transition="home")
+  aside(v-if="$mq.resize && $mq.above(width, 1920)" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '@2x.jpg)' }" transition="home")
   section.single-project(v-bind:class="{sectionscroll: project.images}")
     article.project-description
       p.project-copy {{{project.project_copy}}}
@@ -33,27 +33,23 @@
     route: {
       canReuse: false,
       activate: function() {
-        utility.setId('body','project')
-        $('body').animate({ scrollTop: 0 }, 5);
-        $('#dbk').addClass('fade-out');
-        
+
+        var viewSet = function(){
+          utility.setId('body','project')
+          $('body').animate({ scrollTop: 0 }, 5);
+          $('#dbk').addClass('fade-out');
+        }
+
         var id = this.$route.params.slug
         this.$http.get('/data/work/' + id + '.json').then (
         function (data) {
           this.$set('project', data.json());
+          viewSet();
         },
         function (data) {
           alert('Failed to load data');
         });
-        /*
-        setTimeout(function(){
-          var wh = window.innerHeight;
-          if($('.single-project').hasClass('sectionscroll')){
-            var descriptionHeight = $('.project-description').innerHeight() + 10;
-            $('section.single-project').css('margin-top', 'calc(100vh - ' + descriptionHeight + 'px)');
-          }
-        }, 50);
-        */
+
       }
     }
   }
@@ -69,7 +65,7 @@
       position: relative
       width: 100vw
       height: 125vw
-      border-bottom: 2px solid $black
+      border-bottom: $border
     section.single-project
       position: relative
       padding-bottom: 0
@@ -105,27 +101,39 @@
         max-width: 60rem
         margin-left: auto
         background-color: $white
-        border: 2px solid $black
+        border: $border
       .bottom-buttons
         flex-direction: row
-    
-    .asidescroll
-      //position: relative!important
-      height: calc(100vh - 20rem)!important
-    
+
     .sectionscroll
       position: relative!important
       height: initial!important
-      padding: .5rem!important
+      padding: 0!important
       flex-wrap: wrap
-      border-top: 2px solid $black
-      margin-top: calc(100vh - 22rem)
-      background-color: $white
+      margin-top: calc(100vh - 9rem)!important
+      border-top: $border
+      background-color: $white!important
       article
         align-self: flex-start!important
-        width: 100vw!important
-        border: 0!important
+        max-width: initial!important
+        width: 50vw!important
+        padding: 0!important
+        border-top: $border
+        border-left: $border
+        border-bottom: 0!important
+        border-right: 0
         box-shadow: none!important
+        margin-top: -12rem
+        height: 12rem
+        overflow: visible
+        z-index: 12000
+        p
+          padding: 2rem 2rem 0
+          max-width: 60rem
+          background-color: $white
+      .bottom-buttons
+        padding: 2rem
+        background-color: $white
 
   aside
     @extend %full-bg
@@ -140,7 +148,7 @@
     width: 100vw
     background-color: $white
     z-index: 1500
-    border-bottom: 2px solid $black
+    border-bottom: $border
     padding: 1rem
     font-size: 4.5rem
     letter-spacing: 2px
@@ -178,11 +186,11 @@
     position: relative
     width: 100vw
     background-color: $white
-    padding: 0
+    padding: 1rem
     z-index: 9000
     flex-wrap: wrap
     li
-      padding: .5rem
+      padding: 1rem
       width: 50%
       align-self: flex-end
     li:nth-child(4n)
