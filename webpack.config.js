@@ -17,29 +17,30 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue'
-      },
-      {
+      },{
         test: /\.js$/,
         loader: 'babel',
         exclude: /node_modules/
-      },
-      {
+      },{
         test: /\.json$/,
         loader: 'json'
-      },
-      {
+      },{
         test: /\.html$/,
         loader: 'vue-html'
-      },
-      {
+      },{
         test: /\.sass|css$/,
         loaders: [
           "style",
           "css",
           "sass"
         ]
-      },
-      {
+      },{
+        test: /\.glsl$/,
+        loader: 'webpack-glsl',
+        include: [
+          path.resolve(__dirname, 'src', 'shaders')
+        ]
+      },{
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'url',
         query: {

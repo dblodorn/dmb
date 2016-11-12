@@ -12,6 +12,7 @@ import vMediaQuery from 'v-media-query'
 import states from './_app/states.js'
 import transition from './_app/transition.js'
 import utility from "./_app/utilities.js"
+import Threed from './_app/threed.js';
 
 // Templates
 import shell from './_vue/Shell.vue'
@@ -86,6 +87,11 @@ var initApp = function() {
   series([
     function(done) {
       router.start(App, 'body')
+      done()
+    },
+    function(done) {
+      var three = new Threed();
+      three.start();
       done()
     },
     function(done) {
