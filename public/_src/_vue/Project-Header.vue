@@ -1,5 +1,5 @@
 <template lang="jade">
-  h1 {{headerproject.project_name}} {{$route.params.slug}}hello
+  h1 {{headerproject.project_name}} {{$route.params.slug}}
 </template>
 
 <script>
@@ -10,28 +10,6 @@
     data () {
       return {
         headerproject: {}
-      }
-    },
-    route: {
-      canReuse: true,
-      activate: function() {
-        
-        var viewSet = function(){
-          utility.setId('body','project')
-          $('body').animate({ scrollTop: 0 }, 5);
-          $('#dbk').addClass('fade-out');
-        }
-
-        var id = this.$route.params.slug
-        this.$http.get('/data/work/' + id + '.json').then (
-        function (data) {
-          this.$set('headerproject', data.json());
-          //viewSet();
-        },
-        function (data) {
-          alert('Failed to load data');
-        });
-      
       }
     }
   }

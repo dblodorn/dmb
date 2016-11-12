@@ -1,5 +1,5 @@
 <template lang="jade">
-  project-header
+  h1 {{project.project_name}} 
   aside(v-if="$mq.resize && $mq.below(width, 800)" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '@0.5x.jpg)' }" transition="home")
   aside(v-if="$mq.resize && $mq.between(width, [800,1919])" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '.jpg)' }" transition="home")
   aside(v-if="$mq.resize && $mq.above(width, 1920)" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '@2x.jpg)' }" transition="home")
