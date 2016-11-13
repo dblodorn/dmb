@@ -36,14 +36,10 @@
 
   @import "../_sass/utilities/_utilities.sass"
 
-  article
-    background-color: $white
-
   body#about
     background-color: $white
 
   ul.about-links
-    border-top: 1px solid $white
     padding-top: 3.5rem
     width: 100%
     li

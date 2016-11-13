@@ -55,9 +55,6 @@
         height: 14vw
         padding: 0 2rem
 
-  body
-    background-color: pink
-
   #home-bg
     width: 100%
     height: 100%

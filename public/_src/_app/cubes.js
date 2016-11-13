@@ -9,32 +9,27 @@ $('#gl-bg').css({
 });
 
 // SETUP VARS
-var CONTAINER = document.getElementById('gl-bg');
-var renderer = new THREE.WebGLRenderer({ alpha: true });
-var camera, 
-    scene,
-    raycaster;
+var CONTAINER = document.getElementById('gl-bg'),
+    renderer = new THREE.WebGLRenderer({ alpha: true }),
+    camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 10000 ), 
+    scene = new THREE.Scene(),
+    raycaster = new THREE.Raycaster();
 
 var mouse = new THREE.Vector2(), INTERSECTED;
 var radius = 100, theta = 0;
 
 // ANIMATION
 
+
   function init() {
-    
-    camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 10000 );
-    scene = new THREE.Scene();
-
-    var light = new THREE.DirectionalLight( 0x7de5ea, 2.5 );
-      
+    var light = new THREE.DirectionalLight( 0x348fff, 1.5 );
     light.position.set( 1, 1, 1 ).normalize();
-
     scene.add(light);
     
     var geometry = new THREE.BoxBufferGeometry( 100, 30, 1 );
     
     for ( var i = 0; i < 100; i ++ ) {
-      var object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color: 0x7fef51 } ) );
+      var object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color: 0xdbdbdb } ) );
       object.position.x = Math.random() * 800 - 400;
       object.position.y = Math.random() * 800 - 400;
       object.position.z = Math.random() * 800 - 400;
@@ -47,10 +42,7 @@ var radius = 100, theta = 0;
       scene.add( object );
     }
 
-    raycaster = new THREE.Raycaster();
-    renderer = new THREE.WebGLRenderer();
-    
-    renderer.setClearColor( 0xffffff, 1 );
+    renderer.setClearColor( 0xffffff, 0 );
     renderer.setPixelRatio( window.devicePixelRatio );
     
     renderer.setSize( window.innerWidth, window.innerHeight );
@@ -80,9 +72,7 @@ var radius = 100, theta = 0;
   }
 
   function render() {
-    
     theta += 0.1;
-    
     camera.position.x = radius * Math.sin( THREE.Math.degToRad( theta ) );
     camera.position.y = radius * Math.sin( THREE.Math.degToRad( theta ) );
     camera.position.z = radius * Math.cos( THREE.Math.degToRad( theta ) );
@@ -110,5 +100,5 @@ var radius = 100, theta = 0;
     renderer.render( scene, camera );
   }
 
-init();
-animate();
+  animate();
+  init();

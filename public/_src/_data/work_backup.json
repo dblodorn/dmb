@@ -1,0 +1,138 @@
+{
+  "project_categories": [
+    "all",
+    "web-development",
+    "design",
+    "art",
+    "personal",
+    "experimental"
+  ],
+  "project_list": [
+    {
+      "project": "Tif Sigfrids",
+      "summary": "Visual Design, Custom WordPress Theme Development.",
+      "category": "web-development,design",
+      "link": "tif-sigfrids"
+    },{
+      "project": "db13.us",
+      "summary": "Art Direction, Visual Design, Full Stack Development.",
+      "category": "web-development,design,experimental,personal",
+      "link": "db13"
+    },{
+      "project": "zen sekizawa",
+      "summary": "Custom WordPress Theme Development.",
+      "category": "web-development",
+      "link": "zen-sekizawa"
+    },{
+      "project": "LovingLove.biz",
+      "summary": "Visual Design, Full Stack Development.",
+      "category": "web-development,design,personal",
+      "link": "loving-love"
+    },{
+      "project": "Browser Sketches",
+      "summary": "Interactive Design Experiments.",
+      "category": "web-development,experimental,personal",
+      "link": "browser-sketches"
+    },{
+      "project": "n/naka",
+      "summary": "Responsive Retrofit, Custom WordPress Theme Development.",
+      "category": "web-development",
+      "link": "nnaka"
+    },{
+      "project": "Kitchen Nation & Kindustry",
+      "summary": "Visual Design, Custom WordPress Theme Development.",
+      "category": "web-development",
+      "link": "kitchen-nation"
+    },{
+      "project": "HDR",
+      "summary": "Visual Design, Full Stack Development.",
+      "category": "web-development",
+      "link": "hdr"
+    },{
+      "project": "Canon Pro",
+      "summary": "Visual Design, Full Stack Development.",
+      "category": "web-development",
+      "link": "canon-pro"
+    },{
+      "project": "Canon Genius",
+      "summary": "Visual Design, Front-End Development.",
+      "category": "web-development",
+      "link": "canon-genius"
+    },{
+      "project": "Canon Lenses",
+      "summary": "Visual Design, Front-End Development, Motion Graphics.",
+      "category": "web-development",
+      "link": "canon-lenses"
+    },{
+      "project": "Shift Hypnosis",
+      "summary": "Visual Design, Custom WordPress Theme Development.",
+      "category": "web-development",
+      "link": "shift"
+    },{
+      "project": "Kaiser Permanente",
+      "summary": "Visual Design, Front-End Development.",
+      "category": "web-development",
+      "link": "kaiser-permanente"
+    },{
+      "project": "xiv",
+      "summary": "Visual Design, Branding & Illustration.",
+      "category": "design",
+      "link": "xiv"
+    },{
+      "project": "SLS",
+      "summary": "Visual Design & Print Production.",
+      "category": "design",
+      "link": "sls"
+    },{
+      "project": "SBE Collateral",
+      "summary": "Visual Design & Print Production.",
+      "category": "design",
+      "link": "sbe"
+    },{
+      "project": "Zero-One",
+      "summary": "Visual Design, Web-Development.",
+      "category": "design",
+      "link": "zero-one"
+    },{
+      "project": "N_Gen",
+      "summary": "Collaboration on Generative Design Application.",
+      "category": "design,experimental",
+      "link": "zero-one"
+    },{
+      "project": "Childcare",
+      "summary": "Visual Design, Branding.",
+      "category": "design,experimental",
+      "link": "chidcare"
+    },{
+      "project": "15x19.io",
+      "summary": "Art / Painting Exhibition.",
+      "category": "art,personal",
+      "link": "15x19"
+    },{
+      "project": "Travel Posters",
+      "summary": "Art / Mixed Media.",
+      "category": "art,personal",
+      "link": "travel-posters"
+    },{
+      "project": "Tapestries",
+      "summary": "Art / Mixed Media.",
+      "category": "art,personal",
+      "link": "travel-posters"
+    },{
+      "project": "Earth Abides",
+      "summary": "Art Exhibition / Mixed Media.",
+      "category": "art,personal",
+      "link": "earth-abides"
+    },{
+      "project": "The Naturalist",
+      "summary": "Art / Video.",
+      "category": "art,personal",
+      "link": "the-naturalist"
+    },{
+      "project": "713 Main St.",
+      "summary": "Art / Public.",
+      "category": "art,experimental,design",
+      "link": "the-naturalist"
+    }
+  ]
+}

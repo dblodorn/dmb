@@ -2,8 +2,7 @@
   section#content
     article.copy-content
       .copy.news-copy(v-for="article in news.articles")
-        h2 {{article.date}}
-        h3 {{article.title}}
+        h2 {{article.title}}
         p {{{article.copy}}}
         img(v-bind:src="article.image")
 </template>
@@ -46,25 +45,21 @@
     margin-bottom: 8rem
     
     h2
-      +stroke-type($white,$black,1px)
-      font-size: 4rem
-      margin-bottom: 2rem!important
-    
-    h3
       font-family: $pdu
-      font-size: 4rem
-      color: $black
+      font-size: 3rem
+      color: $blue
       text-transform: uppercase
       margin-bottom: 2rem
       width: 100%
-      text-align: center
+      text-align: left
 
     a
       text-transform: none
       letter-spacing: 0
+    
     img
       padding: 4px
-      background-color: $dk-grey
+      background-color: $blue
   
   .news-copy:last-child
     margin-bottom: 0
