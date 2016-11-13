@@ -17,6 +17,6 @@ gulp.task('minify', function () {
 });
 
 /* Default Task */
-gulp.task('default', ['minify', 'deploy']);
+gulp.task('production', ['minify', 'deploy-kim']);
 
 gulp.task('staging', ['minify', 'deploy-staging']);
