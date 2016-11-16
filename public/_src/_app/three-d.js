@@ -4,45 +4,45 @@ define('threeD', ['three','jquery'], function(THREE,$) {
     'position':'fixed',
     'top': 0,
     'left':0,
-    'z-index':0
+    'z-index':1
   });
 
   // SETUP VARS
   var threeD = {};
 
-  var CONTAINER = document.getElementById('gl-bg'),
-      renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true }),
-      camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 10000 ), 
-      scene = new THREE.Scene(),
-      raycaster = new THREE.Raycaster(),
-      mouse = new THREE.Vector2(), INTERSECTED,
-      radius = 100,
-      theta = 0,
+  // LINES
+  threeD.start = function(){
+    var CONTAINER = document.getElementById('gl-bg'),
+      renderer    = new THREE.WebGLRenderer({ alpha: true, antialias: true }),
+      camera      = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 10000 ), 
+      scene       = new THREE.Scene(),
+      raycaster   = new THREE.Raycaster(),
+      mouse       = new THREE.Vector2(), INTERSECTED,
+      radius      = 100,
+      theta       = 0,
       parentTransform = new THREE.Object3D(),
       sphereInter,
       currentIntersected;
 
-  // LINES
-  threeD.lines = function(){
     function init() {
       
-      var geometry = new THREE.SphereGeometry( 5 );
-      var material = new THREE.MeshBasicMaterial( { color: 0x348fff } );
+      var geometry1 = new THREE.IcosahedronGeometry(12,1);
+      var geometry2 = new THREE.RingBufferGeometry( 1, 5, 32 );
+      var material  = new THREE.MeshBasicMaterial( { color: 0x348fff, wireframe: true } );
       
-      sphereInter = new THREE.Mesh(geometry, material);
-      
-      sphereInter.visible = false;
+      sphereInter = new THREE.Mesh(geometry1, material);
+      sphereInter.visible = true;
       
       scene.add( sphereInter );
       
       var geometry  = new THREE.Geometry();
-      var point     = new THREE.Vector3();
-      var direction = new THREE.Vector3();
+      var point     = new THREE.Vector3(0, 1, 0);
+      var direction = new THREE.Vector3(0, 1, 0);
       
       for ( var i = 0; i < 50; i ++ ) {
         direction.x += Math.random() - 0.25;
         direction.y += Math.random() - 0.5;
-        direction.z += Math.random() - 0.5;
+        direction.z += Math.random() - 0.15;
         direction.normalize().multiplyScalar(10);
         point.add( direction );
         geometry.vertices.push( point.clone() );
@@ -51,16 +51,16 @@ define('threeD', ['three','jquery'], function(THREE,$) {
       parentTransform.position.x = Math.random() * 40 - 20;
       parentTransform.position.y = Math.random() * 40 - 20;
       parentTransform.position.z = Math.random() * 40 - 20;
-      parentTransform.rotation.x = Math.random() * 2 * Math.PI;
+      parentTransform.rotation.x = Math.random() * 3 * Math.PI;
       parentTransform.rotation.y = Math.random() * 2 * Math.PI;
       parentTransform.rotation.z = Math.random() * 2 * Math.PI;
       parentTransform.scale.x = Math.random() + 0.5;
       parentTransform.scale.y = Math.random() + 0.5;
-      parentTransform.scale.z = Math.random() + 0.5;
+      parentTransform.scale.z = Math.random() + 0.25;
       
       for ( var i = 0; i < 35; i ++ ) {
         var object;
-        if ( Math.random() > 0.5 ) {
+        if ( Math.random() > 0.25 ) {
           object = new THREE.Line( geometry );
         } else {
           object = new THREE.LineSegments( geometry );

@@ -83,10 +83,38 @@
       ga('create', 'UA-82853502-1', 'auto');
       ga('send', 'pageview');
     </script>
+    <script id="vertexShader" type="x-shader/x-vertex">
+      precision mediump float;
+      precision mediump int;
+      uniform mat4 modelViewMatrix; // optional
+      uniform mat4 projectionMatrix; // optional
+      attribute vec3 position;
+      attribute vec4 color;
+      varying vec3 vPosition;
+      varying vec4 vColor;
+      void main() {
+        vPosition = position;
+        vColor = color;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+      }
+    </script>
+    <script id="fragmentShader" type="x-shader/x-fragment">
+      precision mediump float;
+      precision mediump int;
+      uniform float time;
+      varying vec3 vPosition;
+      varying vec4 vColor;
+      void main() {
+        vec4 color = vec4( vColor );
+        color.r += sin( vPosition.x * 10.0 + time ) * 0.5;
+        gl_FragColor = color;
+      }
+    </script>
   </head>
   <body>
     <router-view></router-view>
     <div id="gl-bg"></div>
+    <div id="gl-bg2"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

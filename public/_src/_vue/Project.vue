@@ -1,8 +1,7 @@
 <template lang="jade">
   h1 {{project.project_name}} 
-  aside(v-if="$mq.resize && $mq.below(width, 800)" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '@0.5x.jpg)' }" transition="home")
-  aside(v-if="$mq.resize && $mq.between(width, [800,1919])" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '.jpg)' }" transition="home")
-  aside(v-if="$mq.resize && $mq.above(width, 1920)" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '@2x.jpg)' }" transition="home")
+  aside(v-if="$mq.resize && $mq.below(width, 799)" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '@0.5x.jpg)' }" transition="home")
+  aside(v-if="$mq.resize && $mq.above(width, 800)" v-bind:style="{ backgroundImage: 'url(' + imgpath + $route.params.slug + '/' + $route.params.slug + '@2x.jpg)' }" transition="home")
   section.single-project(v-bind:class="{sectionscroll: project.images}")
     article.project-description
       p.project-copy {{{project.project_copy}}}
@@ -69,20 +68,32 @@
     section.single-project
       position: relative
       padding-bottom: 0
+      flex-wrap: wrap
       article.project-description
         padding: 3rem
+        width: 100%
       aside
         height: 55vh
       ul.images
-        padding: 0 2rem 2rem
+        padding: 2rem
+        border-top: 2px solid $black
+        li
+          width: 100%
+          img
+            margin-bottom: .5rem
+        &:last-child
+          img
+            margin-bottom: 0
     .bottom-buttons
+      margin-top: 2rem
       flex-direction: column
+      align-items: center
       .btn
         margin-bottom: 2rem
-        width: 100%
         margin-right: 0
         max-width: initial
         justify-content: center
+        text-align: center
 
   html.desktop
     aside
@@ -121,7 +132,7 @@
         border-top: $border
         border-left: $border
         border-bottom: 0!important
-        border-right: 0
+        border-right: 0!important
         box-shadow: none!important
         margin-top: -12rem
         height: 12rem
@@ -140,7 +151,7 @@
     position: absolute
     top: 0
     left: 0
-    z-index: 1
+    z-index: 2
 
   h1
     @extend %black-shadow
@@ -158,11 +169,14 @@
   .bottom-buttons
     width: 100%
     display: flex
+    flex-wrap: wrap
+    justify-content: space-between
     .btn
-      margin-right: 2rem
+      margin-bottom: 2rem
       font-size: 1.25rem
       border: 1px solid $black
       line-height: 1.125
+      max-width: 20rem
 
   section.single-project
     display: flex
@@ -170,7 +184,7 @@
     width: 100vw
     article
       align-self: flex-end
-      padding: 2rem
+      padding: 2rem 2rem 0
     a.project-link
       display: block
       margin: auto

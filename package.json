@@ -29,13 +29,12 @@
     "shufflejs": "^4.0.0",
     "simplestatemanager": "^3.1.3",
     "smooth-scroll": "cferdinandi/smooth-scroll",
+    "three": "^0.82.1",
     "v-media-query": "^1.0.3",
     "vue": "^1.0.0",
     "vue-resize-mixin": "^1.0.1",
     "vue-resource": "^0.9.3",
-    "vue-router": "^0.7.13",
-    "three": "^0.77.1",
-    "tween.js": "^16.3.4"
+    "vue-router": "^0.7.13"
   },
   "devDependencies": {
     "babel-runtime": "^6.0.0",

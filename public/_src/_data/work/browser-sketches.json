@@ -5,7 +5,27 @@
     {
       "link_copy": "http://clickholes.db13.us/",
       "site_link": "http://clickholes.db13.us/",
-      "link_description": "Check Some Out"
+      "link_description": "Clickholes"
+    },{
+      "link_copy": "http://areaman.info/",
+      "site_link": "http://areaman.info/",
+      "link_description": "Areaman.info"
+    },{
+      "link_copy": "http://sectional.db13.us/",
+      "site_link": "http://sectional.db13.us/",
+      "link_description": "Sectional"
+    },{
+      "link_copy": "http://tunnel.db13.us/",
+      "site_link": "http://tunnel.db13.us/",
+      "link_description": "Tunnel"
+    },{
+      "link_copy": "http://my-crumbling-identity.db13.us/",
+      "site_link": "http://my-crumbling-identity.db13.us/",
+      "link_description": "Crumbling Identity"
+    },{
+      "link_copy": "http://infinite.db13.us/",
+      "site_link": "http://infinite.db13.us/",
+      "link_description": "Infinite Scroll"
     }
   ]
 }

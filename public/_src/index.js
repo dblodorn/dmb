@@ -13,6 +13,7 @@ import states from './_app/states.js'
 import transition from './_app/transition.js'
 import utility from "./_app/utilities.js"
 import threeD from './_app/three-d.js'
+import Cubes from './_app/cubes.js'
 
 // Templates
 import shell from './_vue/Shell.vue'
@@ -90,7 +91,8 @@ var initApp = function() {
       done()
     },
     function(done) {
-      threeD.lines();
+      threeD.start();
+      Cubes.start();
       done()
     },
     function(done) {

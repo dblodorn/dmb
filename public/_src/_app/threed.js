@@ -3,9 +3,9 @@ import $ from 'jquery'
 
 const NEAR = 0.1;
 const FAR = 1800;
-const CONTAINER = document.getElementById('gl-bg');
+const CONTAINER = document.getElementById('gl-bg2');
 
-$('#gl-bg').css({
+$('#gl-bg2').css({
   'position':'fixed',
   'top': 0,
   'left':0,
