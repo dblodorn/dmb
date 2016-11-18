@@ -2,14 +2,10 @@
   nav.project-menu
     h2 WEB ARCHIVE
     ul.links
-      li(v-for="links in work.list_links")
-        a.project-link.link(v-link="links.link" target="_blank") {{links.site}}
-        p {{description}}
-    ul.foot
-      li
-        a(v-link="'https://drive.google.com/open?id=0B6t2BVlhSCGqTERqdEl1Qi1aNE0'" target="_blank") DOWNLOAD CV
-      li(v-for="outs in site_links")
-        a(v-link="outs.link" target="_blank") {{outs.site}}
+      li(v-for="links in work.acf.website")
+        a.project-link.link(v-link="links.web_link" target="_blank") {{links.web_title}}
+        .archive-copy {{{links.web_description}}}
+  aside#bg
 </template>
 
 <script>
@@ -42,12 +38,12 @@
           
         $('body').animate({ scrollTop: 0 }, 5);
         
-        utility.setId('body','links')
+        utility.setId('body','archive')
         
-        var id = this.$route.params.slug
-        this.$http.get('http://digital.db13.us/?json=1').then (
+        this.$http.get('http://digital.db13.us/wp-json/wp/v2/posts/43').then (
         function (data) {
           this.$set('work', data.json());
+          console.log(data.json());
         },
         function (data) {
           alert('Failed to load data');
@@ -55,6 +51,12 @@
         
         setTimeout(function(){
           $('.project-menu').addClass('fade-in-slow')
+          setTimeout(function(){
+            $('ul.links').addClass('fade-in-slow')
+            setTimeout(function(){
+              $('aside#bg').addClass('fade-in-slow')
+            }, 1000);
+          }, 1000);
         }, 500);
 
       }
@@ -62,76 +64,71 @@
   }
 </script>
 
-<style lang="sass?indentedSyntax" scoped>
+<style lang="sass?indentedSyntax">
 
   @import "../_sass/utilities/_utilities.sass"
 
   html.mobile
-    nav.project-menu
-      width: 100vw
+    body#archive
+      nav.project-menu
+        width: 100vw
 
   html.desktop
+    body#archive
+      nav.project-menu
+        width: 85vw
+
+  body#archive
+    aside#bg
+      +h-w-t-b-pos(100vh,100vw,0,0,fixed)
+      background-color: rgba(255,255,255,0.85)
+      z-index: 3
+      opacity: 0
+      
     nav.project-menu
-      width: 85vw
-
-  // BASE
-  nav.project-menu
-    padding: 2rem
-    right: 0
-    position: absolute
-    opacity: 0
-    min-height: 100vh
-    *
-      color: $white
-      width: 100%
-    h2
-      @extend %black-shadow
-      width: 100%
-      font-family: $pdu
-      font-size: 4.25rem
-      letter-spacing: 3px
       padding: 2rem
-      border: 2px solid $white
-      background-color: $black
-      text-align: left
-      line-height: .75
-    ul.foot
-      @extend %black-shadow
-      width: 100%
-      border: 2px solid $white
-      background-color: $black
-      text-align: left
-      padding: 2rem
-      a
-        font-size: 3rem
+      right: 0
+      position: absolute
+      opacity: 0
+      min-height: 100vh
+      *
         color: $white
-    ul.links
-      min-height: calc(100vh - 18rem)
-      margin-bottom: 12rem
+        width: 100%
+      h2
+        @extend %black-shadow
+        width: 82.5vw
+        font-family: $pdu
+        font-size: 4.25rem
+        letter-spacing: 3px
+        padding: 2rem
+        border: 2px solid $white
+        background-color: $black
+        text-align: left
+        line-height: .75
+        position: fixed
+        z-index: $header-z
 
-    li
-      @extend %clearfix
-      margin-bottom: 2rem
+      ul.links
+        margin-top: 13rem
+        padding-left: 1.5rem
+        opacity: 0
 
-    li:last-child
-      margin-bottom: 0
-    
-    p
-      color: $black
-      font-size: 1.65rem
-      line-height: 1.5
-      color: black
-      padding-bottom: 2rem
-      max-width: 60rem
+      li:last-child
+        margin-bottom: 0
 
-    a 
-      text-align: left
-      color: $black
-      display: block
-      float: left
-
-    a.project-link
-      font-size: 6rem
-      margin-bottom: 2rem
+      a.project-link
+        display: flex
+        color: $blue
+        text-decoration: underline
+        font-size: 4.25rem
+        padding-bottom: 1rem
+        letter-spacing: 3px
+        &:hover
+          text-decoration: line-through
+      
+      p
+        font-size: 1.65rem
+        max-width: 45rem
+        color: $black
 
 </style>
