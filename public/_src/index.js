@@ -21,7 +21,7 @@ import home from './_vue/Home.vue'
 import about from './_vue/About.vue'
 import news from './_vue/News.vue'
 import project from './_vue/Project.vue'
-import links from './_vue/Links.vue'
+import archive from './_vue/Archive.vue'
 import WorkNav from './_vue/Work-Nav.vue'
 
 // GLOBAL COMPONENTS
@@ -68,8 +68,8 @@ router.map({
       '/work/:slug': {
         component: project
       },
-      '/links/:slug': {
-        component: links
+      '/archive': {
+        component: archive
       },
       '/about': {
         component: about,

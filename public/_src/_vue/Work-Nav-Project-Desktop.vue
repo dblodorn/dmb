@@ -2,6 +2,7 @@
   #category-nav(transition="nav")
     menu.filter-options
       button(v-for="group in projects.project_categories" v-bind:data-group='group') {{group}}
+      button(v-link="'archive/'") ARCHIVE
   nav.project-menu(transition="project-nav")
     ul.js-shuffle
       li.project-thumb(v-for="item in projects.project_list" v-bind:data-groups="item.category + ',all'")
@@ -54,6 +55,8 @@
     z-index: $header-z
     menu
       @extend %black-shadow
+      display: flex
+      justify-content: space-around
       background-color: $white
       border: 2px solid $black
       padding: 2rem

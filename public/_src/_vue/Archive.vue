@@ -1,6 +1,6 @@
 <template lang="jade">
   nav.project-menu
-    h2 {{work.list_title}}
+    h2 WEB ARCHIVE
     ul.links
       li(v-for="links in work.list_links")
         a.project-link.link(v-link="links.link" target="_blank") {{links.site}}
@@ -45,7 +45,7 @@
         utility.setId('body','links')
         
         var id = this.$route.params.slug
-        this.$http.get('/data/links/' + id + '.json').then (
+        this.$http.get('http://digital.db13.us/?json=1').then (
         function (data) {
           this.$set('work', data.json());
         },

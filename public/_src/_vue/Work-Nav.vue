@@ -22,9 +22,3 @@
     }
   }
 </script>
-
-<style lang="sass?indentedSyntax" scoped>
-
-  @import "../_sass/utilities/_utilities.sass"
-  
-</style>
