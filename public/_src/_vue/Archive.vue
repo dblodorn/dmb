@@ -2,9 +2,9 @@
   nav.project-menu
     h2 WEB ARCHIVE
     ul.links
-      li(v-for="links in work.acf.website")
-        a.project-link.link(v-link="links.web_link" target="_blank") {{links.web_title}}
-        .archive-copy {{{links.web_description}}}
+      li(v-for="links in work.acf.website_archive")
+        a.project-link.link(v-link="links.website_link" target="_blank") {{links.website_title}}
+        .archive-copy {{{links.website_description}}}
   aside#bg
 </template>
 
@@ -16,20 +16,7 @@
   export default {
     data () {
       return {
-        work: {},
-        description: "Promotional Microsite for A new range of Canon Products. Built in HTML5 / CSS3 with Javascript animations and templating. The site was customized by over 100 retailers to showcase related canon offers they had in store. As this site relied heavily on animations, great care was taken in translating that experience to a mobile environment.",
-        site_links: [
-          {
-            site: "LINKEDIN",
-            link: "https://www.linkedin.com/in/dain-blodorn-028324b2"
-          },{
-            site: "GITHUB",
-            link: "https://github.com/dblodorn"
-          },{
-            site: "CODEPEN",
-            link: "http://codepen.io/mrdain/"
-          }
-        ]
+        work: {}
       }
     },
     route: {
@@ -40,10 +27,9 @@
         
         utility.setId('body','archive')
         
-        this.$http.get('http://digital.db13.us/wp-json/wp/v2/posts/43').then (
+        this.$http.get('https://flatfiles.info/wp-json/wp/v2/posts/12').then (
         function (data) {
           this.$set('work', data.json());
-          console.log(data.json());
         },
         function (data) {
           alert('Failed to load data');
