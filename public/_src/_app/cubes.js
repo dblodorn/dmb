@@ -13,10 +13,10 @@ define('Cubes', ['three','jquery'], function(THREE,$) {
   // ANIMATION
   Cubes.start = function(){
     var CONTAINER = document.getElementById('gl-bg2'),
-      renderer = new THREE.WebGLRenderer({ alpha: true }),
-      camera = new THREE.PerspectiveCamera( 20, window.innerWidth / window.innerHeight, 1, 100000 ), 
-      scene = new THREE.Scene(),
-      raycaster = new THREE.Raycaster();
+        renderer = new THREE.WebGLRenderer({ alpha: true }),
+        camera = new THREE.PerspectiveCamera( 20, window.innerWidth / window.innerHeight, 1, 100000 ), 
+        scene = new THREE.Scene(),
+        raycaster = new THREE.Raycaster();
 
     var mouse = new THREE.Vector2(), INTERSECTED;
     var radius = 100, theta = 0;
@@ -68,11 +68,10 @@ define('Cubes', ['three','jquery'], function(THREE,$) {
       }
 
       renderer.setClearColor( 0xffffff, 0 );
-      renderer.setPixelRatio( window.devicePixelRatio );
-      
+      renderer.setPixelRatio( window.devicePixelRatio ); 
       renderer.setSize( window.innerWidth, window.innerHeight );
       renderer.sortObjects = false;
-      
+
       CONTAINER.appendChild(renderer.domElement);
       
       document.addEventListener( 'mousemove', onDocumentMouseMove, false );
@@ -103,16 +102,15 @@ define('Cubes', ['three','jquery'], function(THREE,$) {
       camera.position.z = radius * Math.cos( THREE.Math.degToRad( theta ) );
       camera.lookAt( scene.position );
       camera.updateMatrixWorld();
-
       // find intersections
       raycaster.setFromCamera( mouse, camera );
-      
       renderer.render( scene, camera );
-      }
-      // RUN
-      init();
-      animate();
     }
+    // RUN
+    init();
+    animate();
+  
+}
 
   return Cubes;
 
