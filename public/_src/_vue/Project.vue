@@ -167,6 +167,7 @@
     letter-spacing: 2px
     display: block
     position: fixed
+    z-index: 10000
 
   .bottom-buttons
     width: 100%
