@@ -33,6 +33,11 @@
     width: 1px
 
   html.mobile
+    
+    body#project
+      #dbk
+        top: -20rem
+    
     #dbk
       position: absolute
       top: 2rem
@@ -41,6 +46,7 @@
       width: calc(100vw - 4rem)
       padding: 1.5rem
       color: $blue
+      text-align: center
     .btn
       border: 0
       width: 50%

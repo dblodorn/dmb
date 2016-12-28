@@ -44,7 +44,7 @@
       justify-content: center
       padding: 2rem 2rem 0
       a
-        font-size: 28vw
+        font-size: 18vw
         padding: 2rem 2rem
   
   html.desktop

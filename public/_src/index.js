@@ -91,8 +91,10 @@ var initApp = function() {
       done()
     },
     function(done) {
-      threeD.start();
-      Cubes.start();
+      if(window.innerWidth >= 500) {
+        threeD.start();
+        Cubes.start();
+      }
       done()
     },
     function(done) {

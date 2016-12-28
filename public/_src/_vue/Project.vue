@@ -60,6 +60,8 @@
 
   // RESPONSIVE
   html.mobile
+    h1
+      font-size: 3rem
     aside
       position: relative
       width: 100vw
@@ -103,6 +105,7 @@
     h1
       top: 0
       left: 0
+      font-size: 4.5rem
     section.single-project
       position: fixed
       height: 100vh
@@ -161,7 +164,6 @@
     z-index: 1500
     border-bottom: $border
     padding: 1rem
-    font-size: 4.5rem
     letter-spacing: 2px
     display: block
     position: fixed
