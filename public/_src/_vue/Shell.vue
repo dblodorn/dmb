@@ -1,8 +1,5 @@
 <template lang="jade">
   a#dbk(v-link="'/'") {{title}}
-  .secondary-nav(v-if="$mq.resize && $mq.above('1024px')")
-    a.btn.news(v-link="'/news'") NEWS
-    a.btn.contact(href="mailto:dain@db13.us") EMAIL
   main
     router-view
 </template>

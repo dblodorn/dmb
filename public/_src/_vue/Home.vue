@@ -1,6 +1,7 @@
 <template lang="jade">
   nav.home-menu(transition="home-nav")
     a(v-link="'/work'") WORK
+    a(v-link="'/news'") NEWS
     a(v-link="'/about'") ABOUT
 </template>
 
@@ -43,8 +44,9 @@
     nav.home-menu
       justify-content: center
       padding: 2rem 2rem 0
+      height: 100%
       a
-        font-size: 18vw
+        font-size: 10vh
         padding: 2rem 2rem
   
   html.desktop

@@ -5,7 +5,6 @@
       li(v-for="links in work.acf.website_archive")
         a.project-link.link(v-link="links.website_link" target="_blank") {{links.website_title}}
         .archive-copy {{{links.website_description}}}
-  aside#bg
 </template>
 
 <script>
@@ -30,21 +29,17 @@
         this.$http.get('https://flatfiles.info/wp-json/wp/v2/posts/12').then (
         function (data) {
           this.$set('work', data.json());
+          console.log('data loaded');
+          setTimeout(function(){
+            $('.project-menu').addClass('fade-in-slow')
+            setTimeout(function(){
+              $('ul.links').addClass('fade-in-slow')
+            }, 500);
+          }, 500);
         },
         function (data) {
           alert('Failed to load data');
-        }); 
-        
-        setTimeout(function(){
-          $('.project-menu').addClass('fade-in-slow')
-          setTimeout(function(){
-            $('ul.links').addClass('fade-in-slow')
-            setTimeout(function(){
-              $('aside#bg').addClass('fade-in-slow')
-            }, 1000);
-          }, 1000);
-        }, 500);
-
+        });
       }
     }
   }
@@ -87,8 +82,8 @@
         font-size: 4.25rem
         letter-spacing: 3px
         padding: 2rem
-        border: 2px solid $white
-        background-color: $black
+        border: 2px solid $black
+        background-color: $blue
         text-align: left
         line-height: .75
         position: fixed
@@ -106,7 +101,7 @@
         display: flex
         color: $blue
         text-decoration: underline
-        font-size: 4.25rem
+        font-size: 5vh
         padding-bottom: 1rem
         letter-spacing: 3px
         &:hover
