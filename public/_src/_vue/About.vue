@@ -46,7 +46,7 @@
       display: block
       margin-bottom: .5rem
     a
-      font-size: 3rem
+      font-size: 5vh
       color: $blue
       line-height: 1.5
       text-decoration: underline

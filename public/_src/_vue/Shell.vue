@@ -55,6 +55,7 @@
       height: 4.75rem
       a
         font-size: 3rem
+    
     .btn.contact
       border-left: 2px solid $white
 

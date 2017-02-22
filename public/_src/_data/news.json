@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "date": "02-22-2016",
+      "title": "Terranova Poster",
+      "image": "imgs/news/terranova.jpg", 
+      "copy": "Had a blast drawing this groovy poster for <a href='http://en.terrranova.com/info/' target='_blank'>Terrnova's</a> booth at the LA Art Book Fair - thery're the coolest publishers in Barcelona - the world, Check it out - BCN!!!"
+    },{
+      "date": "02-10-2016",
+      "title": "CAN YOU DEAL?",
+      "image": "imgs/news/canyoudeal.jpg", 
+      "copy": "Working on an awesome Zine with Jennifer Clavin of <a href='http://hellobleached.com/' target='_blank'>Bleached</a> challenging sexism in the music industry through essays and art by amazing musicians. Smash the patriarchy - check out the promo: <a href='http://canyoudealzine.com/' target='_blank'>CAN YOU DEAL???!!!!</a>!"
+    },{
       "date": "08-22-2016",
       "title": "Zachary Leener Poster",
       "image": "imgs/news/leener.jpg", 

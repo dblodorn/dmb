@@ -46,7 +46,7 @@
     
     h2
       font-family: $pdu
-      font-size: 3rem
+      font-size: 7vh
       color: $blue
       text-transform: uppercase
       margin-bottom: 2rem

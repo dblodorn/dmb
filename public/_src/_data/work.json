@@ -23,20 +23,20 @@
       "category": "web-development",
       "link": "zen-sekizawa"
     },{
-      "project": "LovingLove.biz",
-      "summary": "Visual Design, Full Stack Development.",
-      "category": "web-development,design,exploration",
-      "link": "loving-love"
-    },{
-      "project": "Browser Sketches",
-      "summary": "Interactive Design Experiments.",
+      "project": "Clickholes",
+      "summary": "Cyber Explorations.",
       "category": "web-development,experimental,exploration",
-      "link": "browser-sketches"
+      "link": "clickholes"
     },{
       "project": "15x19.io",
       "summary": "Art / Painting Exhibition.",
-      "category": "art,exploration",
+      "category": "art",
       "link": "15x19"
+    },{
+      "project": "LovingLove.biz",
+      "summary": "Visual Design, Web Development, Atmospheric Celebration.",
+      "category": "web-development,design",
+      "link": "loving-love"
     }
   ]
 }
