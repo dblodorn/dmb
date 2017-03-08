@@ -1,6 +1,6 @@
 {
   "headline": "WHAT I DO...",
-  "dain": "<p>I'm a web developer, visual designer, and artist that lives somewhere in between JPL, Art Center, the Norton Simon and Cal Tech. I've been working in the interactive design field since the late 90's and have also maintained a parallel art practice. I provide serivices for web development, creative consulting, and graphic design and work with a variety of people and businesses including artists, production agencies, commercial photographers, restaurants, and skateboarding brands. I've exhibited art both nationally and internationally.</p><p>Enjoy the work, and if you are interested in seeing additional work samples and a full CV <a href='mailto:dain@db13.us'>Email Me</a>.</p>",
+  "dain": "<p>I'm a <a id='progammer' href='http://maedastudio.com/1999/dbn/index.php' target='_blank'>Front End Developer</a>, <a id='designer' href='http://www.designhistory.org/PostModern_pages/NewWave.html' target='_blank'>Visual Designer</a>, and <a id='artist' href='http://www.nytimes.com/2013/08/19/arts/design/Franz-West-a-Sculptor-Who-Defied-Categories.html' target='_blank'>Conceptual Artist</a> stationed somewhere in between <a href='https://www.jpl.nasa.gov/' target='_blank'>JPL</a>, <a href='http://www.artcenter.edu/' target='_blank'>Art Center College of Design</a>, <a href='https://www.nortonsimon.org/exhibitions/2010-2019/duchamp-to-pop/' target='_blank'>the Norton Simon</a> and <a href='http://www.caltech.edu/' target='_blank'>Cal Tech</a>.</p><p>I've been working in the interactive design field since the late 90's and also maintain a conceptual art practice. I provide services in consulting and execution for <span id='services'>graphic design, web development, user experience design, print design, and art direction</span>. Clients and collaborators include artists, production agencies, commercial photographers, restaurants, and skateboarding brands. My artwork has been exhibited both nationally and internationally.</p><p>If you are interested in seeing additional work samples and a full CV <a href='mailto:dain@db13.us'>Email Me</a>.</p>",
   "site_links": [
     {
       "site": "GITHUB",
@@ -9,11 +9,17 @@
       "site": "CODEPEN",
       "link": "http://codepen.io/mrdain/"
     },{
+      "site": "BEHANCE",
+      "link": "https://www.behance.net/dainblodo8a8c"
+    },{
       "site": "INSTAGRAM",
       "link": "https://www.instagram.com/mrdainblo/"
     },{
       "site": "TWITTER",
       "link": "https://twitter.com/dblodorn"
+    },{
+      "site": "LINKEDIN",
+      "link": "https://www.linkedin.com/in/dain-blodorn-028324b2"
     },{
       "site": "SOUNDCLOUD",
       "link": "https://soundcloud.com/dainblodorn"
@@ -21,8 +27,8 @@
       "site": "TUMBLR",
       "link": "http://db13.tumblr.com/"
     },{
-      "site": "LINKEDIN",
-      "link": "https://www.linkedin.com/in/dain-blodorn-028324b2"
+      "site": "PINTEREST",
+      "link": "https://www.pinterest.com/dainblodo/"
     }
   ]
 }
