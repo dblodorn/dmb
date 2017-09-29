@@ -20,6 +20,7 @@ import shell from './_vue/Shell.vue'
 import home from './_vue/Home.vue'
 import about from './_vue/About.vue'
 import news from './_vue/News.vue'
+import calendar from './_vue/CalendarReader.vue'
 import project from './_vue/Project.vue'
 import archive from './_vue/Archive.vue'
 import WorkNav from './_vue/Work-Nav.vue'
@@ -78,6 +79,9 @@ router.map({
       '/news': {
         component: news,
         data: newsData
+      },
+      '/calendar': {
+        component: calendar
       }
     }
   }
